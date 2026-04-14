@@ -1,39 +1,41 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { PageHeader } from '@/components/ui/page-header';
-import { GoldDot } from '@/components/ui/gold-dot';
-import { ScrollReveal } from '@/components/animations/scroll-reveal';
-import { siteConfig, stats } from '@/config/site';
-import { services } from '@/config/services';
-import { ArrowRight } from 'lucide-react';
+import Image from "next/image";
+import Link from "next/link";
+import { PageHeader } from "@/components/ui/page-header";
+import { GoldDot } from "@/components/ui/gold-dot";
+import { ScrollReveal } from "@/components/animations/scroll-reveal";
+import { siteConfig, stats } from "@/config/site";
+import { services } from "@/config/services";
+import { ArrowRight } from "lucide-react";
 
 // Core values
 const coreValues = [
   {
-    title: 'Excellence',
-    description: 'Technical and professional excellence with international best practice.',
+    title: "Excellence",
+    description:
+      "Technical and professional excellence with international best practice.",
   },
   {
-    title: 'Integrity',
-    description: 'Highest standards of honesty and transparency in all dealings.',
+    title: "Integrity",
+    description:
+      "Highest standards of honesty and transparency in all dealings.",
   },
   {
-    title: 'Innovation',
-    description: 'Embracing new technologies and creative solutions.',
+    title: "Innovation",
+    description: "Embracing new technologies and creative solutions.",
   },
   {
-    title: 'People First',
-    description: 'Our people are our greatest asset.',
+    title: "People First",
+    description: "Our people are our greatest asset.",
   },
   {
-    title: 'Commitment',
-    description: 'Dedicated to Africa and sustainable development.',
+    title: "Commitment",
+    description: "Dedicated to Africa and sustainable development.",
   },
   {
-    title: 'Quality',
-    description: 'Rigorous standards across all operations.',
+    title: "Quality",
+    description: "Rigorous standards across all operations.",
   },
 ];
 
@@ -385,7 +387,7 @@ export default function AboutPage() {
               </ScrollReveal>
 
               {/* Divider */}
-              <div className="h-px w-full bg-primary/20" />
+              <div className="h-px w-full bg-steel-blue" />
 
               {/* Values Grid */}
               <ScrollReveal animation="fadeUp" delay={0.2}>
