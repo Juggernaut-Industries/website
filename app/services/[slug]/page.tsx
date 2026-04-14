@@ -1,0 +1,436 @@
+'use client';
+
+import { useParams } from 'next/navigation';
+import { notFound } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
+import { PageHeader } from '@/components/ui/page-header';
+import { GoldDot } from '@/components/ui/gold-dot';
+import { ScrollReveal } from '@/components/animations/scroll-reveal';
+import {
+  services,
+  getServiceBySlug,
+  miningProcessSteps,
+  // agricultureCrops,
+  explorationServices,
+} from '@/config/services';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
+
+export default function ServiceDetailPage() {
+  const params = useParams();
+  const slug = params.slug as string;
+  const service = getServiceBySlug(slug);
+
+  if (!service) {
+    notFound();
+  }
+
+  // Get next and previous services for navigation
+  const currentIndex = services.findIndex((s) => s.id === service.id);
+  const prevService = currentIndex > 0 ? services[currentIndex - 1] : services[services.length - 1];
+  const nextService = currentIndex < services.length - 1 ? services[currentIndex + 1] : services[0];
+
+  const isMining = service.id === 'mining';
+  // const isAgriculture = service.id === 'agriculture';
+
+  return (
+    <>
+      {/* Page Header */}
+      <PageHeader
+        className='h-[70vh] md:h-[60vh] lg:h-[50vh]'
+        title={service.title.toUpperCase()}
+        subtitle={service.description}
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'Services', href: '/services' },
+          { label: service.shortTitle, href: service.href },
+        ]}
+        backgroundImage={service.image}
+      />
+
+      {/* Service Overview Section */}
+      <section className="relative py-14 overflow-hidden bg-white">
+        <div className="container-jil relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+            {/* Left - Content */}
+            <div className="order-2 lg:order-1">
+              <div className="sticky top-24 space-y-8">
+                {/* Header */}
+                <ScrollReveal animation="fadeUp">
+                  <div className="space-y-4">
+                    <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold">
+                      <span className="w-8 h-px bg-industrial-gold" />
+                      Service Overview
+                    </span>
+                    <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem]">
+                      {service.shortTitle.toUpperCase()}
+                      <span className="block text-xl md:text-2xl lg:text-3xl text-steel-blue tracking-[0.15em]">
+                        SERVICES
+                      </span>
+                    </h2>
+                  </div>
+                </ScrollReveal>
+
+                {/* Description */}
+                <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <div className="space-y-4">
+                    {service.fullDescription.map((para, i) => (
+                      <p key={i} className="text-steel-blue leading-relaxed text-lg">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
+                </ScrollReveal>
+
+                {/* Divider */}
+                <div className="h-px bg-steel-blue/20" />
+
+                {/* Features Grid */}
+                {!isMining && <ScrollReveal animation="fadeUp" delay={0.15}>
+                  <div className="grid grid-cols-2 gap-3">
+                    {service.features.map((feature, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-3 text-sm text-steel-blue"
+                      >
+                        <GoldDot size="sm" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </ScrollReveal>}
+
+                {/* CTA */}
+                <ScrollReveal animation="fadeUp" delay={0.2}>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-industrial-gold text-near-black font-heading text-xs tracking-[0.1em] uppercase rounded-xl btn-animated relative z-1 overflow-hidden after:bg-steel-blue hover:text-off-white transition-colors"
+                  >
+                    Contact Us
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </ScrollReveal>
+              </div>
+            </div>
+
+            {/* Right - Image */}
+            <ScrollReveal animation="fadeUp" className="order-1 lg:order-2">
+              <div className="space-y-6">
+                {/* Service Image */}
+                <div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-2xl">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/40 via-transparent to-transparent" />
+                </div>
+
+                {/* Highlights */}
+                {service.highlights && (
+                  <div className="grid grid-cols-2 gap-4">
+                    {service.highlights.map((highlight, index) => (
+                      <div
+                        key={index}
+                        className="p-4 rounded-xl bg-off-white border border-steel-blue/10"
+                      >
+                        <h4 className="font-heading text-xs tracking-[0.1em] uppercase text-industrial-gold mb-1">
+                          {highlight.title}
+                        </h4>
+                        <p className="text-xs text-steel-blue leading-relaxed">
+                          {highlight.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Mining Exploration Services */}
+      {isMining && (
+        <section className="relative py-14 overflow-hidden bg-white">
+          <div className="container-jil relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+              {/* Left - Sticky Image */}
+              <ScrollReveal animation="fadeUp" className="order-2 lg:order-1">
+                <div className="sticky top-24">
+                  <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl">
+                    <Image
+                      src="/mining-2.jpeg"
+                      alt="Mining exploration services"
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/40 via-transparent to-transparent" />
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Right - Content */}
+              <div className="space-y-8 order-1 lg:order-2">
+                {/* Header */}
+                <ScrollReveal animation="fadeUp">
+                  <div className="space-y-4">
+                    <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold">
+                      <span className="w-8 h-px bg-industrial-gold" />
+                      What We Do
+                    </span>
+                    <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem]">
+                      EXPLORATION & DRILLING
+                      <span className="block text-xl md:text-2xl lg:text-3xl text-steel-blue tracking-[0.15em]">
+                        SERVICES
+                      </span>
+                    </h2>
+                  </div>
+                </ScrollReveal>
+
+                {/* Description */}
+                {/* <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <p className="text-steel-blue leading-relaxed">
+                    Our consulting services range from the evaluation of mineral properties, quality control implementation, resource estimations, database implementation and economic assessment and review of mineral projects.
+                  </p>
+                </ScrollReveal> */}
+
+                {/* Divider */}
+                <div className="h-px bg-steel-blue/20" />
+
+                {/* Services Grid */}
+                <ScrollReveal animation="fadeUp" delay={0.2}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {explorationServices.slice(0, 12).map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-3 text-sm text-steel-blue"
+                      >
+                        <GoldDot size="sm" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </ScrollReveal>
+
+                {/* More Services */}
+                {/* {explorationServices.length > 12 && (
+                  <ScrollReveal animation="fadeUp" delay={0.3}>
+                    <div className="p-4 rounded-xl bg-off-white border border-steel-blue/10">
+                      <p className="text-sm text-steel-blue">
+                        <span className="text-industrial-gold font-semibold">+{explorationServices.length - 12} more services</span> including Training and Capacity Building, Spectral Geology, and JORC Format Report Writing.
+                      </p>
+                    </div>
+                  </ScrollReveal>
+                )} */}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {isMining && (
+        <section className="relative py-14 overflow-hidden bg-white">
+          <div className="container-jil relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+              {/* Left - Sticky Image */}
+              <ScrollReveal animation="fadeUp" className="order-2 ">
+                <div className="sticky top-24">
+                  <div className="relative aspect-square w-full lg:h-96  rounded-xl overflow-hidden shadow-2xl">
+                    <Image
+                      src="/rc.jpg"
+                      alt="Mining exploration services"
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/40 via-transparent to-transparent" />
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Right - Content */}
+              <div className="space-y-8 order-1 ">
+                {/* Header */}
+                <ScrollReveal animation="fadeUp">
+                  <div className="space-y-4">
+                    <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem]">
+                      RC Drilling
+                      <span className="block text-xl md:text-2xl lg:text-3xl text-steel-blue tracking-[0.15em]">
+                        SERVICES
+                      </span>
+                    </h2>
+                  </div>
+                </ScrollReveal>
+
+                {/* Description */}
+                <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <p className="text-steel-blue leading-relaxed ">
+                    We deliver efficient and high-performance Reverse Circulation (RC) drilling services tailored for mining and exploration projects. Our systems are optimized to produce accurate, uncontaminated samples at high speeds, ensuring reliable data for resource evaluation and decision-making.
+                  </p>
+                </ScrollReveal>
+
+       
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+       {isMining && (
+        <section className="relative py-14 overflow-hidden bg-white">
+          <div className="container-jil relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+              {/* Left - Sticky Image */}
+              <ScrollReveal animation="fadeUp" className="order-2 lg:order-1 ">
+                <div className="sticky top-24">
+                  <div className="relative aspect-square w-full lg:h-96 rounded-xl overflow-hidden shadow-2xl">
+                    <Image
+                      src="/diamond-mining.jpg"
+                      alt="Mining exploration services"
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/40 via-transparent to-transparent" />
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Right - Content */}
+              <div className="space-y-8 order-1 ">
+                {/* Header */}
+                <ScrollReveal animation="fadeUp" >
+                  <div className="space-y-4">
+                    <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem]">
+                      Diamond Core Drilling
+                      <span className="block text-xl md:text-2xl lg:text-3xl text-steel-blue tracking-[0.15em]">
+                        SERVICES
+                      </span>
+                    </h2>
+                  </div>
+                </ScrollReveal>
+
+                {/* Description */}
+                <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <p className="text-steel-blue leading-relaxed">
+                   Our Diamond Core drilling services provide continuous, high-quality core samples essential for detailed geological and structural analysis. We support advanced exploration, feasibility studies, and geotechnical assessments with precision and consistency, even in complex formations.
+                  </p>
+                </ScrollReveal>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Agriculture Crops Section */}
+      {/*  */}
+
+
+      {/* Operational Showcase Gallery (for services with multiple images) */}
+      {service.images && service.images.length > 0 && (
+        <section className="relative py-14 overflow-hidden bg-white">
+          <div className="container-jil relative z-10">
+            {/* Section Header */}
+            <ScrollReveal animation="fadeUp">
+              <div className="mb-12 md:mb-16 text-center">
+                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="w-8 h-px bg-industrial-gold" />
+                  Operational Showcase
+                </span>
+                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy">
+                  {service.shortTitle.toUpperCase()} IN ACTION
+                </h2>
+              </div>
+            </ScrollReveal>
+
+            {/* Gallery Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {service.images.map((image, index) => (
+                <ScrollReveal key={index} animation="fadeUp" delay={0.05 * index}>
+                  <div className="relative group aspect-[4/3] rounded-xl overflow-hidden shadow-lg border border-steel-blue/10">
+                    <Image
+                      src={image}
+                      alt={`${service.shortTitle} operational image ${index + 1}`}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/40 via-transparent to-transparent" />
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Service Navigation */}
+      <section className="relative py-14 overflow-hidden bg-deep-navy">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+              backgroundSize: '40px 40px',
+            }}
+          />
+        </div>
+
+        <div className="container-jil relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Previous Service */}
+            <ScrollReveal animation="fadeUp">
+              <Link
+                href={prevService.href}
+                className="group block p-6 rounded-xl bg-steel-blue/10 border border-white/10 hover:bg-steel-blue/20 hover:border-white/20 transition-all"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <ArrowLeft className="w-4 h-4 text-industrial-gold group-hover:-translate-x-1 transition-transform" />
+                  <span className="font-heading text-xs tracking-[0.1em] uppercase text-light-gray">
+                    Previous Service
+                  </span>
+                </div>
+                <h3 className="font-display text-xl text-off-white group-hover:text-industrial-gold transition-colors">
+                  {prevService.title}
+                </h3>
+              </Link>
+            </ScrollReveal>
+
+            {/* Next Service */}
+            <ScrollReveal animation="fadeUp" delay={0.1}>
+              <Link
+                href={nextService.href}
+                className="group block p-6 rounded-xl bg-steel-blue/10 border border-white/10 hover:bg-steel-blue/20 hover:border-white/20 transition-all text-right"
+              >
+                <div className="flex items-center justify-end gap-3 mb-3">
+                  <span className="font-heading text-xs tracking-[0.1em] uppercase text-light-gray">
+                    Next Service
+                  </span>
+                  <ArrowRight className="w-4 h-4 text-industrial-gold group-hover:translate-x-1 transition-transform" />
+                </div>
+                <h3 className="font-display text-xl text-off-white group-hover:text-industrial-gold transition-colors">
+                  {nextService.title}
+                </h3>
+              </Link>
+            </ScrollReveal>
+          </div>
+
+          {/* Back to All Services */}
+          <ScrollReveal animation="fadeUp" delay={0.2}>
+            <div className="mt-8 text-center">
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-industrial-gold/50 text-industrial-gold font-heading text-xs tracking-[0.1em] uppercase rounded-xl btn-animated relative z-1 overflow-hidden after:bg-industrial-gold hover:text-near-black transition-colors"
+              >
+                View All Services
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+    </>
+  );
+}
