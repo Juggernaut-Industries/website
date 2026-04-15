@@ -104,7 +104,7 @@ export const heroContent = {
   taglineAccent: "Services",
   subheadline: "Building Africa's mineral future",
   description:
-    "Welcome to Juggernaut  Industries LTD (JIL), a leading multidisciplinary company specializing in mining exploration and drilling. We deliver reliable, efficient, and high‑quality solutions tailored to each project, combining deep expertise with advanced technology. Our operations are guided by international industry standards, ensuring consistent performance, safety, and excellence across all our services.",
+    "Welcome to Juggernaut  Industries LTD (JIL), a leading multidisciplinary company specializing in mining exploration and drilling. We deliver reliable, efficient and high‑quality solutions tailored to each project, combining deep expertise with advanced technology. Our operations are guided by international industry standards, ensuring consistent performance, safety, and excellence across all our services.",
   cta: {
     primary: { label: "Learn More", href: "/about" },
     secondary: { label: "Contact Us", href: "/contact" },

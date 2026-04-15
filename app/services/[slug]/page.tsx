@@ -303,7 +303,7 @@ export default function ServiceDetailPage() {
                 <ScrollReveal animation="fadeUp" >
                   <div className="space-y-4">
                     <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem]">
-                      Diamond Core Drilling
+                      Diamond Drilling
                       <span className="block text-xl md:text-2xl lg:text-3xl text-steel-blue tracking-[0.15em]">
                         SERVICES
                       </span>
@@ -314,7 +314,7 @@ export default function ServiceDetailPage() {
                 {/* Description */}
                 <ScrollReveal animation="fadeUp" delay={0.1}>
                   <p className="text-steel-blue leading-relaxed">
-                   Our Diamond Core drilling services provide continuous, high-quality core samples essential for detailed geological and structural analysis. We support advanced exploration, feasibility studies, and geotechnical assessments with precision and consistency, even in complex formations.
+                   Our Diamond Drilling services provide continuous, high-quality core samples essential for detailed geological and structural analysis. We support advanced exploration, feasibility studies, and geotechnical assessments with precision and consistency, even in complex formations.
                   </p>
                 </ScrollReveal>
 

@@ -189,7 +189,7 @@ export default function ServicesPage() {
                   <ScrollReveal animation="fadeUp">
                     <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold">
                       <span className="w-8 h-px bg-industrial-gold" />
-                      {meta.eyebrow}
+                      Services
                     </span>
                   </ScrollReveal>
 
@@ -268,50 +268,8 @@ export default function ServicesPage() {
       <section className="relative py-14 overflow-hidden bg-white">
         <div className="container-jil relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Left - Stats Grid */}
-            <ScrollReveal animation="fadeUp">
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  {
-                    value: "3",
-                    label: "Service Areas",
-                    description: "Diverse sectors",
-                  },
-                  {
-                    value: "20+",
-                    label: "Years Experience",
-                    description: "Since 2006",
-                  },
-                  {
-                    value: "100%",
-                    label: "Client Satisfaction",
-                    description: "Quality assured",
-                  },
-                  {
-                    value: "24/7",
-                    label: "Support",
-                    description: "Always available",
-                  },
-                ].map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="p-6 rounded-xl bg-off-white border border-steel-blue/10 text-center hover:border-industrial-gold/20 transition-colors"
-                  >
-                    <p className="font-display text-3xl md:text-4xl font-semibold text-industrial-gold mb-1">
-                      {stat.value}
-                    </p>
-                    <p className="font-heading text-xs tracking-[0.1em] uppercase text-deep-navy mb-1">
-                      {stat.label}
-                    </p>
-                    <p className="text-xs text-steel-blue">
-                      {stat.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </ScrollReveal>
 
-            {/* Right - Content */}
+            {/* Left - Content */}
             <div className="space-y-6">
               <ScrollReveal animation="fadeUp">
                 <div className="space-y-4">
@@ -331,7 +289,7 @@ export default function ServicesPage() {
               <ScrollReveal animation="fadeUp" delay={0.1}>
                 <p className="text-steel-blue leading-relaxed">
                   We have assembled a world class team with experience in the
-                  African terrain. We own our own drill rigs, geophysics
+                  Nigerian terrain. We own our own drill rigs, geophysics
                   equipment and in-house lab, ensuring complete control over
                   quality and timelines.
                 </p>
@@ -339,25 +297,34 @@ export default function ServicesPage() {
 
               <div className="h-px bg-steel-blue/20" />
 
-              <ScrollReveal animation="fadeUp" delay={0.15}>
-                <div className="space-y-3">
+              {/* Key Highlights */}
+              <ScrollReveal animation="fadeUp" delay={0.2}>
+                <div className="grid grid-cols-2 gap-3">
                   {[
-                    "Own equipment - drill rigs, geophysics, in-house lab",
-                    "COREN-registered engineers",
-                    "International team with local expertise",
-                    "Projects delivered on time and within budget",
-                  ].map((point) => (
+                    "In-House Laboratory",
+                    "World Class Team",
+                    "JORC Reporting N143-101",
+                    "COREN-Registered Engineers",
+                    "Competent mining technicians (Local and International)",
+                    "Government & Private Clients",
+                    "Nigerian Electricity Management services Agency (NEMSA)",
+                    "Geochemistry Analysis",
+                    "Competent Persons"
+                  ].map((highlight, index) => (
                     <div
-                      key={point}
-                      className="flex items-center gap-3 text-sm text-steel-blue"
+                      key={index}
+                      className="flex items-center gap-2 text-sm text-steel-blue"
                     >
                       <GoldDot size="sm" />
-                      <span>{point}</span>
+                      <span>{highlight}</span>
                     </div>
                   ))}
                 </div>
+                {/* <div className="flex pt-3 items-center gap-2 text-sm text-steel-blue">
+                  <GoldDot size="sm" />
+                  <span>Qualified mining/ Technician and Engineer - local and international</span>
+                </div> */}
               </ScrollReveal>
-
               <ScrollReveal animation="fadeUp" delay={0.2}>
                 <div className="flex flex-wrap gap-4">
                   <Link
@@ -377,6 +344,49 @@ export default function ServicesPage() {
                 </div>
               </ScrollReveal>
             </div>
+
+            {/* Right - Stats Grid */}
+            <ScrollReveal animation="fadeUp">
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  {
+                    value: "3",
+                    label: "Service Areas",
+                    description: "Diverse sectors",
+                  },
+                  {
+                    value: "20+",
+                    label: "Years Experience",
+                    description: "Since 2006",
+                  },
+                  {
+                    value: "100%",
+                    label: "Client Satisfaction",
+                    description: "Quality assured",
+                  },
+                  // {
+                  //   value: "24/7",
+                  //   label: "Support",
+                  //   description: "Always available",
+                  // },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="p-6 rounded-xl bg-off-white border border-steel-blue/10 text-center hover:border-industrial-gold/20 transition-colors"
+                  >
+                    <p className="font-display text-3xl md:text-4xl font-semibold text-industrial-gold mb-1">
+                      {stat.value}
+                    </p>
+                    <p className="font-heading text-xs tracking-[0.1em] uppercase text-deep-navy mb-1">
+                      {stat.label}
+                    </p>
+                    <p className="text-xs text-steel-blue">
+                      {stat.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

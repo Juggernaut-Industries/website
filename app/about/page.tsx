@@ -90,7 +90,7 @@ export default function AboutPage() {
                     Juggernaut Industries Limited (JIL)
                   </strong>{" "}
                   is an indigenous Nigerian company delivering high‑quality
-                  services in mineral exploration, renewable energy, and
+                  services in mineral exploration, renewable energy and
                   construction engineering since 2006. Our skilled Nigerian
                   team, supported by international specialists, combines strong
                   local insight with world‑class technical capability to execute
@@ -121,10 +121,13 @@ export default function AboutPage() {
                   {[
                     "In-House Laboratory",
                     "World Class Team",
-                    "JORC - N1 43-101",
+                    "JORC Reporting N143-101",
                     "COREN-Registered Engineers",
-                    "Government & Private Clients",
                     "Competent mining technicians (Local and International)",
+                    "Government & Private Clients",
+                    "Nigerian Electricity Management services Agency (NEMSA)",
+                    "Geochemistry Analysis",
+                    "Competent Persons"
                   ].map((highlight, index) => (
                     <div
                       key={index}
@@ -387,7 +390,7 @@ export default function AboutPage() {
               </ScrollReveal>
 
               {/* Divider */}
-              <div className="h-px w-full bg-steel-blue" />
+              <div className="h-px w-full bg-steel-blue/50" />
 
               {/* Values Grid */}
               <ScrollReveal animation="fadeUp" delay={0.2}>
