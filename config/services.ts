@@ -142,9 +142,9 @@ export const services: Service[] = [
     description:
       'Juggernaut Industries Ltd is an indigenous mineral exploration services company offering a full suite of services — from grass-roots exploration to advanced definition drill-outs — fully compliant with international reporting standards including JORC and NI 43-101.',
     fullDescription: [
-      'With extensive experience across diverse Nigerian terrains, the company leverages advanced geophysical equipment and a fully equipped in-house laboratory to deliver comprehensive, end-to-end solutions. These services span data compilation and review, strategic planning and budgeting, drill campaign with supervision, logistics coordination, and full-scale project management.',
-      'Juggernaut Industries has established a strong track record in the field, successfully executing Lead, Zinc, and Silver exploration projects on behalf of the Nigerian Government under the NIMEP (National Integrated Mineral Exploration Project) program resulting in significant new discoveries. The company has also delivered world-class grade control drilling and indicated diamond drilling services for Segilola Gold Project.',
-      'We pride our selfs on mining drilling and exploration drilling for Reverse Circulation and Diamond Drilling (RC/DD).'
+      'With extensive experience operating across diverse Nigerian terrains, Juggernaut Industries leverages advanced geophysical equipment and a fully equipped in house laboratory to deliver comprehensive, end to end exploration solutions. Our services cover the full project cycle, including data compilation and review, strategic planning and budgeting, supervised drill campaigns, logistics coordination, and complete project management.',
+      'Juggernaut Industries has built a strong national track record, successfully executing Lead, Zinc, and Silver exploration programs for the Nigerian Government under the NIMEP (National Integrated Mineral Exploration Project) initiative, resulting in significant new discoveries. The company has also delivered world class grade control drilling and indicated diamond drilling services for the Segilola Gold Project, supporting one of the most important mining developments in the country.',
+      'We take pride in our expertise in Reverse Circulation (RC) and Diamond Drilling (DD), providing reliable, high precision drilling solutions for both exploration and mining operations.'
     ],
     icon: 'Pickaxe',
     color: 'mining-green',

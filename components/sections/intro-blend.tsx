@@ -36,11 +36,11 @@ export function IntroBlend({ className }: IntroBlendProps) {
 
       <div className="container-jil">
         {/* Section Title */}
-        <ScrollReveal animation="fadeUp">
+        {/* <ScrollReveal animation="fadeUp">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-12">
             Vision & Mission Statement
           </h2>
-        </ScrollReveal>
+        </ScrollReveal> */}
 
         {/* Vision & Mission Cards Side by Side */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

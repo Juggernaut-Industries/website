@@ -45,12 +45,12 @@ export const navigation = {
     {
       label: 'Services',
       href: '/services',
-      submenu: [
-        { label: 'Mining & Exploration', href: '/services/mining', description: 'Mineral exploration services' },
-        // { label: 'Agriculture & Agro-Processing', href: '/services/agriculture', description: 'Shea butter processing & export' },
-        { label: 'Construction', href: '/services/construction', description: 'Infrastructure development' },
-        { label: 'Renewable Energy', href: '/services/solar-energy', description: 'Solar & electrification solutions' },
-      ],
+      // submenu: [
+      //   { label: 'Mining & Exploration', href: '/services/mining', description: 'Mineral exploration services' },
+      //   // { label: 'Agriculture & Agro-Processing', href: '/services/agriculture', description: 'Shea butter processing & export' },
+      //   { label: 'Construction', href: '/services/construction', description: 'Infrastructure development' },
+      //   { label: 'Renewable Energy', href: '/services/solar-energy', description: 'Solar & electrification solutions' },
+      // ],
     },
     { label: 'Projects', href: '/projects' },
     {

@@ -125,8 +125,8 @@ export default function AboutPage() {
                     "COREN-Registered Engineers",
                     "Competent mining technicians (Local and International)",
                     "Government & Private Clients",
-                    "Nigerian Electricity Management services Agency (NEMSA)",
                     "Geochemistry Analysis",
+                    "Nigerian Electricity Management services Agency (NEMSA)",
                     "Competent Persons"
                   ].map((highlight, index) => (
                     <div

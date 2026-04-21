@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 interface Breadcrumb {
   label: string;
@@ -18,12 +19,15 @@ interface PageHeaderProps {
 }
 
 export function PageHeader({
-  title,
-  subtitle,
-  breadcrumbs,
+  // title,
+  // subtitle,
+  // breadcrumbs,
   backgroundImage,
   className,
 }: PageHeaderProps) {
+  const title = undefined
+  const subtitle = undefined
+  const breadcrumbs: Breadcrumb[] = []
   return (
     <section
       className={cn(
@@ -34,9 +38,10 @@ export function PageHeader({
     >
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src={backgroundImage}
-          alt={title}
+          alt={title || 'JIL'}
+          fill
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-deep-navy/90 via-deep-navy/85 to-near-black/95" />

@@ -2,6 +2,7 @@
 
 export interface Project {
   id: string;
+  sector: string;
   title: string;
   client: string;
   clientLogo: string;
@@ -14,49 +15,19 @@ export interface Project {
   image: string;
   images?: string[];
   href: string;
+  completed: boolean;
 }
 
 export const projects: Project[] = [
   {
-    id: 'ngsa',
-    title: 'Geological Enhancement & Development',
-    client: 'NGSA',
-    clientLogo: '/ngsa.png',
-    category: 'Mining & Exploration',
-    location: 'Nigeria',
-    year: '2019',
-    description:
-      'Juggernaut had been appointed consultants by NGSA for geological enhancement and development of Lead, Zinc, Silver, and Gold.',
-    fullDescription:
-      'Juggernaut Industries was appointed as consultants by the Nigerian Geological Survey Agency (NGSA) for comprehensive geological enhancement and development services. Our team conducted extensive surveys and analysis for Lead, Zinc, Silver, and Gold deposits, contributing to the national mineral resource database.',
-    services: ['Geological Survey', 'Mineral Analysis', 'Resource Development', 'Technical Consulting'],
-    image: '/ngsa.jpg',
-    href: '/projects/ngsa',
-  },
-  {
-    id: 'ministry-solid-minerals',
-    title: 'Barite Processing Plant Installation',
-    client: 'Ministry of Solid Minerals',
-    clientLogo: '/ministry.png',
-    category: 'Construction',
-    location: 'South-South Nigeria',
-    year: '2021',
-    description:
-      'Juggernaut has completed the installation of a Barite processing plant in the South-South region of the country.',
-    fullDescription:
-      'Juggernaut Industries successfully completed the installation of a Barite processing plant in the South-South region of Nigeria. This project aligns with the Federal Government vision to rapidly develop and support locally made Nigerian goods, contributing to the nation\'s industrial growth and self-sufficiency.',
-    services: ['Plant Installation', 'Equipment Setup', 'Process Engineering', 'Commissioning'],
-    image: '/mineral-3.jpg',
-    href: '/projects/ministry-solid-minerals',
-  },
-  {
     id: 'lead-zinc-silver',
+    sector: 'NIMEP',
     title: 'Lead, Zinc & Silver Exploration',
     client: 'Ministry of Mines and Steel Development',
     clientLogo: '/ministry.png',
     category: 'Mining & Exploration',
     location: 'Benue Trough, Nigeria',
-    year: '2010',
+    year: '2018 - 2021',
     description:
       'Successfully completed the Lead, Zinc and Silver exploration program on the Benue trough for the Ministry of Mines and Steel Development.',
     fullDescription:
@@ -65,15 +36,17 @@ export const projects: Project[] = [
     image: '/survey-4.jpg',
     images: ['/survey-4.jpg', '/survey-5.jpg', '/survey-6.jpg', '/survey-7.jpg'],
     href: '/projects/lead-zinc-silver',
+    completed: true
   },
   {
     id: 'segilola',
+    sector: 'SEGILOLA',
     title: 'Grade Control Operations',
     client: 'Segilola Gold Mine',
     clientLogo: '/segilola.png',
     category: 'Mining & Exploration',
     location: 'Osun State, Nigeria',
-    year: '2020',
+    year: '2021',
     description:
       "Currently conducting grade control with partners for Segilola, Nigeria's only large scale producing gold mine.",
     fullDescription:
@@ -81,15 +54,53 @@ export const projects: Project[] = [
     services: ['Grade Control', 'Drilling Services', 'Sample Analysis', 'Quality Assurance'],
     image: '/mining-1.jpeg',
     href: '/projects/segilola',
+    completed: false
+  },
+  {
+    id: 'ministry-solid-minerals',
+    sector: 'MSMD',
+    title: 'Barite Processing Plant Installation',
+    client: 'Ministry of Solid Minerals',
+    clientLogo: '/ministry.png',
+    category: 'Construction',
+    location: 'South-South Nigeria',
+    year: '2021 - 2023',
+    description:
+      'Juggernaut has completed the installation of a Barite processing plant in the South-South region of the country.',
+    fullDescription:
+      'Juggernaut Industries successfully completed the installation of a Barite processing plant in the South-South region of Nigeria. This project aligns with the Federal Government vision to rapidly develop and support locally made Nigerian goods, contributing to the nation\'s industrial growth and self-sufficiency.',
+    services: ['Plant Installation', 'Equipment Setup', 'Process Engineering', 'Commissioning'],
+    image: '/mineral-3.jpg',
+    href: '/projects/ministry-solid-minerals',
+    completed: true,
+  },
+  {
+    id: 'ngsa',
+    sector: 'NGSA',
+    title: 'Geological Enhancement & Development',
+    client: 'NGSA',
+    clientLogo: '/ngsa.png',
+    category: 'Mining & Exploration',
+    location: 'Nigeria',
+    year: '2022 - 2024',
+    description:
+      'Juggernaut had been appointed consultants by NGSA for geological enhancement and development of Lead, Zinc, Silver, and Gold.',
+    fullDescription:
+      'Juggernaut Industries was appointed as consultants by the Nigerian Geological Survey Agency (NGSA) for comprehensive geological enhancement and development services. Our team conducted extensive surveys and analysis for Lead, Zinc, Silver, and Gold deposits, contributing to the national mineral resource database.',
+    services: ['Geological Survey', 'Mineral Analysis', 'Resource Development', 'Technical Consulting'],
+    image: '/ngsa.jpg',
+    href: '/projects/ngsa',
+    completed: true,
   },
   {
     id: 'newstar-thor',
+    sector: 'NEWSTAR MINERALS LTD',
     title: 'Lithium Exploration Drilling',
     client: 'Newstar Minerals Ltd (Thor Explorations)',
     clientLogo: '/newstar.png',
     category: 'Mining & Exploration',
     location: 'West Oyo, Nigeria',
-    year: '2024',
+    year: '2023 - 2024',
     description:
       'Currently carrying out drilling services for lithium exploration in the West Oyo Project Area.',
     fullDescription:
@@ -97,6 +108,7 @@ export const projects: Project[] = [
     services: ['Exploration Drilling', 'Core Sampling', 'Geological Mapping', 'Resource Assessment'],
     image: '/mining-2.jpeg',
     href: '/projects/newstar-thor',
+    completed: true
   },
 ];
 
