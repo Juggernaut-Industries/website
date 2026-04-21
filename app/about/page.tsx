@@ -95,7 +95,7 @@ export default function AboutPage() {
                   team, supported by international specialists, combines strong
                   local insight with world‑class technical capability to execute
                   complex projects across the country. With a commitment to
-                  global standards in quality, safety, and performance, JIL
+                  global standards in quality, safety and performance, JIL
                   continues to serve as a trusted partner in Nigeria’s
                   industrial and economic development.
                 </p>

@@ -32,7 +32,7 @@ export const projects: Project[] = [
       'Successfully completed the Lead, Zinc and Silver exploration program on the Benue trough for the Ministry of Mines and Steel Development.',
     fullDescription:
       'Juggernaut Industries successfully completed the Lead, Zinc and Silver exploration program on the Benue trough for the Ministry of Mines and Steel Development in Nigeria. This comprehensive project included Desktop Study, Soil Mapping, Geo-Physics and RC Drilling, yielding significant new discoveries.',
-    services: ['Desktop Study', 'Soil Mapping', 'Geo-Physics', 'RC Drilling', 'Data Analysis'],
+    services: ['Desktop Study', 'Soil Mapping', 'Geo-Physics', 'RC Drilling', 'Data Analysis', 'Geochemistry', 'JORC Report', 'Drilling'],
     image: '/survey-4.jpg',
     images: ['/survey-4.jpg', '/survey-5.jpg', '/survey-6.jpg', '/survey-7.jpg'],
     href: '/projects/lead-zinc-silver',
@@ -102,10 +102,10 @@ export const projects: Project[] = [
     location: 'West Oyo, Nigeria',
     year: '2023 - 2024',
     description:
-      'Currently carrying out drilling services for lithium exploration in the West Oyo Project Area.',
+      'We carried out an extensive drilling campaign for lithium.',
     fullDescription:
       'Juggernaut Industries is currently carrying out drilling services for lithium exploration in partnership with Newstar Minerals Ltd (Thor Explorations) in their West Oyo Project Area. This project positions JIL at the forefront of Nigeria\'s emerging battery minerals sector.',
-    services: ['Exploration Drilling', 'Core Sampling', 'Geological Mapping', 'Resource Assessment'],
+    services: ['Exploration Drilling', 'Resource Assessment'],
     image: '/mining-2.jpeg',
     href: '/projects/newstar-thor',
     completed: true
