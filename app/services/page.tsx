@@ -8,13 +8,10 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { services, explorationServices } from "@/config/services";
 import { ArrowRight } from "lucide-react";
 
-const SERVICE_HEADLINES: Record<
-  string,
-  { headlineLine1: string; headlineLine2: string }
-> = {
-  mining: { headlineLine1: "MINING & EXPLORATION", headlineLine2: "SERVICES" },
-  construction: { headlineLine1: "CONSTRUCTION", headlineLine2: "ENGINEERING" },
-  solar: { headlineLine1: "RENEWABLE", headlineLine2: "ENERGY" },
+const SERVICE_HEADLINES: Record<string, { headline: string }> = {
+  mining: { headline: "MINING & EXPLORATION SERVICES" },
+  construction: { headline: "CONSTRUCTION" },
+  solar: { headline: "RENEWABLE ENERGY" },
 };
 
 export default function ServicesPage() {
@@ -37,18 +34,20 @@ export default function ServicesPage() {
       <section className="relative py-14 overflow-hidden bg-white">
         <div className="container-jil relative z-10">
           <div className="max-w-3xl">
-            <ScrollReveal animation="fadeUp">
-              <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
-                <span className="w-8 h-px bg-industrial-gold" />
-                What We Do
-              </span>
-            </ScrollReveal>
+            <div>
+  <ScrollReveal animation="fadeUp">
+                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="w-8 h-px bg-industrial-gold" />
+                  What We Do
+                </span>
+              </ScrollReveal>
 
-            <ScrollReveal animation="fadeUp" delay={0.1}>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
-                EXCELLENCE ACROSS SECTORS
-              </h2>
-            </ScrollReveal>
+              <ScrollReveal animation="fadeUp" delay={0.1}>
+                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  EXCELLENCE ACROSS SECTORS
+                </h2>
+              </ScrollReveal>
+            </div>
 
             <ScrollReveal animation="fadeUp" delay={0.15}>
               <p className="text-steel-blue leading-relaxed text-lg">
@@ -67,7 +66,7 @@ export default function ServicesPage() {
       {/* ─── MINING & EXPLORATION ─────────────────────────────── */}
 
       {/* Mining Section 1 – Overview Hero */}
-      <section className="relative py-14 overflow-hidden bg-deep-navy">
+      <section className="relative py-14 overflow-hidden bg-deep-navy" id="mining">
         <div className="absolute inset-0">
           <Image
             src={miningService.image}
@@ -91,21 +90,20 @@ export default function ServicesPage() {
         <div className="container-jil relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
-              <ScrollReveal animation="fadeUp">
-                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold">
-                  <span className="w-8 h-px bg-industrial-gold" />
-                  Our Core Service
-                </span>
-              </ScrollReveal>
-
-              <ScrollReveal animation="fadeUp" delay={0.1}>
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-off-white leading-[2.5rem]">
-                  MINING & EXPLORATION
-                  <span className="block text-xl md:text-2xl lg:text-3xl text-light-gray tracking-[0.15em]">
-                    SERVICES
+              <div>
+  <ScrollReveal animation="fadeUp">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                    <span className="w-8 h-px bg-industrial-gold" />
+                    Our Core Service
                   </span>
-                </h2>
-              </ScrollReveal>
+                </ScrollReveal>
+
+                <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-off-white leading-[2.5rem] mb-6">
+                    MINING & EXPLORATION SERVICES
+                  </h2>
+                </ScrollReveal>
+              </div>
 
               <ScrollReveal animation="fadeUp" delay={0.15}>
                 <div className="space-y-3 max-w-xl">
@@ -155,7 +153,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Mining Section 2 – Exploration & Drilling Services */}
-      <section className="relative py-14 overflow-hidden bg-white">
+      {/* <section className="relative py-14 overflow-hidden bg-white">
         <div className="container-jil relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             <ScrollReveal animation="fadeUp" className="order-2 lg:order-1">
@@ -173,20 +171,20 @@ export default function ServicesPage() {
             </ScrollReveal>
 
             <div className="space-y-8 order-1 lg:order-2">
-              <ScrollReveal animation="fadeUp">
-                <div className="space-y-4">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold">
+              <div>
+  <ScrollReveal animation="fadeUp">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
                     <span className="w-8 h-px bg-industrial-gold" />
                     What We Do
                   </span>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem]">
-                    EXPLORATION & DRILLING
-                    <span className="block text-xl md:text-2xl lg:text-3xl text-steel-blue tracking-[0.15em]">
-                      SERVICES
-                    </span>
+                </ScrollReveal>
+
+                <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                    EXPLORATION & DRILLING SERVICES
                   </h2>
-                </div>
-              </ScrollReveal>
+                </ScrollReveal>
+              </div>
 
               <div className="h-px bg-steel-blue/20" />
 
@@ -203,7 +201,7 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Mining Section 3 – RC Drilling */}
       <section className="relative py-14 overflow-hidden bg-white">
@@ -225,14 +223,9 @@ export default function ServicesPage() {
 
             <div className="space-y-8 order-1">
               <ScrollReveal animation="fadeUp">
-                <div className="space-y-4">
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem]">
-                    RC Drilling
-                    <span className="block text-xl md:text-2xl lg:text-3xl text-steel-blue tracking-[0.15em]">
-                      SERVICES
-                    </span>
-                  </h2>
-                </div>
+                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  RC DRILLING SERVICES
+                </h2>
               </ScrollReveal>
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
@@ -245,7 +238,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Mining Section 4 – Diamond Core Drilling */}
+      {/* Mining Section 4 – Diamond Drilling */}
       <section className="relative py-14 overflow-hidden bg-white">
         <div className="container-jil relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
@@ -253,8 +246,8 @@ export default function ServicesPage() {
               <div className="sticky top-24">
                 <div className="relative aspect-square w-full lg:h-96 rounded-xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/diamond-mining.jpg"
-                    alt="Diamond Core Drilling"
+                    src="/mining-2.jpeg"
+                    alt="Diamond Drilling"
                     fill
                     className="object-cover"
                   />
@@ -265,19 +258,14 @@ export default function ServicesPage() {
 
             <div className="space-y-8 order-1">
               <ScrollReveal animation="fadeUp">
-                <div className="space-y-4">
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem]">
-                    Diamond Core Drilling
-                    <span className="block text-xl md:text-2xl lg:text-3xl text-steel-blue tracking-[0.15em]">
-                      SERVICES
-                    </span>
-                  </h2>
-                </div>
+                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  DIAMOND DRILLING SERVICES
+                </h2>
               </ScrollReveal>
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
                 <p className="text-steel-blue leading-relaxed">
-                  Our Diamond Core drilling services provide continuous, high-quality core samples essential for detailed geological and structural analysis. We support advanced exploration, feasibility studies, and geotechnical assessments with precision and consistency, even in complex formations.
+                  Our Diamond drilling services provide continuous, high-quality core samples essential for detailed geological and structural analysis. We support advanced exploration, feasibility studies, and geotechnical assessments with precision and consistency, even in complex formations.
                 </p>
               </ScrollReveal>
             </div>
@@ -292,6 +280,7 @@ export default function ServicesPage() {
         return (
           <section
             key={service.id}
+            id={service.id === 'solar' ? 'solar-energy' : service.id}
             className="relative py-14 overflow-hidden bg-deep-navy"
           >
             <div className="absolute inset-0">
@@ -317,21 +306,20 @@ export default function ServicesPage() {
             <div className="container-jil relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 <div className="lg:col-span-7 space-y-6">
-                  <ScrollReveal animation="fadeUp">
-                    <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold">
-                      <span className="w-8 h-px bg-industrial-gold" />
-                      Services
-                    </span>
-                  </ScrollReveal>
-
-                  <ScrollReveal animation="fadeUp" delay={0.1}>
-                    <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-off-white leading-[2.5rem]">
-                      {headlines.headlineLine1}
-                      <span className="block text-xl md:text-2xl lg:text-3xl text-light-gray tracking-[0.15em]">
-                        {headlines.headlineLine2}
+                  <div>
+  <ScrollReveal animation="fadeUp">
+                      <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                        <span className="w-8 h-px bg-industrial-gold" />
+                        Services
                       </span>
-                    </h2>
-                  </ScrollReveal>
+                    </ScrollReveal>
+
+                    <ScrollReveal animation="fadeUp" delay={0.1}>
+                      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-off-white leading-[2.5rem] mb-6">
+                        {headlines.headline}
+                      </h2>
+                    </ScrollReveal>
+                  </div>
 
                   <ScrollReveal animation="fadeUp" delay={0.15}>
                     <div className="space-y-3 max-w-xl">
@@ -388,20 +376,20 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left - Content */}
             <div className="space-y-6">
-              <ScrollReveal animation="fadeUp">
-                <div className="space-y-4">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold">
+              <div>
+  <ScrollReveal animation="fadeUp">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Why Choose Us
                   </span>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem]">
-                    TRUSTED
-                    <span className="block text-xl md:text-2xl lg:text-3xl text-steel-blue tracking-[0.15em]">
-                      EXCELLENCE
-                    </span>
+                </ScrollReveal>
+
+                <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                    TRUSTED EXCELLENCE
                   </h2>
-                </div>
-              </ScrollReveal>
+                </ScrollReveal>
+              </div>
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
                 <p className="text-steel-blue leading-relaxed">
@@ -425,7 +413,6 @@ export default function ServicesPage() {
                     "Government & Private Clients",
                     "Nigerian Electricity Management services Agency (NEMSA)",
                     "Geochemistry Analysis",
-                    "Competent Persons",
                   ].map((highlight, index) => (
                     <div key={index} className="flex items-center gap-2 text-sm text-steel-blue">
                       <GoldDot size="sm" />
@@ -457,7 +444,7 @@ export default function ServicesPage() {
 
             {/* Right - Stats Grid */}
             <ScrollReveal animation="fadeUp">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4">
                 {[
                   { value: "3", label: "Service Areas", description: "Diverse sectors" },
                   { value: "20+", label: "Years Experience", description: "Since 2006" },

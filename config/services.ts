@@ -157,7 +157,23 @@ export const services: Service[] = [
       'Resource Estimation',
       'JORC Reporting',
       'Geochemistry Analysis',
-      'Competent Persons'
+      'Competent Persons',
+      'Literature Review & Public Domain',
+      'Data Compilation',
+      'Remote Sensing',
+      'Bio-geochemical Surveys',
+      'Soil Sampling Surveys',
+      'Mapping',
+      'Trenching and Pitting',
+      'Priority Targets Generation',
+      'Rock Chips/Grab Sampling',
+      'Geotechnical Management',
+      'Geophysical and Geological Interpretation',
+      'Exploration Visualization',
+      'Metallurgical Test Work Campaigns',
+      'Exploration Advisory',
+      'Spectral Geology',
+      'Training and Capacity Building'
     ],
     highlights: [
       // {
@@ -176,6 +192,10 @@ export const services: Service[] = [
         title: 'World Class Team',
         description: 'International team of experienced personnel representing diverse cultures.',
       },
+      {
+        title: 'Equipment and Infrastructure',
+        description: 'Modern RC and Diamond rigs, built for accuracy and reliability.',
+      }
     ],
     image: '/mining-1.jpeg',
     images: ['/mining-1.jpeg', '/mining-2.jpeg', '/mining-3.jpeg', '/mineral.jpg', '/mineral-2.jpg'],
@@ -225,7 +245,7 @@ export const services: Service[] = [
   // },
   {
     id: 'construction',
-    title: 'Construction Engineering',
+    title: 'Construction',
     shortTitle: 'Construction',
     description:
       'Juggernaut Industries Ltd delivers high-quality construction and civil engineering solutions across Nigeria, with a strong portfolio of successfully completed projects for both Federal Government and private sector clients.',

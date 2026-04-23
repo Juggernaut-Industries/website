@@ -87,8 +87,7 @@ export function CTASection({ className }: CTASectionProps) {
           <ScrollReveal animation="fadeUp">
             <div className="mb-8">
               <h2 className="font-display text-3xl md:text-4xl lg:text-6xl font-light text-off-white leading-tight mb-4">
-                LET&apos;S BUILD
-                <span className="block text-industrial-gold mt-2">SOMETHING GREAT</span>
+                LET&apos;S BUILD SOMETHING GREAT
               </h2>
               <p className="text-light-gray text-lg md:text-xl max-w-2xl mx-auto">
                 Ready to start your next project? Get in touch with our team for a consultation.

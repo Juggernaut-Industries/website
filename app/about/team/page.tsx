@@ -51,20 +51,19 @@ export default function TeamPage() {
             {/* Left - Content */}
             <div className="space-y-8 order-2 lg:order-1">
               {/* Header */}
-              <ScrollReveal animation="fadeUp">
-                <div className="space-y-4">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold">
+              <div>
+                <ScrollReveal animation="fadeUp">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Our People
                   </span>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem]">
-                    THE DRIVING FORCE
-                    <span className="block text-xl md:text-2xl lg:text-3xl text-steel-blue tracking-[0.15em]">
-                      BEHIND OUR SUCCESS
-                    </span>
+                </ScrollReveal>
+                <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                    THE DRIVING FORCE BEHIND OUR SUCCESS
                   </h2>
-                </div>
-              </ScrollReveal>
+                </ScrollReveal>
+              </div>
 
               {/* Description */}
               <ScrollReveal animation="fadeUp" delay={0.1}>
@@ -123,13 +122,19 @@ export default function TeamPage() {
         </div>
 
         <div className="container-jil mb-12 md:mb-16">
-          <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-3">
-            <span className="w-8 h-px bg-industrial-gold" />
-            Our People
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl font-light text-deep-navy">
-            EXECUTIVE TEAM
-          </h2>
+          <div>
+            <ScrollReveal animation="fadeUp">
+              <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                <span className="w-8 h-px bg-industrial-gold" />
+                Our People
+              </span>
+            </ScrollReveal>
+            <ScrollReveal animation="fadeUp" delay={0.1}>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                EXECUTIVE TEAM
+              </h2>
+            </ScrollReveal>
+          </div>
         </div>
 
         <div className="container-jil relative z-10">

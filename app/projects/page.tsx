@@ -29,20 +29,20 @@ export default function ProjectsPage() {
             {/* Left - Content */}
             <div className="space-y-8 order-1">
               {/* Header */}
-              <ScrollReveal animation="fadeUp">
-                <div className="space-y-4">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold">
+              <div>
+  <ScrollReveal animation="fadeUp">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Selected Projects
                   </span>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem]">
-                    DELIVERING
-                    <span className="block text-xl md:text-2xl lg:text-3xl text-steel-blue tracking-[0.15em]">
-                      EXCELLENCE
-                    </span>
+                </ScrollReveal>
+  
+                <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                    DELIVERING EXCELLENCE
                   </h2>
-                </div>
-              </ScrollReveal>
+                </ScrollReveal>
+              </div>
 
               {/* Description */}
               <ScrollReveal animation="fadeUp" delay={0.1}>
@@ -65,7 +65,7 @@ export default function ProjectsPage() {
             {/* Right - Sticky Image */}
              {/* Project Stats */}
               <ScrollReveal animation="fadeUp" delay={0.2} className='order-2'>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4">
                   {[
                     { value: '5+', label: 'Major Projects' },
                     { value: '100%', label: 'On-Time Delivery' },
@@ -176,7 +176,7 @@ export default function ProjectsPage() {
                       </div>
 
                       {/* Title */}
-                      <h3 className="font-display text-xl md:text-2xl font-semibold text-deep-navy mb-3">
+                      <h3 className="font-display text-xl md:text-2xl  text-deep-navy mb-3">
                         {project.title}
                       </h3>
 
@@ -210,20 +210,20 @@ export default function ProjectsPage() {
         <div className="container-jil relative z-10">
           <div className="w-full space-y-8">
             {/* Header */}
-            <ScrollReveal animation="fadeUp">
-              <div className="space-y-4">
-                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold">
+            <div>
+  <ScrollReveal animation="fadeUp">
+                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
                   <span className="w-8 h-px bg-industrial-gold" />
                   Why We Succeed
                 </span>
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem]">
-                  SUCCESS
-                  <span className="block text-xl md:text-2xl lg:text-3xl text-steel-blue tracking-[0.15em]">
-                    FACTORS
-                  </span>
+              </ScrollReveal>
+  
+              <ScrollReveal animation="fadeUp" delay={0.1}>
+                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  SUCCESS FACTORS
                 </h2>
-              </div>
-            </ScrollReveal>
+              </ScrollReveal>
+            </div>
 
             {/* Description */}
             <ScrollReveal animation="fadeUp" delay={0.1}>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -12,6 +13,11 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  const scrollToTop = (href: string) => {
+    if (!href.includes('#') && href === pathname) window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,6 +91,7 @@ export function Header() {
                   >
                     <Link
                       href={item.href}
+                      onClick={() => scrollToTop(item.href)}
                       className={cn(
                         'relative font-heading text-xs tracking-[0.15em] uppercase text-light-gray hover:text-off-white transition-colors duration-300 py-2',
                         'flex items-center gap-1'
@@ -134,6 +141,7 @@ export function Header() {
                               >
                                 <Link
                                   href={subitem.href}
+                                  onClick={() => scrollToTop(subitem.href)}
                                   className="block px-4 py-3 rounded-xl hover:bg-white/10 transition-all duration-300 group"
                                 >
                                   <div className="flex items-start justify-between gap-3">
@@ -294,7 +302,7 @@ export function Header() {
                                         <Link
                                           key={subitem.href}
                                           href={subitem.href}
-                                          onClick={() => setIsMobileMenuOpen(false)}
+                                          onClick={() => { setIsMobileMenuOpen(false); scrollToTop(subitem.href); }}
                                           className="block py-3 px-4 text-sm text-light-gray hover:text-industrial-gold hover:bg-white/10 rounded-lg transition-all duration-300"
                                         >
                                           <div className="font-heading">{subitem.label}</div>
@@ -314,7 +322,7 @@ export function Header() {
                         ) : (
                           <Link
                             href={item.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
+                            onClick={() => { setIsMobileMenuOpen(false); scrollToTop(item.href); }}
                             className="flex items-center justify-between py-4 font-heading text-xl tracking-wide text-off-white hover:text-industrial-gold transition-colors border-b border-white/5"
                           >
                             {item.label}

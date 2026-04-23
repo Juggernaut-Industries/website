@@ -71,35 +71,37 @@ export default function AboutPage() {
               </ScrollReveal> */}
 
               {/* Main Description */}
-              <ScrollReveal
-                animation="fadeUp"
-                delay={0.1}
-                className="space-y-8"
-              >
-                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
-                  <span className="w-8 h-px bg-industrial-gold" />
-                  About
-                </span>
-                <div className=" flex flex-col justify-start items-start">
-                  <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light text-black leading-[2.5rem]">
+              <div>
+                <ScrollReveal animation="fadeUp">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                    <span className="w-8 h-px bg-industrial-gold" />
+                    About
+                  </span>
+                </ScrollReveal>
+
+                <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
                     WHO WE ARE
                   </h2>
-                </div>
-                <p className="text-steel-blue leading-relaxed text-lg">
-                  <strong className="text-deep-navy">
-                    Juggernaut Industries Limited (JIL)
-                  </strong>{" "}
-                  is an indigenous Nigerian company delivering high‑quality
-                  services in mineral exploration, renewable energy and
-                  construction engineering since 2006. Our skilled Nigerian
-                  team, supported by international specialists, combines strong
-                  local insight with world‑class technical capability to execute
-                  complex projects across the country. With a commitment to
-                  global standards in quality, safety and performance, JIL
-                  continues to serve as a trusted partner in Nigeria’s
-                  industrial and economic development.
-                </p>
-              </ScrollReveal>
+                </ScrollReveal>
+
+                <ScrollReveal animation="fadeUp" delay={0.15}>
+                  <p className="text-steel-blue leading-relaxed text-lg">
+                    <strong className="text-deep-navy">
+                      Juggernaut Industries Limited (JIL)
+                    </strong>{" "}
+                    is an indigenous Nigerian company delivering high‑quality
+                    services in mineral exploration, renewable energy and
+                    construction engineering since 2006. Our skilled Nigerian
+                    team, supported by international specialists, combines strong
+                    local insight with world‑class technical capability to execute
+                    complex projects across the country. With a commitment to
+                    global standards in quality, safety and performance, JIL
+                    continues to serve as a trusted partner in Nigeria’s
+                    industrial and economic development.
+                  </p>
+                </ScrollReveal>
+              </div>
 
               {/* <ScrollReveal animation="fadeUp" delay={0.15}>
                 <p className="text-steel-blue leading-relaxed text-lg">
@@ -127,7 +129,6 @@ export default function AboutPage() {
                     "Government & Private Clients",
                     "Geochemistry Analysis",
                     "Nigerian Electricity Management services Agency (NEMSA)",
-                    "Competent Persons"
                   ].map((highlight, index) => (
                     <div
                       key={index}
@@ -241,13 +242,17 @@ export default function AboutPage() {
             <ScrollReveal animation="fadeUp">
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
                 <div>
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
-                    <span className="w-8 h-px bg-industrial-gold" />
-                    What We Do
-                  </span>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-off-white">
-                    OUR ACTIVITIES
-                  </h2>
+                  <ScrollReveal animation="fadeUp">
+                    <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                      <span className="w-8 h-px bg-industrial-gold" />
+                      What We Do
+                    </span>
+                  </ScrollReveal>
+                  <ScrollReveal animation="fadeUp" delay={0.1}>
+                    <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-off-white mb-6">
+                      OUR ACTIVITIES
+                    </h2>
+                  </ScrollReveal>
                 </div>
                 <Link
                   href="/services"
@@ -368,17 +373,19 @@ export default function AboutPage() {
             {/* Right - Content */}
             <div className="space-y-8 ">
               {/* Header */}
-              <ScrollReveal animation="fadeUp">
-                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
-                  <span className="w-8 h-px bg-industrial-gold" />
-                  Our Values
-                </span>
-                <div className="space-y-4 flex flex-col justify-start items-start">
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-black leading-[2.5rem]">
+              <div>
+                <ScrollReveal animation="fadeUp">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                    <span className="w-8 h-px bg-industrial-gold" />
+                    Our Values
+                  </span>
+                </ScrollReveal>
+                <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
                     CORE VALUES
                   </h2>
-                </div>
-              </ScrollReveal>
+                </ScrollReveal>
+              </div>
 
               {/* Description */}
               <ScrollReveal animation="fadeUp" delay={0.1}>

@@ -29,19 +29,20 @@ export function HSEPolicySection({ className }: HSEPolicySectionProps) {
 
       <div className="container-jil relative z-10">
         <div className="max-w-3xl mx-auto text-center space-y-6">
-          <ScrollReveal animation="fadeUp">
-            <div className="space-y-4">
-              <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold justify-center">
+          <div>
+            <ScrollReveal animation="fadeUp">
+              <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold justify-center mb-4">
                 <span className="w-8 h-px bg-industrial-gold" />
                 Our Commitment
                 <span className="w-8 h-px bg-industrial-gold" />
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light leading-[2.5rem]">
-                HEALTH, SAFETY &
-                <span className="block text-industrial-gold mt-2">ENVIRONMENT</span>
+            </ScrollReveal>
+            <ScrollReveal animation="fadeUp" delay={0.1}>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light leading-[2.5rem] mb-6">
+                HEALTH, SAFETY & ENVIRONMENT
               </h2>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          </div>
 
           <ScrollReveal animation="fadeUp" delay={0.1}>
             <p className="text-light-gray text-lg leading-relaxed">
