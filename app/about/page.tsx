@@ -8,6 +8,7 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { siteConfig, stats } from "@/config/site";
 import { services } from "@/config/services";
 import { ArrowRight } from "lucide-react";
+import { HSEPolicySection } from "@/components/sections";
 
 // Core values
 const coreValues = [
@@ -80,7 +81,7 @@ export default function AboutPage() {
                 </ScrollReveal>
 
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
                     WHO WE ARE
                   </h2>
                 </ScrollReveal>
@@ -123,7 +124,7 @@ export default function AboutPage() {
                   {[
                     "In-House Laboratory",
                     "World Class Team",
-                    "JORC Reporting N143-101",
+                    "JORC & N143-101 Reporting",
                     "COREN-Registered Engineers",
                     "Competent mining technicians (Local and International)",
                     "Government & Private Clients",
@@ -249,7 +250,7 @@ export default function AboutPage() {
                     </span>
                   </ScrollReveal>
                   <ScrollReveal animation="fadeUp" delay={0.1}>
-                    <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-off-white mb-6">
+                    <h2 className="font-display text-3xl md:text-4xl  font-light text-off-white mb-6">
                       OUR ACTIVITIES
                     </h2>
                   </ScrollReveal>
@@ -381,7 +382,7 @@ export default function AboutPage() {
                   </span>
                 </ScrollReveal>
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
                     CORE VALUES
                   </h2>
                 </ScrollReveal>
@@ -389,7 +390,7 @@ export default function AboutPage() {
 
               {/* Description */}
               <ScrollReveal animation="fadeUp" delay={0.1}>
-                <p className="text-steel-blue text-left max-w-2xl leading-relaxed">
+                <p className="text-steel-blue text-left text-lg max-w-2xl leading-relaxed">
                   Our values define who we are and guide every decision we make.
                   They are the foundation of our commitment to excellence and
                   our dedication to serving Africa and its people.
@@ -424,6 +425,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <HSEPolicySection />
     </>
   );
 }

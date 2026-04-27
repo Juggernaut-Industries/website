@@ -31,8 +31,7 @@ export function PageHeader({
   return (
     <section
       className={cn(
-        'relative h-[50vh] min-h-[400px] overflow-hidden flex items-center justify-center',
-        !title && !breadcrumbs && 'h-[30vh] min-h-[300px]',
+        'relative h-[15vh] min-h-[150px] overflow-hidden flex items-center justify-center',
         className
       )}
     >

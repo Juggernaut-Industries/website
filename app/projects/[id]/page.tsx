@@ -55,7 +55,7 @@ export default function ProjectDetailPage() {
                 </ScrollReveal>
   
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
                     {project.title.toUpperCase()}
                   </h2>
                 </ScrollReveal>
@@ -172,7 +172,7 @@ export default function ProjectDetailPage() {
                 <span className="w-8 h-px bg-industrial-gold" />
                 What We Delivered
               </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy">
+              <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy">
                 PROJECT SERVICES
               </h2>
             </div>
@@ -207,7 +207,7 @@ export default function ProjectDetailPage() {
                   <span className="w-8 h-px bg-industrial-gold" />
                   Site Documentation
                 </span>
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy">
+                <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy">
                   PROJECT GALLERY
                 </h2>
               </div>

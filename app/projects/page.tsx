@@ -38,7 +38,7 @@ export default function ProjectsPage() {
                 </ScrollReveal>
   
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
                     DELIVERING EXCELLENCE
                   </h2>
                 </ScrollReveal>
@@ -219,7 +219,7 @@ export default function ProjectsPage() {
               </ScrollReveal>
   
               <ScrollReveal animation="fadeUp" delay={0.1}>
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
                   SUCCESS FACTORS
                 </h2>
               </ScrollReveal>

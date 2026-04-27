@@ -155,7 +155,7 @@ export const services: Service[] = [
       'Geophysical Surveys',
       'Grade Control',
       'Resource Estimation',
-      'JORC Reporting',
+      'JORC & N143-101 Reporting',
       'Geochemistry Analysis',
       'Competent Persons',
       'Literature Review & Public Domain',
@@ -182,7 +182,7 @@ export const services: Service[] = [
       // },
       {
         title: 'International Standards',
-        description: 'JORC and NI 43-101 format reporting and international best practices.',
+        description: 'JORC and N143-101 format reporting and international best practices.',
       },
       {
         title: 'Proven Track Record',
@@ -264,6 +264,7 @@ export const services: Service[] = [
       'Project Management',
       'Quality Assurance',
       'Government Contracts',
+      'COREN-Registered Engineers'
     ],
     highlights: [
       {
@@ -307,6 +308,7 @@ export const services: Service[] = [
       'Sustainable Energy Solutions',
       'Government Projects',
       'Remote Location Expertise',
+      'Nigerian Electricity Management Services Agency (NEMSA)'
     ],
     highlights: [
       {

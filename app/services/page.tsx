@@ -43,7 +43,7 @@ export default function ServicesPage() {
               </ScrollReveal>
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
                   EXCELLENCE ACROSS SECTORS
                 </h2>
               </ScrollReveal>
@@ -99,7 +99,7 @@ export default function ServicesPage() {
                 </ScrollReveal>
 
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-off-white leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-off-white leading-[2.5rem] mb-6">
                     MINING & EXPLORATION SERVICES
                   </h2>
                 </ScrollReveal>
@@ -115,19 +115,9 @@ export default function ServicesPage() {
                 </div>
               </ScrollReveal>
 
-              <ScrollReveal animation="fadeUp" delay={0.2}>
-                <div className="flex flex-wrap gap-2">
-                  {miningService.features.map((feature) => (
-                    <span
-                      key={feature}
-                      className="px-3 py-1.5 rounded-full text-xs font-heading tracking-wider uppercase bg-steel-blue/20 text-light-gray border border-white/10"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-              </ScrollReveal>
+              
             </div>
+            
 
             <div className="lg:col-span-5">
               <ScrollReveal animation="fadeUp" delay={0.2}>
@@ -149,6 +139,19 @@ export default function ServicesPage() {
               </ScrollReveal>
             </div>
           </div>
+
+          <ScrollReveal animation="fadeUp" delay={0.2} className="mt-10">
+                <div className="flex flex-wrap gap-2">
+                  {miningService.features.map((feature) => (
+                    <span
+                      key={feature}
+                      className="px-3 py-1.5 rounded-full text-xs font-heading tracking-wider uppercase bg-steel-blue/20 text-light-gray border border-white/10"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -180,7 +183,7 @@ export default function ServicesPage() {
                 </ScrollReveal>
 
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
                     EXPLORATION & DRILLING SERVICES
                   </h2>
                 </ScrollReveal>
@@ -223,14 +226,14 @@ export default function ServicesPage() {
 
             <div className="space-y-8 order-1">
               <ScrollReveal animation="fadeUp">
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
                   RC DRILLING SERVICES
                 </h2>
               </ScrollReveal>
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
                 <p className="text-steel-blue leading-relaxed">
-                  We deliver efficient and high-performance Reverse Circulation (RC) drilling services tailored for mining and exploration projects. Our systems are optimized to produce accurate, uncontaminated samples at high speeds, ensuring reliable data for resource evaluation and decision-making.
+                  We deliver efficient and high-performance Reverse Circulation (RC) drilling services tailored for mining and exploration projects. Our systems are optimized to produce accurate, uncontaminated samples at high speeds, ensuring reliable data for resource evaluation and decision making.
                 </p>
               </ScrollReveal>
             </div>
@@ -258,14 +261,15 @@ export default function ServicesPage() {
 
             <div className="space-y-8 order-1">
               <ScrollReveal animation="fadeUp">
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
                   DIAMOND DRILLING SERVICES
                 </h2>
               </ScrollReveal>
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
                 <p className="text-steel-blue leading-relaxed">
-                  Our Diamond drilling services provide continuous, high-quality core samples essential for detailed geological and structural analysis. We support advanced exploration, feasibility studies, and geotechnical assessments with precision and consistency, even in complex formations.
+                  Our Diamond drilling services deliver continuous, high-quality core samples that are essential for accurate geological and structural analysis. With advanced drilling technology and highly skilled crews, we achieve excellent core recovery and precision across a wide range of ground conditions.
+We support advanced mineral exploration, feasibility studies, and geotechnical investigations, ensuring reliable results even in complex and challenging formations. Through strict quality control, careful core handling, and efficient field operations, we provide dependable geological data that strengthens decision-making and enhances overall project outcomes.
                 </p>
               </ScrollReveal>
             </div>
@@ -315,7 +319,7 @@ export default function ServicesPage() {
                     </ScrollReveal>
 
                     <ScrollReveal animation="fadeUp" delay={0.1}>
-                      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-off-white leading-[2.5rem] mb-6">
+                      <h2 className="font-display text-3xl md:text-4xl  font-light text-off-white leading-[2.5rem] mb-6">
                         {headlines.headline}
                       </h2>
                     </ScrollReveal>
@@ -385,7 +389,7 @@ export default function ServicesPage() {
                 </ScrollReveal>
 
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
                     TRUSTED EXCELLENCE
                   </h2>
                 </ScrollReveal>
@@ -407,7 +411,7 @@ export default function ServicesPage() {
                   {[
                     "In-House Laboratory",
                     "World Class Team",
-                    "JORC Reporting N143-101",
+                    "JORC & N143-101 Reporting",
                     "COREN-Registered Engineers",
                     "Competent mining technicians (Local and International)",
                     "Government & Private Clients",

@@ -27,31 +27,40 @@ export function HSEPolicySection({ className }: HSEPolicySectionProps) {
         />
       </div>
 
-      <div className="container-jil relative z-10">
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <div>
-            <ScrollReveal animation="fadeUp">
-              <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold justify-center mb-4">
-                <span className="w-8 h-px bg-industrial-gold" />
-                Our Commitment
-                <span className="w-8 h-px bg-industrial-gold" />
-              </span>
-            </ScrollReveal>
-            <ScrollReveal animation="fadeUp" delay={0.1}>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light leading-[2.5rem] mb-6">
-                HEALTH, SAFETY & ENVIRONMENT
-              </h2>
-            </ScrollReveal>
+        <div className="container-jil relative z-10">
+          <div className="flex flex-col justify-center items-center gap-8 lg:gap-8 items-stretch">
+            <div className="space-y-8 ">
+              <div>
+                <ScrollReveal animation="fadeUp">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                    <span className="w-8 h-px bg-industrial-gold" />
+                    Our Commitment
+                  </span>
+                </ScrollReveal>
+                <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <h2 className="font-display text-3xl md:text-4xl  font-light leading-[2.5rem] mb-6">
+                    HEALTH, SAFETY & ENVIRONMENT
+                  </h2>
+                </ScrollReveal>
+              </div>
           </div>
 
           <ScrollReveal animation="fadeUp" delay={0.1}>
             <p className="text-light-gray text-lg leading-relaxed">
-              At Juggernaut Industries Limited, the health and safety of our people, and the protection of our environment, are fundamental to how we do business. We are committed to maintaining the highest HSE standards across all our operations.
+              Safety is not a policy at Juggernaut it is a
+              culture. Our HSE management system is built
+              on global best practices, continuous staff
+              training, and strict regulatory compliance.
+              Across thousands of operational hours and
+              multiple active sites, we have maintained a
+              record free of major incidents and that is a
+              standard we protect on every project we take
+              on. Our people go home safe.
             </p>
           </ScrollReveal>
 
           {/* Feature points */}
-          <ScrollReveal animation="fadeUp" delay={0.2}>
+          {/* <ScrollReveal animation="fadeUp" delay={0.2}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 text-left max-w-xl mx-auto">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-steel-blue/20 text-industrial-gold">
@@ -72,7 +81,7 @@ export function HSEPolicySection({ className }: HSEPolicySectionProps) {
                 </div>
               </div>
             </div>
-          </ScrollReveal>
+          </ScrollReveal> */}
         </div>
       </div>
     </section>

@@ -52,15 +52,15 @@ export default function TeamPage() {
             <div className="space-y-8 order-2 lg:order-1">
               {/* Header */}
               <div>
-                <ScrollReveal animation="fadeUp">
+                {/* <ScrollReveal animation="fadeUp">
                   <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Our People
                   </span>
-                </ScrollReveal>
+                </ScrollReveal> */}
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
-                    THE DRIVING FORCE BEHIND OUR SUCCESS
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                     OUR PEOPLE
                   </h2>
                 </ScrollReveal>
               </div>
@@ -78,7 +78,7 @@ export default function TeamPage() {
               </ScrollReveal>
 
               <ScrollReveal animation="fadeUp" delay={0.15}>
-                <p className="text-steel-blue leading-relaxed">
+                <p className="text-steel-blue leading-relaxed text-lg">
                   We invest in highly skilled and qualified personnel because we
                   believe our people are our greatest asset and it is this
                   commitment to talent that underpins every project we undertake
@@ -130,7 +130,7 @@ export default function TeamPage() {
               </span>
             </ScrollReveal>
             <ScrollReveal animation="fadeUp" delay={0.1}>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+              <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
                 EXECUTIVE TEAM
               </h2>
             </ScrollReveal>
@@ -188,7 +188,7 @@ export default function TeamPage() {
                     <span className="w-8 h-px bg-industrial-gold" />
                     Careers
                   </span>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem]">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem]">
                     JOIN OUR
                     <span className="block text-xl md:text-2xl lg:text-3xl text-steel-blue tracking-[0.15em]">
                       TEAM
