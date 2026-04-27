@@ -3,16 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Juggernaut Industries — Coming Soon</title>
-  <meta name="description" content="Juggernaut Industries Limited — Our new website is under construction. We are building something extraordinary." />
+
+  <!-- Primary Meta -->
+  <title>Juggernaut Industries Limited | Coming Soon</title>
+  <meta name="description" content="Juggernaut Industries Limited (JIL) — Our new website is under construction. A Nigerian company delivering quality services across Mining, Agriculture, Construction, and Renewable Energy since 2006." />
+  <meta name="keywords" content="Juggernaut Industries, JIL Nigeria, Mining Nigeria, Agriculture Nigeria, Construction Abuja, Renewable Energy Nigeria" />
+  <meta name="author" content="Juggernaut Industries Limited" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://juggernautind.com" />
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0D1B2A" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://juggernautind.com" />
+  <meta property="og:title" content="Juggernaut Industries Limited | Coming Soon" />
+  <meta property="og:description" content="Our new website is under construction. A Nigerian company delivering quality services across Mining, Agriculture, Construction, and Renewable Energy since 2006." />
+  <meta property="og:site_name" content="Juggernaut Industries Limited" />
+  <meta property="og:locale" content="en_NG" />
+  <meta property="og:image" content="https://juggernautind.com/logo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Juggernaut Industries Limited | Coming Soon" />
+  <meta name="twitter:description" content="Our new website is under construction. Building Africa's Future Together since 2006." />
+  <meta name="twitter:image" content="https://juggernautind.com/logo.png" />
 
   <!-- Fonts (same as main site) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- DotLottie Player -->
-  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <!-- DotLottie Player (latest stable) -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Juggernaut Industries Limited",
+    "url": "https://juggernautind.com",
+    "logo": "https://juggernautind.com/logo.png",
+    "description": "A Nigerian company delivering quality services across Mining, Agriculture, Construction, and Renewable Energy since 2006.",
+    "foundingDate": "2006",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Abuja",
+      "addressCountry": "NG"
+    }
+  }
+  </script>
 
   <style>
     /* ===== BRAND TOKENS ===== */
@@ -39,6 +84,12 @@
       color: var(--near-black);
     }
 
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--deep-navy); }
+    ::-webkit-scrollbar-thumb { background: var(--steel-blue); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--industrial-gold); }
+
     /* ===== BASE ===== */
     html, body {
       height: 100%;
@@ -64,7 +115,6 @@
       overflow: hidden;
     }
 
-    /* Subtle radial glow */
     .bg-layer::before {
       content: '';
       position: absolute;
@@ -81,7 +131,6 @@
       animation: pulse-glow 8s ease-in-out infinite alternate;
     }
 
-    /* Gold accent glow */
     .bg-layer::after {
       content: '';
       position: absolute;
@@ -108,14 +157,14 @@
       100% { transform: translate(-50%, -50%) translate(-5vw, 5vh); }
     }
 
-    /* ===== GRID OVERLAY ===== */
+    /* Subtle grid overlay */
     .grid-overlay {
       position: fixed;
       inset: 0;
       z-index: 1;
       background-image:
-        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
       background-size: 80px 80px;
       pointer-events: none;
     }
@@ -127,12 +176,48 @@
       text-align: center;
       padding: 2rem;
       max-width: 640px;
-      animation: fade-in 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      opacity: 0;
     }
 
-    @keyframes fade-in {
-      to { opacity: 1; }
+    /* ===== LOGO ===== */
+    .logo-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+      animation: fade-down 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      opacity: 0;
+      transform: translateY(-16px);
+    }
+
+    .logo-wrapper img {
+      width: 100px;
+      height: auto;
+      filter: brightness(1.1);
+      margin-bottom: 0.25rem;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 600;
+      color: var(--off-white);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 0.9;
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-heading);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-top: 0.15rem;
+    }
+
+    @keyframes fade-down {
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* ===== GOLD LINE ===== */
@@ -140,8 +225,8 @@
       width: 60px;
       height: 2px;
       background: var(--industrial-gold);
-      margin: 0 auto 2rem;
-      animation: line-grow 1s 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      margin: 0 auto 1rem;
+      animation: line-grow 1s 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       transform: scaleX(0);
     }
 
@@ -149,81 +234,36 @@
       to { transform: scaleX(1); }
     }
 
-    /* ===== EYEBROW ===== */
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: var(--font-heading);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--industrial-gold);
-      margin-bottom: 1rem;
-      animation: slide-up 0.8s 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      opacity: 0;
-      transform: translateY(12px);
-    }
-
-    .eyebrow .line {
-      width: 2rem;
-      height: 1px;
-      background: var(--industrial-gold);
-    }
-
     @keyframes slide-up {
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ===== HEADING ===== */
-    .heading {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 6vw, 3.5rem);
-      font-weight: 300;
-      line-height: 1.15;
-      color: var(--off-white);
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      animation: slide-up 0.8s 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      opacity: 0;
-      transform: translateY(12px);
-    }
-
     /* ===== LOTTIE PLAYER ===== */
     .lottie-wrapper {
-      margin: 0 auto 2rem;
-      width: min(320px, 80vw);
-      animation: slide-up 0.8s 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      margin: 0 auto 3rem;
+      width: min(600px, 85vw);
+      height: auto;
+      animation: slide-up 0.8s 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       opacity: 0;
       transform: translateY(12px);
     }
 
-    dotlottie-player {
+    lottie-player {
       width: 100%;
       height: auto;
+      display: block;
     }
 
-    /* ===== BODY TEXT ===== */
-    .description {
-      font-family: var(--font-body);
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--light-gray);
-      margin-bottom: 2.5rem;
-      animation: slide-up 0.8s 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      opacity: 0;
-      transform: translateY(12px);
-    }
 
-    /* ===== CONTACT LINK ===== */
+    /* ===== CONTACT ===== */
     .contact {
       font-family: var(--font-heading);
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      animation: slide-up 0.8s 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      color: var(--mid-gray);
+      animation: slide-up 0.8s 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       opacity: 0;
       transform: translateY(12px);
     }
@@ -247,14 +287,14 @@
       right: 0;
       z-index: 10;
       text-align: center;
-      padding: 1.5rem;
+      padding: 1.25rem;
       font-family: var(--font-heading);
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--mid-gray);
       border-top: 1px solid rgba(255, 255, 255, 0.05);
-      animation: fade-in 1s 1.5s forwards;
+      animation: fade-in 1s 1.4s forwards;
       opacity: 0;
     }
 
@@ -262,10 +302,22 @@
       color: var(--industrial-gold);
     }
 
+    @keyframes fade-in {
+      to { opacity: 1; }
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 480px) {
-      .lottie-wrapper {
-        width: 260px;
+      .logo-wrapper img { width: 80px; }
+      .lottie-wrapper { width: 360px; }
+    }
+
+    /* ===== REDUCED MOTION ===== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
@@ -278,27 +330,26 @@
 
   <!-- Main content -->
   <main class="content">
-    <div class="eyebrow">
-      <span class="line"></span>
-      Juggernaut Industries
-      <span class="line"></span>
+    <!-- Logo (navbar style) -->
+    <div class="logo-wrapper">
+      <img src="logo.png" alt="Juggernaut Industries Limited" width="80" height="80" />
+      <span class="brand-name">JUGGERNAUT</span>
+      <span class="brand-subtitle">Industries Ltd</span>
     </div>
 
-    <h1 class="heading">Under Construction</h1>
+    <div class="gold-line"></div>
 
+    <!-- Lottie Animation -->
     <div class="lottie-wrapper">
-      <dotlottie-player
-        src="underconstruction.lottie"
+      <lottie-player
+        src="underconstruction white.json"
         background="transparent"
         speed="1"
-        loop
+        style="width: 100%; height: auto;"
         autoplay
-      ></dotlottie-player>
+      ></lottie-player>
     </div>
 
-    <p class="description">
-      We are building something extraordinary. Our new website is on its way — engineered with precision and built to impress.
-    </p>
 
     <div class="contact">
       Get in touch — <a href="mailto:info@juggernautind.com">info@juggernautind.com</a>
