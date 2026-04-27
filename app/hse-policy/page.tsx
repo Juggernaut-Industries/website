@@ -55,7 +55,15 @@ export default function HSEPolicyPage() {
                 SAFETY IS OUR <span className="text-steel-blue">PRIORITY</span>
               </h2>
               <p className="text-steel-blue text-lg leading-relaxed">
-                Juggernaut Industries Limited (JIL) recognizes that the protection of the health and safety of its employees, contractors, and the public, as well as the protection of the environment, are among its highest priorities.
+              Safety is not a policy at Juggernaut it is a
+              culture. Our HSE management system is built
+              on global best practices, continuous staff
+              training, and strict regulatory compliance.
+              Across thousands of operational hours and
+              multiple active sites, we have maintained a
+              record free of major incidents and that is a
+              standard we protect on every project we take
+              on. Our people go home safe.
               </p>
             </ScrollReveal>
           </div>
