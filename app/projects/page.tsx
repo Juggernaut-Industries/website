@@ -154,19 +154,20 @@ export default function ProjectsPage() {
                       {/* Meta Information */}
                       <div className="flex flex-col gap-4 mb-6">
                         {/* Category & Date Group */}
+                        
+
+                        {/* Client & Location Group */}
+                        <div className="flex flex-col gap-1">
+                          <span className="font-heading text-sm tracking-wide text-steel-blue font-medium">
+                            {project.client}
+                          </span>
+                        </div>
                         <div className="flex flex-col gap-1">
                           <span className="font-heading text-xs tracking-[0.1em] uppercase text-industrial-gold">
                             {project.sector}
                           </span>
                           <span className="font-heading text-xs tracking-[0.1em] uppercase text-steel-blue opacity-80">
                             {project.year}
-                          </span>
-                        </div>
-
-                        {/* Client & Location Group */}
-                        <div className="flex flex-col gap-1">
-                          <span className="font-heading text-sm tracking-wide text-steel-blue font-medium">
-                            {project.client}
                           </span>
                           <div className="flex items-center gap-2 text-sm text-steel-blue">
                             <GoldDot size="sm" />
@@ -242,7 +243,7 @@ export default function ProjectsPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {successFactors.map((factor, index) => (
                   <div key={index} className="flex items-start gap-4">
-                    <GoldDot size="lg" className="mt-1 flex-shrink-0" />
+                    <GoldDot size="sm" className="mt-2 flex-shrink-0" />
                     <p className="text-steel-blue leading-relaxed">{factor}</p>
                   </div>
                 ))}

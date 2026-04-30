@@ -7,6 +7,7 @@ import { GoldDot } from "@/components/ui/gold-dot";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { services, explorationServices } from "@/config/services";
 import { ArrowRight } from "lucide-react";
+import { HSEPolicySection } from "@/components/sections";
 
 const SERVICE_HEADLINES: Record<string, { headline: string }> = {
   mining: { headline: "MINING & EXPLORATION SERVICES" },
@@ -140,17 +141,75 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          <ScrollReveal animation="fadeUp" delay={0.2} className="mt-10">
-                <div className="flex flex-wrap gap-2">
-                  {miningService.features.map((feature) => (
-                    <span
-                      key={feature}
-                      className="px-3 py-1.5 rounded-full text-xs font-heading tracking-wider uppercase bg-steel-blue/20 text-light-gray border border-white/10"
-                    >
-                      {feature}
-                    </span>
-                  ))}
+          <ScrollReveal animation="fadeUp" delay={0.2} className="mt-14 border-t border-white/10 pt-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+              {[
+                {
+                  title: "1. Desktop Study & Target Generation",
+                  items: [
+                    "Literature Review & Public Domain Research",
+                    "Data Compilation",
+                    "Remote Sensing",
+                    "Spectral Geology",
+                    "Geophysical Surveys (regional scale)",
+                    "Geochemistry Analysis (regional datasets)",
+                    "Priority Targets Generation",
+                  ],
+                },
+                {
+                  title: "2. Early-Stage Fieldwork",
+                  items: [
+                    "Mapping (Reconnaissance & Detailed)",
+                    "Rock Chips / Grab Sampling",
+                    "Soil Sampling Surveys",
+                    "Bio-geochemical Surveys",
+                    "Trenching and Pitting",
+                  ],
+                },
+                {
+                  title: "3. Subsurface Investigation",
+                  items: [
+                    "Geophysical and Geological Interpretation",
+                    "RC & Diamond Drilling",
+                    "Grade Control (where applicable)",
+                    "Geotechnical Management",
+                  ],
+                },
+                {
+                  title: "4. Resource Definition & Evaluation",
+                  items: [
+                    "Resource Estimation",
+                    "Metallurgical Test Work Campaigns",
+                    "Exploration Visualization",
+                    "JORC & NI 43-101 Reporting",
+                    "Competent Persons (sign-off & oversight)",
+                  ],
+                },
+                {
+                  title: "5. Support & Governance",
+                  items: [
+                    "Exploration Advisory",
+                    "Training and Capacity Building",
+                  ],
+                },
+              ].map((section, idx) => (
+                <div key={idx} className="space-y-4">
+                  <h4 className="font-heading text-xs tracking-[0.1em] uppercase text-industrial-gold">
+                    {section.title}
+                  </h4>
+                  <div className="space-y-3">
+                    {section.items.map((item, i) => (
+                      <div key={i} className="flex items-start gap-2 text-sm text-light-gray">
+                        <div className="-mt-0.5 flex-shrink-0">
+                          <GoldDot size="sm" />
+                        </div>
+                        <span className="leading-tight">{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </section>
@@ -206,6 +265,27 @@ export default function ServicesPage() {
         </div>
       </section> */}
 
+            <section className="relative pt-14 overflow-hidden bg-white">
+        <div className="container-jil relative z-10">
+          <div >
+            <div>
+  <ScrollReveal animation="fadeUp">
+                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="w-8 h-px bg-industrial-gold" />
+                  Services we offer
+                </span>
+              </ScrollReveal>
+            </div>
+
+            <ScrollReveal animation="fadeUp" delay={0.15}>
+              <p className="text-steel-blue leading-relaxed text-lg">
+                Reverse Circulation (RC) Drilling <span className="text-industrial-gold px-1.5">&bull;</span> Diamond Drilling (DD) Core Recovery <span className="text-industrial-gold px-1.5">&bull;</span> Blast Hole & Grade Control Drilling <span className="text-industrial-gold px-1.5">&bull;</span> Greenfield & Brownfield Exploration <span className="text-industrial-gold px-1.5">&bull;</span> Water Well & Geotechnical Drilling.
+              </p>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Mining Section 3 – RC Drilling */}
       <section className="relative py-14 overflow-hidden bg-white">
         <div className="container-jil relative z-10">
@@ -225,15 +305,18 @@ export default function ServicesPage() {
             </ScrollReveal>
 
             <div className="space-y-8 order-1">
-              <ScrollReveal animation="fadeUp">
-                <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
-                  RC DRILLING SERVICES
-                </h2>
-              </ScrollReveal>
+              <div>
+                <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                    RC DRILLING CAMPAIGN
+                  </h2>
+                </ScrollReveal>
+              </div>
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
                 <p className="text-steel-blue leading-relaxed">
-                  We deliver efficient and high-performance Reverse Circulation (RC) drilling services tailored for mining and exploration projects. Our systems are optimized to produce accurate, uncontaminated samples at high speeds, ensuring reliable data for resource evaluation and decision making.
+                  We deliver high-performance Reverse Circulation (RC) drilling services tailored to the demands of modern mining and exploration projects. Leveraging advanced drilling systems and experienced crews, we consistently produce clean, uncontaminated samples with exceptional speed and precision, ensuring reliable, high-quality data for accurate resource evaluation and confident decision-making.
+Our operations are built on efficiency, safety, and consistency, allowing us to perform effectively across a wide range of terrains and challenging environments. With strict quality control measures and disciplined sampling procedures, we maintain data integrity at every stage, helping clients reduce risk, stay on schedule, and maximize the overall value of their projects.
                 </p>
               </ScrollReveal>
             </div>
@@ -262,13 +345,13 @@ export default function ServicesPage() {
             <div className="space-y-8 order-1">
               <ScrollReveal animation="fadeUp">
                 <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
-                  DIAMOND DRILLING SERVICES
+                  DIAMOND DRILLING CAMPAIGN
                 </h2>
               </ScrollReveal>
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
                 <p className="text-steel-blue leading-relaxed">
-                  Our Diamond drilling services deliver continuous, high-quality core samples that are essential for accurate geological and structural analysis. With advanced drilling technology and highly skilled crews, we achieve excellent core recovery and precision across a wide range of ground conditions.
+                  Mixture of exploration and indicated (MRE) drilling at depth exceeding 500 meters. Our Diamond drilling services deliver continuous, high-quality core samples that are essential for accurate geological and structural analysis. With advanced drilling technology and highly skilled crews, we achieve excellent core recovery and precision across a wide range of ground conditions.
 We support advanced mineral exploration, feasibility studies, and geotechnical investigations, ensuring reliable results even in complex and challenging formations. Through strict quality control, careful core handling, and efficient field operations, we provide dependable geological data that strengthens decision-making and enhances overall project outcomes.
                 </p>
               </ScrollReveal>
@@ -276,6 +359,8 @@ We support advanced mineral exploration, feasibility studies, and geotechnical i
           </div>
         </div>
       </section>
+
+      <HSEPolicySection />
 
       {/* ─── CONSTRUCTION & SOLAR – Dark Hero Blocks ──────────── */}
 
@@ -336,14 +421,14 @@ We support advanced mineral exploration, feasibility studies, and geotechnical i
                   </ScrollReveal>
 
                   <ScrollReveal animation="fadeUp" delay={0.2}>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {service.features.map((feature) => (
-                        <span
-                          key={feature}
-                          className="px-3 py-1.5 rounded-full text-xs font-heading tracking-wider uppercase bg-steel-blue/20 text-light-gray border border-white/10"
-                        >
-                          {feature}
-                        </span>
+                        <div key={feature} className="flex items-start gap-2 text-sm text-light-gray">
+                          <div className="-mt-0.5 flex-shrink-0">
+                            <GoldDot size="sm" />
+                          </div>
+                          <span className="leading-tight">{feature}</span>
+                        </div>
                       ))}
                     </div>
                   </ScrollReveal>
@@ -381,7 +466,7 @@ We support advanced mineral exploration, feasibility studies, and geotechnical i
             {/* Left - Content */}
             <div className="space-y-6">
               <div>
-  <ScrollReveal animation="fadeUp">
+                <ScrollReveal animation="fadeUp">
                   <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Why Choose Us
@@ -404,7 +489,7 @@ We support advanced mineral exploration, feasibility studies, and geotechnical i
                 </p>
               </ScrollReveal>
 
-              <div className="h-px bg-steel-blue/20" />
+              {/* <div className="h-px bg-steel-blue/20" />
 
               <ScrollReveal animation="fadeUp" delay={0.2}>
                 <div className="grid grid-cols-2 gap-3">
@@ -424,7 +509,7 @@ We support advanced mineral exploration, feasibility studies, and geotechnical i
                     </div>
                   ))}
                 </div>
-              </ScrollReveal>
+              </ScrollReveal> */}
 
               <ScrollReveal animation="fadeUp" delay={0.2}>
                 <div className="flex flex-wrap gap-4">

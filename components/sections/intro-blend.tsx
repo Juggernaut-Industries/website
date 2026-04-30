@@ -2,6 +2,9 @@
 
 import { cn } from '@/lib/utils';
 import { ScrollReveal } from '@/components/animations/scroll-reveal';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 interface IntroBlendProps {
   className?: string;
@@ -68,6 +71,21 @@ export function IntroBlend({ className }: IntroBlendProps) {
             </div>
           </ScrollReveal>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="flex flex-wrap justify-start items-center gap-4 pt-8"
+        >
+          <Link
+            href={'/about'}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-industrial-gold text-near-black font-heading text-xs tracking-[0.1em] uppercase rounded-xl btn-animated relative z-1 overflow-hidden after:bg-steel-blue hover:text-off-white transition-colors"
+          >
+            {'About Us'}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </motion.div>   
       </div>
     </section>
   );

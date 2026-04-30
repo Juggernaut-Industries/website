@@ -34,12 +34,12 @@ export function HSEPolicySection({ className }: HSEPolicySectionProps) {
                 <ScrollReveal animation="fadeUp">
                   <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
                     <span className="w-8 h-px bg-industrial-gold" />
-                    Our Commitment
+                    Our Values
                   </span>
                 </ScrollReveal>
                 <ScrollReveal animation="fadeUp" delay={0.1}>
                   <h2 className="font-display text-3xl md:text-4xl  font-light leading-[2.5rem] mb-6">
-                    HEALTH, SAFETY & ENVIRONMENT
+                    HEALTH SAFETY & ENVIRONMENT
                   </h2>
                 </ScrollReveal>
               </div>

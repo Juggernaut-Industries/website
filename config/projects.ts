@@ -32,7 +32,7 @@ export const projects: Project[] = [
       'Successfully completed the Lead, Zinc and Silver exploration program on the Benue trough for the Ministry of Mines and Steel Development.',
     fullDescription:
       'Juggernaut Industries successfully completed the Lead, Zinc and Silver exploration program on the Benue trough for the Ministry of Mines and Steel Development in Nigeria. This comprehensive project included Desktop Study, Soil Mapping, Geo-Physics and RC Drilling, yielding significant new discoveries.',
-    services: ['Desktop Study', 'Soil Mapping', 'Geo-Physics', 'RC Drilling', 'Data Analysis', 'Geochemistry', 'JORC & N143-101 Reporting', 'Drilling'],
+    services: ['Desktop Study', 'Data Analysis', 'Soil Mapping', 'Geochemistry', 'Geo-Physics', 'RC Drilling',  'JORC & N143-101 Reporting'],
     image: '/survey-4.jpg',
     images: ['/survey-4.jpg', '/survey-5.jpg', '/survey-6.jpg', '/survey-7.jpg'],
     href: '/projects/lead-zinc-silver',
@@ -40,7 +40,7 @@ export const projects: Project[] = [
   },
   {
     id: 'segilola',
-    sector: 'SEGILOLA',
+    sector: 'SEGILOLA RESOURCES OPERATING LIMITED',
     title: 'Grade Control Operations',
     client: 'Segilola Gold Mine',
     clientLogo: '/segilola.png',
@@ -76,7 +76,7 @@ export const projects: Project[] = [
   },
   {
     id: 'ngsa',
-    sector: 'SEGILOLA',
+    sector: 'SEGILOLA RESOURCES OPERATING LIMITED',
     title: 'Diamond Exploration Drilling',
     client: 'Segilola Gold Mine',
     clientLogo: '/segilola.png',
@@ -87,7 +87,7 @@ export const projects: Project[] = [
       'Provides high quality core samples for accurate geological analysis and resource evaluation.',
     fullDescription:
       'Juggernaut Industries provides high quality core samples for accurate geological analysis and resource evaluation. Our diamond drilling services are essential for comprehensive geological assessments and resource evaluations.',
-    services: ['Diamond Drilling', 'Drilling Services', 'Sample Analysis', 'Quality Assurance'],
+    services: ['Diamond Drilling', 'Exploration Drilling', 'MRE', 'Quality Assurance'],
     image: '/segilola-2.png',
     href: '/projects/ngsa',
     completed: false,
