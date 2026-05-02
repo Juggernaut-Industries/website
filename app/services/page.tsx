@@ -36,7 +36,7 @@ export default function ServicesPage() {
         <div className="container-jil relative z-10">
           <div className="max-w-3xl">
             <div>
-  <ScrollReveal animation="fadeUp">
+              <ScrollReveal animation="fadeUp">
                 <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
                   <span className="w-8 h-px bg-industrial-gold" />
                   What We Do
@@ -67,7 +67,10 @@ export default function ServicesPage() {
       {/* ─── MINING & EXPLORATION ─────────────────────────────── */}
 
       {/* Mining Section 1 – Overview Hero */}
-      <section className="relative py-14 overflow-hidden bg-deep-navy" id="mining">
+      <section
+        className="relative py-14 overflow-hidden bg-deep-navy"
+        id="mining"
+      >
         <div className="absolute inset-0">
           <Image
             src={miningService.image}
@@ -92,7 +95,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
               <div>
-  <ScrollReveal animation="fadeUp">
+                <ScrollReveal animation="fadeUp">
                   <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Our Core Service
@@ -101,7 +104,7 @@ export default function ServicesPage() {
 
                 <ScrollReveal animation="fadeUp" delay={0.1}>
                   <h2 className="font-display text-3xl md:text-4xl  font-light text-off-white leading-[2.5rem] mb-6">
-                    MINING & EXPLORATION SERVICES
+                    MINING & EXPLORATION
                   </h2>
                 </ScrollReveal>
               </div>
@@ -109,16 +112,16 @@ export default function ServicesPage() {
               <ScrollReveal animation="fadeUp" delay={0.15}>
                 <div className="space-y-3 max-w-xl">
                   {miningService.fullDescription.map((para) => (
-                    <p key={para} className="text-light-gray leading-relaxed text-lg">
+                    <p
+                      key={para}
+                      className="text-light-gray leading-relaxed text-lg"
+                    >
                       {para}
                     </p>
                   ))}
                 </div>
               </ScrollReveal>
-
-              
             </div>
-            
 
             <div className="lg:col-span-5">
               <ScrollReveal animation="fadeUp" delay={0.2}>
@@ -141,7 +144,26 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          <ScrollReveal animation="fadeUp" delay={0.2} className="mt-14 border-t border-white/10 pt-10">
+          <ScrollReveal
+            animation="fadeUp"
+            delay={0.2}
+            className="mt-14 border-t border-white/10 pt-10"
+          >
+            <div>
+              {/* <ScrollReveal animation="fadeUp">
+                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-white mb-6">
+                  <span className="w-8 h-px bg-white" />
+                  Our Step by Step Approach
+                </span>
+              </ScrollReveal> */}
+
+              <ScrollReveal animation="fadeUp" delay={0.1}>
+                <h2 className="font-display text-2xl md:text-3xl  font-light text-off-white leading-[2.5rem] mb-6">
+                  Our Step by Step Approach
+                </h2>
+              </ScrollReveal>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {[
                 {
@@ -170,7 +192,6 @@ export default function ServicesPage() {
                   title: "3. Subsurface Investigation",
                   items: [
                     "Geophysical and Geological Interpretation",
-                    "RC & Diamond Drilling",
                     "Grade Control (where applicable)",
                     "Geotechnical Management",
                   ],
@@ -199,7 +220,10 @@ export default function ServicesPage() {
                   </h4>
                   <div className="space-y-3">
                     {section.items.map((item, i) => (
-                      <div key={i} className="flex items-start gap-2 text-sm text-light-gray">
+                      <div
+                        key={i}
+                        className="flex items-start gap-2 text-sm text-light-gray"
+                      >
                         <div className="-mt-0.5 flex-shrink-0">
                           <GoldDot size="sm" />
                         </div>
@@ -265,22 +289,38 @@ export default function ServicesPage() {
         </div>
       </section> */}
 
-            <section className="relative pt-14 overflow-hidden bg-white">
+      <section className="relative pt-14 overflow-hidden bg-white">
         <div className="container-jil relative z-10">
-          <div >
+          <div>
             <div>
-  <ScrollReveal animation="fadeUp">
+              <ScrollReveal animation="fadeUp">
                 <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
                   <span className="w-8 h-px bg-industrial-gold" />
                   Services we offer
                 </span>
               </ScrollReveal>
             </div>
+            <ScrollReveal animation="fadeUp" delay={0.1}>
+              <p className="text-steel-blue leading-relaxed text-lg mb-4">
+                JIL offers a wide range of drilling, that covers the following
+              </p>
+            </ScrollReveal>
 
             <ScrollReveal animation="fadeUp" delay={0.15}>
-              <p className="text-steel-blue leading-relaxed text-lg">
-                Reverse Circulation (RC) Drilling <span className="text-industrial-gold px-1.5">&bull;</span> Diamond Drilling (DD) Core Recovery <span className="text-industrial-gold px-1.5">&bull;</span> Blast Hole & Grade Control Drilling <span className="text-industrial-gold px-1.5">&bull;</span> Greenfield & Brownfield Exploration <span className="text-industrial-gold px-1.5">&bull;</span> Water Well & Geotechnical Drilling.
-              </p>
+              <ul className="list-disc pl-6 text-steel-blue leading-relaxed text-lg space-y-2">
+                <li className="marker:text-industrial-gold">
+                  Reverse Circulation (RC) Drilling
+                </li>
+                <li className="marker:text-industrial-gold">
+                  Diamond Drilling (DD) Core Recovery
+                </li>
+                <li className="marker:text-industrial-gold">
+                  Blast Hole & Grade Control Drilling
+                </li>
+                <li className="marker:text-industrial-gold">
+                  Water Well & Geotechnical Drilling
+                </li>
+              </ul>
             </ScrollReveal>
           </div>
         </div>
@@ -308,15 +348,26 @@ export default function ServicesPage() {
               <div>
                 <ScrollReveal animation="fadeUp" delay={0.1}>
                   <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
-                    RC DRILLING CAMPAIGN
+                    RC DRILLING
                   </h2>
                 </ScrollReveal>
               </div>
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
                 <p className="text-steel-blue leading-relaxed">
-                  We deliver high-performance Reverse Circulation (RC) drilling services tailored to the demands of modern mining and exploration projects. Leveraging advanced drilling systems and experienced crews, we consistently produce clean, uncontaminated samples with exceptional speed and precision, ensuring reliable, high-quality data for accurate resource evaluation and confident decision-making.
-Our operations are built on efficiency, safety, and consistency, allowing us to perform effectively across a wide range of terrains and challenging environments. With strict quality control measures and disciplined sampling procedures, we maintain data integrity at every stage, helping clients reduce risk, stay on schedule, and maximize the overall value of their projects.
+                  We deliver high-performance Reverse Circulation (RC) drilling
+                  services tailored to the demands of modern mining and
+                  exploration projects. Leveraging advanced drilling systems and
+                  experienced crews, we consistently produce clean,
+                  uncontaminated samples with exceptional speed and precision,
+                  ensuring reliable, high-quality data for accurate resource
+                  evaluation and confident decision-making. Our operations are
+                  built on efficiency, safety, and consistency, allowing us to
+                  perform effectively across a wide range of terrains and
+                  challenging environments. With strict quality control measures
+                  and disciplined sampling procedures, we maintain data
+                  integrity at every stage, helping clients reduce risk, stay on
+                  schedule, and maximize the overall value of their projects.
                 </p>
               </ScrollReveal>
             </div>
@@ -345,14 +396,25 @@ Our operations are built on efficiency, safety, and consistency, allowing us to 
             <div className="space-y-8 order-1">
               <ScrollReveal animation="fadeUp">
                 <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
-                  DIAMOND DRILLING CAMPAIGN
+                  DIAMOND DRILLING
                 </h2>
               </ScrollReveal>
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
                 <p className="text-steel-blue leading-relaxed">
-                  Mixture of exploration and indicated (MRE) drilling at depth exceeding 500 meters. Our Diamond drilling services deliver continuous, high-quality core samples that are essential for accurate geological and structural analysis. With advanced drilling technology and highly skilled crews, we achieve excellent core recovery and precision across a wide range of ground conditions.
-We support advanced mineral exploration, feasibility studies, and geotechnical investigations, ensuring reliable results even in complex and challenging formations. Through strict quality control, careful core handling, and efficient field operations, we provide dependable geological data that strengthens decision-making and enhances overall project outcomes.
+                  Mixture of exploration and indicated (MRE) drilling at depth
+                  exceeding 500 meters. Our Diamond drilling services deliver
+                  continuous, high-quality core samples that are essential for
+                  accurate geological and structural analysis. With advanced
+                  drilling technology and highly skilled crews, we achieve
+                  excellent core recovery and precision across a wide range of
+                  ground conditions. We support advanced mineral exploration,
+                  feasibility studies, and geotechnical investigations, ensuring
+                  reliable results even in complex and challenging formations.
+                  Through strict quality control, careful core handling, and
+                  efficient field operations, we provide dependable geological
+                  data that strengthens decision-making and enhances overall
+                  project outcomes.
                 </p>
               </ScrollReveal>
             </div>
@@ -369,7 +431,7 @@ We support advanced mineral exploration, feasibility studies, and geotechnical i
         return (
           <section
             key={service.id}
-            id={service.id === 'solar' ? 'solar-energy' : service.id}
+            id={service.id === "solar" ? "solar-energy" : service.id}
             className="relative py-14 overflow-hidden bg-deep-navy"
           >
             <div className="absolute inset-0">
@@ -396,7 +458,7 @@ We support advanced mineral exploration, feasibility studies, and geotechnical i
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 <div className="lg:col-span-7 space-y-6">
                   <div>
-  <ScrollReveal animation="fadeUp">
+                    <ScrollReveal animation="fadeUp">
                       <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
                         <span className="w-8 h-px bg-industrial-gold" />
                         Services
@@ -413,7 +475,10 @@ We support advanced mineral exploration, feasibility studies, and geotechnical i
                   <ScrollReveal animation="fadeUp" delay={0.15}>
                     <div className="space-y-3 max-w-xl">
                       {service.fullDescription.map((para) => (
-                        <p key={para} className="text-light-gray leading-relaxed text-lg">
+                        <p
+                          key={para}
+                          className="text-light-gray leading-relaxed text-lg"
+                        >
                           {para}
                         </p>
                       ))}
@@ -423,7 +488,10 @@ We support advanced mineral exploration, feasibility studies, and geotechnical i
                   <ScrollReveal animation="fadeUp" delay={0.2}>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {service.features.map((feature) => (
-                        <div key={feature} className="flex items-start gap-2 text-sm text-light-gray">
+                        <div
+                          key={feature}
+                          className="flex items-start gap-2 text-sm text-light-gray"
+                        >
                           <div className="-mt-0.5 flex-shrink-0">
                             <GoldDot size="sm" />
                           </div>
@@ -535,9 +603,21 @@ We support advanced mineral exploration, feasibility studies, and geotechnical i
             <ScrollReveal animation="fadeUp">
               <div className="grid grid-cols-1 gap-4">
                 {[
-                  { value: "3", label: "Service Areas", description: "Diverse sectors" },
-                  { value: "20+", label: "Years Experience", description: "Since 2006" },
-                  { value: "100%", label: "Client Satisfaction", description: "Quality assured" },
+                  {
+                    value: "3",
+                    label: "Service Areas",
+                    description: "Diverse sectors",
+                  },
+                  {
+                    value: "20+",
+                    label: "Years Experience",
+                    description: "Since 2006",
+                  },
+                  {
+                    value: "100%",
+                    label: "Client Satisfaction",
+                    description: "Quality assured",
+                  },
                 ].map((stat) => (
                   <div
                     key={stat.label}
@@ -549,7 +629,9 @@ We support advanced mineral exploration, feasibility studies, and geotechnical i
                     <p className="font-heading text-xs tracking-[0.1em] uppercase text-deep-navy mb-1">
                       {stat.label}
                     </p>
-                    <p className="text-xs text-steel-blue">{stat.description}</p>
+                    <p className="text-xs text-steel-blue">
+                      {stat.description}
+                    </p>
                   </div>
                 ))}
               </div>

@@ -143,7 +143,7 @@ export const services: Service[] = [
       'Juggernaut Industries Ltd is an indigenous mineral exploration services company offering a full suite of services — from grass-roots exploration to advanced definition drill-outs — fully compliant with international reporting standards including JORC and NI 43-101.',
     fullDescription: [
       'With extensive experience operating across diverse Nigerian terrains, Juggernaut Industries leverages advanced geophysical equipment and a fully equipped in house laboratory to deliver comprehensive, end to end exploration solutions. Our services cover the full project cycle, including data compilation and review, strategic planning and budgeting, supervised drill campaigns, logistics coordination, and complete project management.',
-      'Juggernaut Industries has built a strong national track record, successfully executing Lead, Zinc, and Silver exploration programs for the Nigerian Government under the NIMEP (National Integrated Mineral Exploration Project) initiative, resulting in significant new discoveries. The company has also delivered world class grade control drilling and indicated diamond drilling services for the Segilola Gold Project, supporting one of the most important mining developments in the country.',
+      'Juggernaut Industries has built a strong national track record, successfully executing Lead, Zinc, and Silver exploration programs for the Nigerian Government under the NIMEP (National Integrated Mineral Exploration Project) initiative, resulting in significant new discoveries. The company has also delivered world class grade control drilling and diamond drilling services for the Segilola Gold Project, supporting one of the most important mining developments in the country.',
       'We take pride in our expertise in Reverse Circulation (RC) and Diamond Drilling (DD), providing reliable, high precision drilling solutions for both exploration and mining operations.'
     ],
     icon: 'Pickaxe',
@@ -248,9 +248,9 @@ export const services: Service[] = [
     title: 'Construction',
     shortTitle: 'Construction',
     description:
-      'Juggernaut Industries Ltd delivers high-quality construction and civil engineering solutions across Nigeria, with a strong portfolio of successfully completed projects for both Federal Government and private sector clients.',
+      'JIL delivers high-quality construction and civil engineering solutions across Nigeria, with a strong portfolio of successfully completed projects for both Federal Government and private sector clients.',
     fullDescription: [
-      'Juggernaut Industries Ltd delivers high-quality construction and civil engineering solutions across Nigeria, with a strong portfolio of successfully completed projects for both Federal Government and private sector clients.',
+      'JIL delivers high-quality construction and civil engineering solutions across Nigeria, with a strong portfolio of successfully completed projects for both Federal Government and private sector clients.',
       'Underpinned by a team of COREN-registered engineers with decades of combined experience, JIL brings technical rigour, professional excellence, and a commitment to delivering projects on time and within specification.',
       'From concept to completion, the company applies industry best practices to every engagement, ensuring durable, compliant, and high-impact infrastructure outcomes for its clients.',
     ],
