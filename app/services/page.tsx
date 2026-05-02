@@ -302,7 +302,7 @@ export default function ServicesPage() {
             </div>
             <ScrollReveal animation="fadeUp" delay={0.1}>
               <p className="text-steel-blue leading-relaxed text-lg mb-4">
-                JIL offers a wide range of drilling, that covers the following
+                JIL offers a wide range of drilling services that covers the following:
               </p>
             </ScrollReveal>
 
