@@ -159,7 +159,7 @@ export default function ServicesPage() {
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
                 <h2 className="font-display text-2xl md:text-3xl  font-light text-off-white leading-[2.5rem] mb-6">
-                  Our Step by Step Approach
+                  Our Step by Step Approach to Exploration
                 </h2>
               </ScrollReveal>
             </div>
@@ -402,8 +402,7 @@ export default function ServicesPage() {
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
                 <p className="text-steel-blue leading-relaxed">
-                  Mixture of exploration and indicated (MRE) drilling at depth
-                  exceeding 500 meters. Our Diamond drilling services deliver
+                  Our Diamond drilling services deliver
                   continuous, high-quality core samples that are essential for
                   accurate geological and structural analysis. With advanced
                   drilling technology and highly skilled crews, we achieve

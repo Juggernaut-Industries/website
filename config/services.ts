@@ -292,9 +292,9 @@ export const services: Service[] = [
     title: 'Renewable Energy',
     shortTitle: 'Renewable Energy',
     description:
-      'Juggernaut Industries Ltd delivers reliable solar and electrification solutions across Nigeria, with a proven track record of successfully completed projects for Federal Government and private sector clients.',
+      'JIL delivers reliable solar and electrification solutions across Nigeria, with a proven track record of successfully completed projects for Federal Government and private sector clients.',
     fullDescription: [
-      'Juggernaut Industries Ltd delivers reliable solar and electrification solutions across Nigeria, with a proven track record of successfully completed projects for Federal Government and private sector clients.',
+      'JIL delivers reliable solar and electrification solutions across Nigeria, with a proven track record of successfully completed projects for Federal Government and private sector clients.',
       'From solar street lighting to transformer installation across varying capacities, JIL brings technical expertise and a commitment to sustainable energy to every project.',
       'Supported by a team of experienced and trained technicians, JIL is equipped to operate effectively in remote locations nationwide, ensuring that communities and private clients alike gain access to dependable and sustainable power infrastructure.',
     ],

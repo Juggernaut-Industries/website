@@ -20,114 +20,141 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'lead-zinc-silver',
-    sector: 'NIMEP',
-    title: 'Lead, Zinc & Silver Exploration',
-    client: 'Ministry of Mines and Steel Development',
-    clientLogo: '/nimep-new.png',
-    category: 'Mining & Exploration',
-    location: 'Benue Trough, Nigeria',
-    year: '2018 - 2021',
+    id: "lead-zinc-silver",
+    sector: "NIMEP",
+    title: "Lead, Zinc & Silver Exploration",
+    client: "Ministry of Mines and Steel Development",
+    clientLogo: "/nimep-new.png",
+    category: "Mining & Exploration",
+    location: "Benue Trough, Nigeria",
+    year: "2018 - 2021",
     description:
-      'Successfully completed the Lead, Zinc and Silver exploration program on the Benue trough for the Ministry of Mines and Steel Development.',
+      "Successfully completed the Lead, Zinc and Silver exploration program on the Benue trough for the Ministry of Mines and Steel Development.",
     fullDescription:
-      'Juggernaut Industries successfully completed the Lead, Zinc and Silver exploration program on the Benue trough for the Ministry of Mines and Steel Development in Nigeria. This comprehensive project included Desktop Study, Soil Mapping, Geo-Physics and RC Drilling, yielding significant new discoveries.',
-    services: ['Desktop Study', 'Data Analysis', 'Soil Mapping', 'Geochemistry', 'Geo-Physics', 'RC Drilling',  'JORC & N143-101 Reporting'],
-    image: '/survey-4.jpg',
-    images: ['/survey-4.jpg', '/survey-5.jpg', '/survey-6.jpg', '/survey-7.jpg'],
-    href: '/projects/lead-zinc-silver',
-    completed: true
-  },
-  {
-    id: 'segilola',
-    sector: 'SEGILOLA RESOURCES OPERATING LIMITED',
-    title: 'Grade Control Operations',
-    client: 'Segilola Gold Mine',
-    clientLogo: '/segilola.png',
-    category: 'Mining & Exploration',
-    location: 'Osun State, Nigeria',
-    year: '2021',
-    description:
-      "Currently conducting grade control with partners for Segilola, Nigeria's only large scale producing gold mine.",
-    fullDescription:
-      'Juggernaut Industries is currently conducting grade control operations with its partners for Segilola, Nigeria\'s only large scale producing gold mine. This historic project represents a significant milestone in Nigeria\'s mining industry, and JIL is proud to be providing essential services on this landmark project.',
-    services: ['Grade Control', 'Drilling Services', 'Sample Analysis', 'Quality Assurance'],
-    image: '/mining-1.jpeg',
-    href: '/projects/segilola',
-    completed: false
-  },
-  {
-    id: 'ministry-solid-minerals',
-    sector: 'MSMD',
-    title: 'Barite Processing Plant Installation',
-    client: 'Ministry of Solid Minerals',
-    clientLogo: '/nimep-new.png',
-    category: 'Construction',
-    location: 'South-South Nigeria',
-    year: '2021 - 2023',
-    description:
-      'Juggernaut has completed the installation of a Barite processing plant in the South-South region of the country.',
-    fullDescription:
-      'Juggernaut Industries successfully completed the installation of a Barite processing plant in the South-South region of Nigeria. This project aligns with the Federal Government vision to rapidly develop and support locally made Nigerian goods, contributing to the nation\'s industrial growth and self-sufficiency.',
-    services: ['Plant Installation', 'Equipment Setup', 'Process Engineering', 'Commissioning'],
-    image: '/barite.jpeg',
-    href: '/projects/ministry-solid-minerals',
+      "Juggernaut Industries successfully completed the Lead, Zinc and Silver exploration program on the Benue trough for the Ministry of Mines and Steel Development in Nigeria. This comprehensive project included Desktop Study, Soil Mapping, Geo-Physics and RC Drilling, yielding significant new discoveries.",
+    services: [
+      "Desktop Study",
+      "Data Analysis",
+      "Soil Mapping",
+      "Geochemistry",
+      "Geo-Physics",
+      "RC Drilling",
+      "JORC & N143-101 Reporting",
+    ],
+    image: "/survey-4.jpg",
+    images: [
+      "/survey-4.jpg",
+      "/survey-5.jpg",
+      "/survey-6.jpg",
+      "/survey-7.jpg",
+    ],
+    href: "/projects/lead-zinc-silver",
     completed: true,
   },
   {
-    id: 'ngsa',
-    sector: 'SEGILOLA RESOURCES OPERATING LIMITED',
-    title: 'Diamond Exploration Drilling',
-    client: 'Segilola Gold Mine',
-    clientLogo: '/segilola.png',
-    category: 'Mining & Exploration',
-    location: 'Osun State, Nigeria',
-    year: '2024',
+    id: "segilola",
+    sector: "SEGILOLA RESOURCES OPERATING LIMITED",
+    title: "Grade Control Operations",
+    client: "Segilola Gold Mine",
+    clientLogo: "/segilola.png",
+    category: "Mining & Exploration",
+    location: "Osun State, Nigeria",
+    year: "2021",
     description:
-      'Provides high quality core samples for accurate geological analysis and resource evaluation.',
+      "Currently conducting grade control with partners for Segilola, Nigeria's only large scale producing gold mine.",
     fullDescription:
-      'Juggernaut Industries provides high quality core samples for accurate geological analysis and resource evaluation. Our diamond drilling services are essential for comprehensive geological assessments and resource evaluations.',
-    services: ['Diamond Drilling', 'Exploration Drilling', 'MRE', 'Quality Assurance'],
-    image: '/segilola-2.png',
-    href: '/projects/ngsa',
+      "Juggernaut Industries is currently conducting grade control operations with its partners for Segilola, Nigeria's only large scale producing gold mine. This historic project represents a significant milestone in Nigeria's mining industry, and JIL is proud to be providing essential services on this landmark project.",
+    services: [
+      "Grade Control",
+      "Drilling Services",
+      "Sample Analysis",
+      "Quality Assurance",
+    ],
+    image: "/mining-1.jpeg",
+    href: "/projects/segilola",
     completed: false,
   },
   {
-    id: 'newstar-thor',
-    sector: 'NEWSTAR MINERALS LTD',
-    title: 'Lithium Exploration Drilling',
-    client: 'Newstar Minerals Ltd (Thor Explorations)',
-    clientLogo: '/newstar.png',
-    category: 'Mining & Exploration',
-    location: 'West Oyo, Nigeria',
-    year: '2023 - 2024',
+    id: "ministry-solid-minerals",
+    sector: "MSMD",
+    title: "Barite Processing Plant Installation",
+    client: "Ministry of Solid Minerals",
+    clientLogo: "/nimep-new.png",
+    category: "Construction",
+    location: "South-South Nigeria",
+    year: "2021 - 2023",
     description:
-      'We carried out an extensive drilling campaign for lithium.',
+      "Juggernaut has completed the installation of a Barite processing plant in the South-South region of the country.",
     fullDescription:
-      'Juggernaut Industries is currently carrying out drilling services for lithium exploration in partnership with Newstar Minerals Ltd (Thor Explorations) in their West Oyo Project Area. This project positions JIL at the forefront of Nigeria\'s emerging battery minerals sector.',
-    services: ['Exploration Drilling', 'Resource Assessment'],
-    image: '/mining-2.jpeg',
-    href: '/projects/newstar-thor',
-    completed: true
+      "Juggernaut Industries successfully completed the installation of a Barite processing plant in the South-South region of Nigeria. This project aligns with the Federal Government vision to rapidly develop and support locally made Nigerian goods, contributing to the nation's industrial growth and self-sufficiency.",
+    services: [
+      "Plant Installation",
+      "Equipment Setup",
+      "Process Engineering",
+      "Commissioning",
+    ],
+    image: "/barite.jpeg",
+    href: "/projects/ministry-solid-minerals",
+    completed: true,
+  },
+  {
+    id: "ngsa",
+    sector: "SEGILOLA RESOURCES OPERATING LIMITED",
+    title: "Diamond Exploration Drilling",
+    client: "Segilola Gold Mine",
+    clientLogo: "/segilola.png",
+    category: "Mining & Exploration",
+    location: "Osun State, Nigeria",
+    year: "2024",
+    description:
+      "Mixture of exploration and indicated drilling at depth exceeding 550 meters.",
+    fullDescription:
+      "Juggernaut Industries provides high quality core samples for accurate geological analysis and resource evaluation. Our diamond drilling services are essential for comprehensive geological assessments and resource evaluations.",
+    services: [
+      "Diamond Drilling",
+      "Exploration Drilling",
+      "Mineral Resource Estimate (MRE)",
+      "Quality Assurance",
+    ],
+    image: "/segilola-2.png",
+    href: "/projects/ngsa",
+    completed: false,
+  },
+  {
+    id: "newstar-thor",
+    sector: "NEWSTAR MINERALS LTD",
+    title: "Lithium Exploration Drilling",
+    client: "Newstar Minerals Ltd (Thor Explorations)",
+    clientLogo: "/newstar.png",
+    category: "Mining & Exploration",
+    location: "West Oyo, Nigeria",
+    year: "2023 - 2024",
+    description: "We carried out an extensive drilling campaign for lithium.",
+    fullDescription:
+      "Juggernaut Industries is currently carrying out drilling services for lithium exploration in partnership with Newstar Minerals Ltd (Thor Explorations) in their West Oyo Project Area. This project positions JIL at the forefront of Nigeria's emerging battery minerals sector.",
+    services: ["Exploration Drilling", "Resource Assessment"],
+    image: "/mining-2.jpeg",
+    href: "/projects/newstar-thor",
+    completed: true,
   },
 ];
 
 // Project categories for filtering
 export const projectCategories = [
-  'All',
-  'Mining & Exploration',
-  'Construction',
-  'Agriculture & Agro-Processing',
-  'Renewable Energy',
+  "All",
+  "Mining & Exploration",
+  "Construction",
+  "Agriculture & Agro-Processing",
+  "Renewable Energy",
 ];
 
 // Success factors from company profile
 export const successFactors = [
-  'Availability of competent team members',
-  'Extensive local regional knowledge and excellent community relations',
-  'Ability to meet project objectives',
-  'Completed within budget',
-  'Project carried out on time',
+  "Availability of competent team members",
+  "Extensive local regional knowledge and excellent community relations",
+  "Ability to meet project objectives",
+  "Completed within budget",
+  "Project carried out on time",
 ];
 
 export const getProjectById = (id: string): Project | undefined => {
@@ -135,6 +162,6 @@ export const getProjectById = (id: string): Project | undefined => {
 };
 
 export const getProjectsByCategory = (category: string): Project[] => {
-  if (category === 'All') return projects;
+  if (category === "All") return projects;
   return projects.filter((project) => project.category === category);
 };
