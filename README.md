@@ -4,7 +4,7 @@ A modern, responsive corporate website for Juggernaut Industries Limited - Niger
 
 ## Tech Stack
 
-- **Framework:** Next.js 14+ (App Router)
+- **Framework:** Next.js 16 (App Router)
 - **Styling:** Tailwind CSS
 - **Animations:** Framer Motion
 - **Icons:** Lucide React
