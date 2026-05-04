@@ -48,14 +48,14 @@ export function NewsSection({ className, limit = 3, showFeatured = true }: NewsS
             <div className="flex-1">
               <div>
   <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Latest Updates
                   </span>
                 </ScrollReveal>
   
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-3">
                     NEWS & INSIGHTS FROM THE FIELD
                   </h2>
                 </ScrollReveal>

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Home, Search } from 'lucide-react';
+import { listKey } from '@/lib/list-key';
 
 export default function NotFound() {
   return (
@@ -34,7 +35,7 @@ export default function NotFound() {
         {/* Floating particles */}
         {[...Array(6)].map((_, i) => (
           <motion.div
-            key={i}
+            key={listKey(['not-found-particle'], i)}
             className="absolute w-2 h-2 rounded-full bg-industrial-gold/20"
             style={{
               top: `${20 + i * 15}%`,
@@ -96,7 +97,7 @@ export default function NotFound() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-8"
         >
-          <span className="inline-flex items-center justify-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+          <span className="inline-flex items-center justify-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
             <span className="w-8 h-px bg-industrial-gold" />
             Page Not Found
             <span className="w-8 h-px bg-industrial-gold" />

@@ -5,9 +5,9 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PageHeader } from '@/components/ui/page-header';
-import { GoldDot } from '@/components/ui/gold-dot';
 import { ScrollReveal } from '@/components/animations/scroll-reveal';
 import { projects, getProjectById } from '@/config/projects';
+import { listKey } from '@/lib/list-key';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 
 export default function ProjectDetailPage() {
@@ -44,18 +44,18 @@ export default function ProjectDetailPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             {/* Left - Content */}
             <div className="order-2 lg:order-1">
-              <div className="sticky top-24 space-y-8">
+              <div className="sticky top-24 space-y-5">
               {/* Header */}
               <div>
   <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Project Overview
                   </span>
                 </ScrollReveal>
   
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-3">
                     {project.title.toUpperCase()}
                   </h2>
                 </ScrollReveal>
@@ -168,7 +168,7 @@ export default function ProjectDetailPage() {
           {/* Section Header */}
           <ScrollReveal animation="fadeUp">
             <div className="mb-12 md:mb-16">
-              <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+              <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                 <span className="w-8 h-px bg-industrial-gold" />
                 What We Delivered
               </span>
@@ -181,7 +181,11 @@ export default function ProjectDetailPage() {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {project.services.map((service, index) => (
-              <ScrollReveal key={index} animation="fadeUp" delay={0.1 * index}>
+              <ScrollReveal
+                key={listKey(['project-detail-service', project.id, service], index)}
+                animation="fadeUp"
+                delay={0.1 * index}
+              >
                 <div className="p-6 rounded-xl bg-white border border-steel-blue/10 hover:border-industrial-gold/20 hover:shadow-lg transition-all">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-1 h-8 bg-industrial-gold rounded-full" />
@@ -203,7 +207,7 @@ export default function ProjectDetailPage() {
             {/* Section Header */}
             <ScrollReveal animation="fadeUp">
               <div className="mb-12 md:mb-16 text-center">
-                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                   <span className="w-8 h-px bg-industrial-gold" />
                   Site Documentation
                 </span>
@@ -216,7 +220,11 @@ export default function ProjectDetailPage() {
             {/* Gallery Grid */}
             <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
               {project.images.map((image, index) => (
-                <ScrollReveal key={index} animation="fadeUp" delay={0.05 * index}>
+                <ScrollReveal
+                  key={listKey(['project-gallery-img', project.id, image], index)}
+                  animation="fadeUp"
+                  delay={0.05 * index}
+                >
                   <div className="relative group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500">
                     <div className="relative aspect-[4/3] md:aspect-auto">
                       <Image

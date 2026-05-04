@@ -8,6 +8,7 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { services, explorationServices } from "@/config/services";
 import { ArrowRight } from "lucide-react";
 import { HSEPolicySection } from "@/components/sections";
+import { listKey } from "@/lib/list-key";
 
 const SERVICE_HEADLINES: Record<string, { headline: string }> = {
   mining: { headline: "MINING & EXPLORATION SERVICES" },
@@ -34,17 +35,17 @@ export default function ServicesPage() {
       {/* Intro Section */}
       <section className="relative py-14 overflow-hidden bg-white">
         <div className="container-jil relative z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl flex flex-col gap-4">
             <div>
               <ScrollReveal animation="fadeUp">
-                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                   <span className="w-8 h-px bg-industrial-gold" />
                   What We Do
                 </span>
               </ScrollReveal>
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
-                <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-0">
                   EXCELLENCE ACROSS SECTORS
                 </h2>
               </ScrollReveal>
@@ -93,17 +94,17 @@ export default function ServicesPage() {
 
         <div className="container-jil relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-4">
               <div>
                 <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Our Core Service
                   </span>
                 </ScrollReveal>
 
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl  font-light text-off-white leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-off-white leading-[2.5rem] mb-3">
                     MINING & EXPLORATION
                   </h2>
                 </ScrollReveal>
@@ -158,7 +159,7 @@ export default function ServicesPage() {
               </ScrollReveal> */}
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
-                <h2 className="font-display text-2xl md:text-3xl  font-light text-off-white leading-[2.5rem] mb-6">
+                <h2 className="font-display text-2xl md:text-3xl  font-light text-off-white leading-[2.5rem] mb-3">
                   Our Step by Step Approach to Exploration
                 </h2>
               </ScrollReveal>
@@ -213,15 +214,24 @@ export default function ServicesPage() {
                     "Training and Capacity Building",
                   ],
                 },
-              ].map((section, idx) => (
-                <div key={idx} className="space-y-4">
+              ].map((section, sectionIndex) => (
+                <div
+                  key={listKey(
+                    ["exploration-step", section.title],
+                    sectionIndex
+                  )}
+                  className="space-y-4"
+                >
                   <h4 className="font-heading text-xs tracking-[0.1em] uppercase text-industrial-gold">
                     {section.title}
                   </h4>
                   <div className="space-y-3">
-                    {section.items.map((item, i) => (
+                    {section.items.map((item, itemIndex) => (
                       <div
-                        key={i}
+                        key={listKey(
+                          ["exploration-item", section.title, item],
+                          `${sectionIndex}-${itemIndex}`
+                        )}
                         className="flex items-start gap-2 text-sm text-light-gray"
                       >
                         <div className="-mt-0.5 flex-shrink-0">
@@ -256,17 +266,17 @@ export default function ServicesPage() {
               </div>
             </ScrollReveal>
 
-            <div className="space-y-8 order-1 lg:order-2">
+            <div className="space-y-5 order-1 lg:order-2">
               <div>
   <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     What We Do
                   </span>
                 </ScrollReveal>
 
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-3">
                     EXPLORATION & DRILLING SERVICES
                   </h2>
                 </ScrollReveal>
@@ -294,7 +304,7 @@ export default function ServicesPage() {
           <div>
             <div>
               <ScrollReveal animation="fadeUp">
-                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                   <span className="w-8 h-px bg-industrial-gold" />
                   Services we offer
                 </span>
@@ -302,23 +312,28 @@ export default function ServicesPage() {
             </div>
             <ScrollReveal animation="fadeUp" delay={0.1}>
               <p className="text-steel-blue leading-relaxed text-lg mb-4">
-                JIL offers a wide range of drilling services that covers the following:
+                JIL offers a wide range of drilling services that covers the
+                following:
               </p>
             </ScrollReveal>
 
             <ScrollReveal animation="fadeUp" delay={0.15}>
               <ul className="list-disc pl-6 text-steel-blue leading-relaxed text-lg space-y-2">
+                <li className="marker:text-industrial-gold">Blast Hole</li>
                 <li className="marker:text-industrial-gold">
-                  Reverse Circulation (RC) Drilling
+                  Grade Control
+                </li>
+                <li className="marker:text-industrial-gold">
+                  Geotechnical Drilling
+                </li>
+                <li className="marker:text-industrial-gold">
+                  Water Well Drilling
+                </li>
+                <li className="marker:text-industrial-gold">
+                  Reverse Circulation (RC)
                 </li>
                 <li className="marker:text-industrial-gold">
                   Diamond Drilling (DD) Core Recovery
-                </li>
-                <li className="marker:text-industrial-gold">
-                  Blast Hole & Grade Control Drilling
-                </li>
-                <li className="marker:text-industrial-gold">
-                  Water Well & Geotechnical Drilling
                 </li>
               </ul>
             </ScrollReveal>
@@ -344,10 +359,10 @@ export default function ServicesPage() {
               </div>
             </ScrollReveal>
 
-            <div className="space-y-8 order-1">
+            <div className="space-y-5 order-1">
               <div>
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-3">
                     RC DRILLING
                   </h2>
                 </ScrollReveal>
@@ -393,27 +408,27 @@ export default function ServicesPage() {
               </div>
             </ScrollReveal>
 
-            <div className="space-y-8 order-1">
+            <div className="space-y-5 order-1">
               <ScrollReveal animation="fadeUp">
-                <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-3">
                   DIAMOND DRILLING
                 </h2>
               </ScrollReveal>
 
               <ScrollReveal animation="fadeUp" delay={0.1}>
                 <p className="text-steel-blue leading-relaxed">
-                  Our Diamond drilling services deliver
-                  continuous, high-quality core samples that are essential for
-                  accurate geological and structural analysis. With advanced
-                  drilling technology and highly skilled crews, we achieve
-                  excellent core recovery and precision across a wide range of
-                  ground conditions. We support advanced mineral exploration,
-                  feasibility studies, and geotechnical investigations, ensuring
-                  reliable results even in complex and challenging formations.
-                  Through strict quality control, careful core handling, and
-                  efficient field operations, we provide dependable geological
-                  data that strengthens decision-making and enhances overall
-                  project outcomes.
+                  Our Diamond drilling services deliver continuous, high-quality
+                  core samples that are essential for accurate geological and
+                  structural analysis. With advanced drilling technology and
+                  highly skilled crews, we achieve excellent core recovery and
+                  precision across a wide range of ground conditions. We support
+                  advanced mineral exploration, feasibility studies, and
+                  geotechnical investigations, ensuring reliable results even in
+                  complex and challenging formations. Through strict quality
+                  control, careful core handling, and efficient field
+                  operations, we provide dependable geological data that
+                  strengthens decision-making and enhances overall project
+                  outcomes.
                 </p>
               </ScrollReveal>
             </div>
@@ -455,17 +470,17 @@ export default function ServicesPage() {
 
             <div className="container-jil relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                <div className="lg:col-span-7 space-y-6">
+                <div className="lg:col-span-7 space-y-4">
                   <div>
                     <ScrollReveal animation="fadeUp">
-                      <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                      <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                         <span className="w-8 h-px bg-industrial-gold" />
                         Services
                       </span>
                     </ScrollReveal>
 
                     <ScrollReveal animation="fadeUp" delay={0.1}>
-                      <h2 className="font-display text-3xl md:text-4xl  font-light text-off-white leading-[2.5rem] mb-6">
+                      <h2 className="font-display text-3xl md:text-4xl  font-light text-off-white leading-[2.5rem] mb-3">
                         {headlines.headline}
                       </h2>
                     </ScrollReveal>
@@ -534,14 +549,14 @@ export default function ServicesPage() {
             <div className="space-y-6">
               <div>
                 <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Why Choose Us
                   </span>
                 </ScrollReveal>
 
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-3">
                     TRUSTED EXCELLENCE
                   </h2>
                 </ScrollReveal>

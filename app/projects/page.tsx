@@ -1,12 +1,13 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { PageHeader } from '@/components/ui/page-header';
-import { GoldDot } from '@/components/ui/gold-dot';
-import { ScrollReveal } from '@/components/animations/scroll-reveal';
-import { projects, successFactors } from '@/config/projects';
-import { ArrowRight } from 'lucide-react';
+import Image from "next/image";
+import Link from "next/link";
+import { PageHeader } from "@/components/ui/page-header";
+import { GoldDot } from "@/components/ui/gold-dot";
+import { ScrollReveal } from "@/components/animations/scroll-reveal";
+import { projects, successFactors } from "@/config/projects";
+import { listKey } from "@/lib/list-key";
+import { ArrowRight } from "lucide-react";
 
 export default function ProjectsPage() {
   return (
@@ -16,8 +17,8 @@ export default function ProjectsPage() {
         title="OUR PROJECTS"
         subtitle="Selected projects that we have delivered or are currently ongoing, making key impacts across Nigeria."
         breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'Projects', href: '/projects' },
+          { label: "Home", href: "/" },
+          { label: "Projects", href: "/projects" },
         ]}
         backgroundImage="/construction.jpg"
       />
@@ -27,61 +28,68 @@ export default function ProjectsPage() {
         <div className="container-jil relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             {/* Left - Content */}
-            <div className="space-y-8 order-1">
-              {/* Header */}
+            <div className="flex flex-col gap-4 order-1">
+              {/* Title stack — tighter kicker → headline */}
               <div>
-  <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                <ScrollReveal animation="fadeUp">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Selected Projects
                   </span>
                 </ScrollReveal>
-  
+
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-0">
                     DELIVERING EXCELLENCE
                   </h2>
                 </ScrollReveal>
               </div>
 
-              {/* Description */}
-              <ScrollReveal animation="fadeUp" delay={0.1}>
-                <p className="text-steel-blue leading-relaxed text-lg">
-                  The following is a list of <strong className="text-deep-navy">selected projects</strong> that
-                  we have delivered or are currently ongoing, making key impacts across Nigeria.
-                </p>
-              </ScrollReveal>
+              {/* Body copy — tighter between paragraphs */}
+              <div className="space-y-3">
+                <ScrollReveal animation="fadeUp" delay={0.1}>
+                  <p className="text-steel-blue leading-relaxed text-lg">
+                    The following is a list of{" "}
+                    <strong className="text-deep-navy">
+                      selected projects
+                    </strong>{" "}
+                    that we have delivered or are currently ongoing, making key
+                    impacts across Nigeria.
+                  </p>
+                </ScrollReveal>
 
-              <ScrollReveal animation="fadeUp" delay={0.15}>
-                <p className="text-steel-blue leading-relaxed">
-                  From government contracts to private sectors, our portfolio demonstrates
-                  our commitment to quality and our capability to deliver complex projects on time
-                  and within budget.
-                </p>
-              </ScrollReveal>
-
+                <ScrollReveal animation="fadeUp" delay={0.15}>
+                  <p className="text-steel-blue leading-relaxed">
+                    From government contracts to private sectors, our portfolio
+                    demonstrates our commitment to quality and our capability to
+                    deliver complex projects on time and within budget.
+                  </p>
+                </ScrollReveal>
+              </div>
             </div>
 
-            {/* Right - Sticky Image */}
-             {/* Project Stats */}
-              <ScrollReveal animation="fadeUp" delay={0.2} className='order-2'>
-                <div className="grid grid-cols-1 gap-4">
-                  {[
-                    { value: '5+', label: 'Major Projects' },
-                    { value: '100%', label: 'On-Time Delivery' },
-                    { value: '20+', label: 'Years Experience' },
-                  ].map((stat, index) => (
-                    <div key={index} className="text-center p-4 rounded-xl bg-off-white/50 border border-steel-blue/5">
-                      <p className="font-display text-2xl md:text-3xl font-semibold text-industrial-gold mb-1">
-                        {stat.value}
-                      </p>
-                      <p className="font-heading text-[10px] tracking-[0.1em] uppercase text-steel-blue">
-                        {stat.label}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </ScrollReveal>
+            {/* Right - Stats */}
+            <ScrollReveal animation="fadeUp" delay={0.2} className="order-2">
+              <div className="grid grid-cols-1 gap-4">
+                {[
+                  { value: "5+", label: "Major Projects" },
+                  { value: "100%", label: "On-Time Delivery" },
+                  { value: "20+", label: "Years Experience" },
+                ].map((stat) => (
+                  <div
+                    key={listKey(["projects-intro-stat", stat.label, stat.value])}
+                    className="text-center p-4 rounded-xl bg-off-white/50 border border-steel-blue/5"
+                  >
+                    <p className="font-display text-2xl md:text-3xl font-semibold text-industrial-gold mb-1">
+                      {stat.value}
+                    </p>
+                    <p className="font-heading text-[10px] tracking-[0.1em] uppercase text-steel-blue">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -94,7 +102,7 @@ export default function ProjectsPage() {
             className="absolute inset-0"
             style={{
               backgroundImage: `radial-gradient(circle at 2px 2px, #0D1B2A 1px, transparent 0)`,
-              backgroundSize: '48px 48px',
+              backgroundSize: "48px 48px",
             }}
           />
         </div>
@@ -109,13 +117,19 @@ export default function ProjectsPage() {
 
         <div className="container-jil relative z-10">
           {/* Projects Grid */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {projects.map((project, index) => (
-              <ScrollReveal key={project.id} animation="fadeUp" delay={0.1 * index}>
+              <ScrollReveal
+                key={project.id}
+                animation="fadeUp"
+                delay={0.1 * index}
+              >
                 <div className="group bg-white rounded-xl overflow-hidden border border-steel-blue/10 hover:shadow-xl transition-all duration-300">
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Image */}
-                    <div className={`relative aspect-[4/3] lg:aspect-auto overflow-hidden ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                    <div
+                      className={`relative aspect-[4/3] lg:aspect-auto overflow-hidden ${index % 2 === 1 ? "lg:order-2" : ""}`}
+                    >
                       <Image
                         src={project.image}
                         alt={project.title}
@@ -126,7 +140,9 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* Content */}
-                    <div className={`p-6 lg:p-8 flex flex-col justify-center ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                    <div
+                      className={`p-6 lg:p-8 flex flex-col justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}
+                    >
                       {/* Top Bar: Client Logo & Status Badge */}
                       <div className="flex items-center justify-between gap-4 mb-4">
                         {/* Client Logo */}
@@ -138,43 +154,42 @@ export default function ProjectsPage() {
                             className="object-contain p-1"
                           />
                         </div>
-                        
+
                         {/* Status Badge */}
-                        <span 
+                        <span
                           className={`px-3 py-1 text-[10px] font-heading tracking-[0.15em] uppercase rounded-full border ${
-                            project.completed 
-                              ? 'bg-steel-blue/5 border-steel-blue/20 text-steel-blue' 
-                              : 'bg-industrial-gold/10 border-industrial-gold/20 text-industrial-gold'
+                            project.completed
+                              ? "bg-steel-blue/5 border-steel-blue/20 text-steel-blue"
+                              : "bg-industrial-gold/10 border-industrial-gold/20 text-industrial-gold"
                           }`}
                         >
-                          {project.completed ? 'Completed' : 'Ongoing'}
+                          {project.completed ? "Completed" : "Ongoing"}
                         </span>
                       </div>
 
-                      {/* Meta Information */}
-                      <div className="flex flex-col gap-4 mb-6">
-                        {/* Category & Date Group */}
-                        
-
-                        {/* Client & Location Group */}
-                        <div className="flex flex-col gap-1">
-                          <span className="font-heading text-sm tracking-wide text-steel-blue font-medium">
-                            {project.client}
-                          </span>
-                        </div>
-                        <div className="flex flex-col gap-1">
-                          <span className="font-heading text-xs tracking-[0.1em] uppercase text-industrial-gold">
-                            {project.sector}
-                          </span>
-                          <span className="font-heading text-xs tracking-[0.1em] uppercase text-steel-blue opacity-80">
-                            {project.year}
-                          </span>
-                          <div className="flex items-center gap-2 text-sm text-steel-blue">
-                            <GoldDot size="sm" />
-                            <span>{project.location}</span>
+                      {/* Meta Information — key / value */}
+                      <dl className="grid gap-3 mb-6 text-sm border border-steel-blue/10 rounded-lg p-4 bg-off-white/40">
+                        {(
+                          [
+                            ["Client", project.client],
+                            ["Project", project.sector],
+                            ["Year", project.year],
+                            ["Location", project.location],
+                          ] as const
+                        ).map(([label, value]) => (
+                          <div
+                            key={label}
+                            className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3"
+                          >
+                            <dt className="font-heading text-[10px] tracking-[0.15em] uppercase text-deep-navy font-semibold shrink-0 sm:min-w-[5.5rem]">
+                              {label}
+                            </dt>
+                            <dd className="text-steel-blue font-medium leading-snug sm:flex-1 m-0">
+                              {value}
+                            </dd>
                           </div>
-                        </div>
-                      </div>
+                        ))}
+                      </dl>
 
                       {/* Title */}
                       <h3 className="font-display text-xl md:text-2xl  text-deep-navy mb-3">
@@ -188,9 +203,9 @@ export default function ProjectsPage() {
 
                       {/* Services */}
                       <div className="flex flex-wrap gap-2 mb-6">
-                        {project.services.map((service, idx) => (
+                        {project.services.map((service) => (
                           <span
-                            key={idx}
+                            key={listKey(["portfolio-service-tag", project.id, service])}
                             className="px-3 py-1 rounded-full text-xs font-heading tracking-wider uppercase bg-off-white text-steel-blue border border-steel-blue/10"
                           >
                             {service}
@@ -209,29 +224,28 @@ export default function ProjectsPage() {
       {/* Success Factors Section */}
       <section className="relative py-14 overflow-hidden bg-white">
         <div className="container-jil relative z-10">
-          <div className="w-full space-y-8">
-            {/* Header */}
+          <div className="w-full flex flex-col gap-4">
+            {/* Title stack */}
             <div>
-  <ScrollReveal animation="fadeUp">
-                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+              <ScrollReveal animation="fadeUp">
+                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                   <span className="w-8 h-px bg-industrial-gold" />
                   Why We Succeed
                 </span>
               </ScrollReveal>
-  
+
               <ScrollReveal animation="fadeUp" delay={0.1}>
-                <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-0">
                   SUCCESS FACTORS
                 </h2>
               </ScrollReveal>
             </div>
 
-            {/* Description */}
             <ScrollReveal animation="fadeUp" delay={0.1}>
               <p className="text-steel-blue leading-relaxed max-w-3xl">
-                We have identified key elements that contribute to the success of our projects.
-                These factors ensure consistent delivery and client satisfaction across all our
-                engagements.
+                We have identified key elements that contribute to the success
+                of our projects. These factors ensure consistent delivery and
+                client satisfaction across all our engagements.
               </p>
             </ScrollReveal>
 
@@ -241,8 +255,8 @@ export default function ProjectsPage() {
             {/* Success Factors List */}
             <ScrollReveal animation="fadeUp" delay={0.2}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {successFactors.map((factor, index) => (
-                  <div key={index} className="flex items-start gap-4">
+                {successFactors.map((factor) => (
+                  <div key={listKey(["success-factor", factor])} className="flex items-start gap-4">
                     <GoldDot size="sm" className="mt-2 flex-shrink-0" />
                     <p className="text-steel-blue leading-relaxed">{factor}</p>
                   </div>
@@ -252,7 +266,7 @@ export default function ProjectsPage() {
 
             {/* CTA */}
             <ScrollReveal animation="fadeUp" delay={0.3}>
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-industrial-gold text-near-black font-heading text-xs tracking-[0.1em] uppercase rounded-xl btn-animated relative z-1 overflow-hidden after:bg-steel-blue hover:text-off-white transition-colors"

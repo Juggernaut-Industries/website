@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { heroContent, heroSlides, stats } from '@/config/site';
+import { listKey } from '@/lib/list-key';
 import { ChevronDown, ArrowRight } from 'lucide-react';
 import { ScrollReveal } from '../animations';
 import Image from 'next/image';
@@ -224,7 +225,7 @@ export function HeroFlow({ className }: HeroFlowProps) {
           </div>
 
           {/* Bottom Section - Stats */}
-          <div className="pb-6 space-y-8">
+          <div className="pb-6 space-y-5">
             {/* Scroll Text */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -250,7 +251,16 @@ export function HeroFlow({ className }: HeroFlowProps) {
               <div className="grid grid-cols-3 md:grid-cols-3 gap-4 md:gap-0">
                 {stats.map((stat, index) => (
                   <motion.div
-                    key={index}
+                    key={listKey(
+                      [
+                        'hero-stat',
+                        stat.label,
+                        String(stat.value),
+                        stat.suffix ?? '',
+                        'description' in stat ? stat.description : '',
+                      ],
+                      index
+                    )}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1.3 + index * 0.1 }}

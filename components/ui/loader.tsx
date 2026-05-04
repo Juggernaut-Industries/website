@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { listKey } from '@/lib/list-key';
 
 interface LoaderProps {
   size?: 'sm' | 'md' | 'lg' | 'full';
@@ -205,7 +206,7 @@ export function PageLoader() {
         >
           {[...Array(3)].map((_, i) => (
             <motion.span
-              key={i}
+              key={listKey(['loader-dot'], i)}
               className="w-1 h-1 rounded-full bg-industrial-gold"
               animate={{ y: [0, -4, 0] }}
               transition={{ duration: 0.6, repeat: Infinity, delay: i * 0.15 }}

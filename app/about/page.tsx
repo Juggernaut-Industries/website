@@ -7,8 +7,8 @@ import { GoldDot } from "@/components/ui/gold-dot";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { siteConfig, stats } from "@/config/site";
 import { services } from "@/config/services";
+import { listKey } from "@/lib/list-key";
 import { ArrowRight } from "lucide-react";
-import { HSEPolicySection } from "@/components/sections";
 
 // Core values
 const coreValues = [
@@ -59,7 +59,7 @@ export default function AboutPage() {
         <div className="container-jil relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             {/* Left - Content */}
-            <div className="space-y-8 order-2 lg:order-1">
+            <div className="space-y-5 order-2 lg:order-1">
               {/* Header */}
               {/* <ScrollReveal animation="fadeUp">
                 <div className="space-y-4">
@@ -74,19 +74,19 @@ export default function AboutPage() {
               {/* Main Description */}
               <div>
                 <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     About
                   </span>
                 </ScrollReveal>
 
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-0">
                     WHO WE ARE
                   </h2>
                 </ScrollReveal>
 
-                <ScrollReveal animation="fadeUp" delay={0.15}>
+                <ScrollReveal animation="fadeUp" delay={0.15} className="mt-3">
                   <p className="text-steel-blue leading-relaxed text-lg">
                     <strong className="text-deep-navy">
                       Juggernaut Industries Limited (JIL)
@@ -130,9 +130,9 @@ export default function AboutPage() {
                     "Government & Private Clients",
                     "Geochemistry Analysis",
                     "Nigerian Electricity Management services Agency (NEMSA)",
-                  ].map((highlight, index) => (
+                  ].map((highlight) => (
                     <div
-                      key={index}
+                      key={listKey(["about-highlight", highlight])}
                       className="flex items-center gap-2 text-sm text-steel-blue"
                     >
                       <GoldDot size="sm" />
@@ -184,7 +184,7 @@ export default function AboutPage() {
                     { src: "/solar_installation.jpg" },
                   ].map((item, i) => (
                     <div
-                      key={i}
+                      key={listKey(["about-photo-grid", item.src])}
                       className={`relative overflow-hidden ${i === 0 ? "rounded-tl-xl" : i === 1 ? "rounded-tr-xl" : i === 2 ? "rounded-bl-xl" : "rounded-br-xl"}`}
                     >
                       <Image
@@ -207,7 +207,20 @@ export default function AboutPage() {
         <div className="container-jil relative z-10">
           <div className="grid grid-cols-3 md:grid-cols-3 gap-6 lg:gap-8">
             {stats.map((stat, index) => (
-              <ScrollReveal key={index} animation="fadeUp" delay={0.1 * index}>
+              <ScrollReveal
+                key={listKey(
+                  [
+                    "about-stat",
+                    stat.label,
+                    String(stat.value),
+                    stat.suffix ?? "",
+                    stat.description ?? "",
+                  ],
+                  index
+                )}
+                animation="fadeUp"
+                delay={0.1 * index}
+              >
                 <div className="text-center p-6 rounded-xl bg-steel-blue/10 border border-white/10">
                   <p className="font-display text-4xl md:text-5xl font-semibold text-industrial-gold mb-2">
                     {stat.value}
@@ -239,29 +252,29 @@ export default function AboutPage() {
 
         <div className="container-jil relative z-10">
           {/* Section Header */}
-          <div className="mb-12 md:mb-16">
+          <div className="mb-8 md:mb-10">
             <ScrollReveal animation="fadeUp">
-              <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+              <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
                 <div>
                   <ScrollReveal animation="fadeUp">
-                    <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                    <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                       <span className="w-8 h-px bg-industrial-gold" />
                       What We Do
                     </span>
                   </ScrollReveal>
                   <ScrollReveal animation="fadeUp" delay={0.1}>
-                    <h2 className="font-display text-3xl md:text-4xl  font-light text-off-white mb-6">
+                    <h2 className="font-display text-3xl md:text-4xl  font-light text-off-white mb-0">
                       OUR ACTIVITIES
                     </h2>
                   </ScrollReveal>
                 </div>
-                <Link
+                {/* <Link
                   href="/services"
                   className="inline-flex items-center gap-2 px-6 py-3 border border-industrial-gold/50 text-industrial-gold font-heading text-xs tracking-[0.1em] uppercase rounded-xl btn-animated relative z-1 overflow-hidden after:bg-industrial-gold hover:text-near-black transition-colors"
                 >
                   View All Services
                   <ArrowRight className="w-4 h-4" />
-                </Link>
+                </Link> */}
               </div>
             </ScrollReveal>
           </div>
@@ -322,7 +335,7 @@ export default function AboutPage() {
             {/* Vision Card */}
             <ScrollReveal animation="fadeUp" delay={0.1}>
               <div className="group h-full p-8 md:p-10 rounded-xl bg-white border border-steel-blue/10 shadow-sm hover:shadow-lg transition-shadow">
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-3 mb-4">
                   <div className="w-1 h-8 bg-industrial-gold rounded-full" />
                   <h3 className="font-heading text-lg tracking-[0.1em] uppercase text-deep-navy">
                     Our Vision
@@ -337,7 +350,7 @@ export default function AboutPage() {
             {/* Mission Card */}
             <ScrollReveal animation="fadeUp" delay={0.2}>
               <div className="group h-full p-8 md:p-10 rounded-xl bg-white border border-steel-blue/10 shadow-sm hover:shadow-lg transition-shadow">
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-3 mb-4">
                   <div className="w-1 h-8 bg-industrial-gold rounded-full" />
                   <h3 className="font-heading text-lg tracking-[0.1em] uppercase text-deep-navy">
                     Our Mission
@@ -355,7 +368,7 @@ export default function AboutPage() {
       {/* Core Values Section - Image Left, Content Right */}
       <section className="relative py-14 overflow-hidden bg-white">
         <div className="container-jil relative z-10">
-          <div className="flex flex-col justify-center items-center gap-8 lg:gap-10 items-stretch">
+          <div className="flex flex-col justify-center gap-6 lg:gap-8">
             {/* Left - Sticky Image */}
             {/* <ScrollReveal animation="fadeUp" className="order-2 lg:order-1">
               <div className="sticky top-24">
@@ -372,23 +385,22 @@ export default function AboutPage() {
             </ScrollReveal> */}
 
             {/* Right - Content */}
-            <div className="space-y-8 ">
-              {/* Header */}
+            <div className="flex flex-col gap-4">
+              {/* Title stack */}
               <div>
                 <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Our Values
                   </span>
                 </ScrollReveal>
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-0">
                     CORE VALUES
                   </h2>
                 </ScrollReveal>
               </div>
 
-              {/* Description */}
               <ScrollReveal animation="fadeUp" delay={0.1}>
                 <p className="text-steel-blue text-left text-lg max-w-2xl leading-relaxed">
                   Our values define who we are and guide every decision we make.
@@ -403,9 +415,9 @@ export default function AboutPage() {
               {/* Values Grid */}
               <ScrollReveal animation="fadeUp" delay={0.2}>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  {coreValues.map((value, index) => (
+                  {coreValues.map((value) => (
                     <div
-                      key={index}
+                      key={listKey(["core-value", value.title])}
                       className="p-4 rounded-xl bg-off-white/50 border border-steel-blue/5 hover:border-industrial-gold/20 transition-colors"
                     >
                       <div className="flex flex-row gap-3">

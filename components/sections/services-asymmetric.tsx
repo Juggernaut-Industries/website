@@ -9,6 +9,7 @@ import { services } from '@/config/services';
 import { Pickaxe, Leaf, Building2, Sun, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { listKey } from '@/lib/list-key';
 
 interface ServicesAsymmetricProps {
   className?: string;
@@ -46,18 +47,18 @@ export function ServicesAsymmetric({ className }: ServicesAsymmetricProps) {
           {/* Two Column Layout - Details Left, Sticky Image Right */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             {/* Left - Details Section */}
-            <div className="space-y-8 order-1">
+            <div className="space-y-5 order-1">
               {/* Section Header - Like Intro */}
               <div>
   <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     What We Do
                   </span>
                 </ScrollReveal>
   
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-3">
                     OUR SERVICES ACROSS INDUSTRIES
                   </h2>
                 </ScrollReveal>
@@ -125,7 +126,7 @@ export function ServicesAsymmetric({ className }: ServicesAsymmetricProps) {
                     { src: '/solar_installation.jpg', label: 'Renewable Energy' },
                   ].map((item, i) => (
                     <div
-                      key={i}
+                      key={listKey(['services-collage', item.src, item.label])}
                       className={`relative overflow-hidden ${i === 0 ? 'rounded-tl-xl' : i === 1 ? 'rounded-tr-xl' : i === 2 ? 'rounded-bl-xl' : 'rounded-br-xl'}`}
                     >
                       <Image

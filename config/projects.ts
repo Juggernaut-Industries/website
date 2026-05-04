@@ -100,7 +100,7 @@ export const projects: Project[] = [
   {
     id: "ngsa",
     sector: "SEGILOLA RESOURCES OPERATING LIMITED",
-    title: "Diamond Exploration Drilling",
+    title: "Diamond Drilling",
     client: "Segilola Gold Mine",
     clientLogo: "/segilola.png",
     category: "Mining & Exploration",

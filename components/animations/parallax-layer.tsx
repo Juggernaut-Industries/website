@@ -3,6 +3,7 @@
 import { useRef, ReactNode } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { listKey } from '@/lib/list-key';
 
 type ParallaxSpeed = 'slow' | 'medium' | 'fast' | 'reverse';
 
@@ -152,7 +153,7 @@ export function ParallaxScene({ layers, className }: ParallaxSceneProps) {
     <div className={cn('relative', className)}>
       {layers.map((layer, index) => (
         <ParallaxLayer
-          key={index}
+          key={listKey(['parallax-layer', layer.speed, String(layer.zIndex ?? '')], index)}
           speed={layer.speed}
           className={cn('absolute inset-0', layer.zIndex && `z-${layer.zIndex}`)}
         >

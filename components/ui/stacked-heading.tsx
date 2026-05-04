@@ -8,6 +8,7 @@ import {
   wordRevealContainer,
   wordReveal,
 } from '@/lib/animations';
+import { listKey } from '@/lib/list-key';
 
 type HeadingSize = 'hero' | 'large' | 'medium' | 'small';
 type HeadingWeight = 'light' | 'normal' | 'medium' | 'semibold' | 'bold';
@@ -66,7 +67,7 @@ export function StackedHeading({
     if (!animate) {
       return (
         <div
-          key={index}
+          key={listKey(['stacked-line-plain', line], index)}
           className={cn(
             sizeClasses[size],
             weightClasses[weight],
@@ -81,7 +82,7 @@ export function StackedHeading({
     if (animationType === 'character') {
       return (
         <motion.div
-          key={index}
+          key={listKey(['stacked-line-char', line], index)}
           className={cn(
             sizeClasses[size],
             weightClasses[weight],
@@ -95,7 +96,7 @@ export function StackedHeading({
         >
           {line.split('').map((char, charIndex) => (
             <motion.span
-              key={charIndex}
+              key={listKey(['stacked-char', line, char], charIndex)}
               variants={textRevealCharacter}
               className="inline-block"
               style={{ display: char === ' ' ? 'inline' : 'inline-block' }}
@@ -110,7 +111,7 @@ export function StackedHeading({
     if (animationType === 'word') {
       return (
         <motion.div
-          key={index}
+          key={listKey(['stacked-line-word', line], index)}
           className={cn(
             sizeClasses[size],
             weightClasses[weight],
@@ -124,7 +125,7 @@ export function StackedHeading({
         >
           {line.split(' ').map((word, wordIndex) => (
             <motion.span
-              key={wordIndex}
+              key={listKey(['stacked-word', line, word], wordIndex)}
               variants={wordReveal}
               className="inline-block mr-[0.25em]"
               style={{ perspective: '1000px' }}
@@ -139,7 +140,7 @@ export function StackedHeading({
     // Line animation
     return (
       <motion.div
-        key={index}
+        key={listKey(['stacked-line-reveal', line], index)}
         className={cn(
           sizeClasses[size],
           weightClasses[weight],

@@ -6,6 +6,7 @@ import { PageHeader } from '@/components/ui/page-header';
 import { GoldDot } from '@/components/ui/gold-dot';
 import { ScrollReveal } from '@/components/animations/scroll-reveal';
 import { ArrowRight } from 'lucide-react';
+import { listKey } from '@/lib/list-key';
 
 // Timeline milestones
 const milestones = [
@@ -67,17 +68,17 @@ export default function OurStoryPage() {
         <div className="container-jil relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             {/* Left - Content */}
-            <div className="space-y-8 order-2 lg:order-1">
+            <div className="space-y-5 order-2 lg:order-1">
               {/* Header */}
               <div>
                 <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     How It All Began
                   </span>
                 </ScrollReveal>
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-3">
                     THE JUGGERNAUT JOURNEY
                   </h2>
                 </ScrollReveal>
@@ -122,8 +123,8 @@ export default function OurStoryPage() {
                     'COREN-registered engineers',
                     'Government contracts',
                     'Private sector clients',
-                  ].map((fact, index) => (
-                    <div key={index} className="flex items-center gap-2 text-sm text-steel-blue">
+                  ].map((fact) => (
+                    <div key={listKey(['our-story-fact', fact])} className="flex items-center gap-2 text-sm text-steel-blue">
                       <GoldDot size="sm" />
                       <span>{fact}</span>
                     </div>
@@ -163,12 +164,12 @@ export default function OurStoryPage() {
           />
         </div>
 
-        <div className="container-jil mb-12 md:mb-16">
-          <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+        <div className="container-jil mb-8 md:mb-10">
+          <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
             <span className="w-8 h-px bg-industrial-gold" />
             Our Journey
           </span>
-          <h2 className="font-display text-3xl md:text-4xl font-light text-deep-navy mb-6">OUR MILESTONES</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-light text-deep-navy mb-3">OUR MILESTONES</h2>
         </div>
 
         <div className="container-jil relative z-10">
@@ -180,7 +181,7 @@ export default function OurStoryPage() {
             {/* Timeline Items */}
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
-                <ScrollReveal key={index} animation="fadeUp" delay={0.1 * index}>
+                <ScrollReveal key={listKey(['our-story-milestone', milestone.year, milestone.title])} animation="fadeUp" delay={0.1 * index}>
                   <div
                     className={`relative flex flex-col md:flex-row gap-6 md:gap-12 ${
                       index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
@@ -221,17 +222,17 @@ export default function OurStoryPage() {
         <div className="container-jil relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             {/* Left - Content */}
-            <div className="space-y-8 order-2 lg:order-1">
+            <div className="space-y-5 order-2 lg:order-1">
               {/* Header */}
               <div>
                 <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     The Future
                   </span>
                 </ScrollReveal>
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-3">
                     LOOKING AHEAD
                   </h2>
                 </ScrollReveal>
@@ -266,8 +267,8 @@ export default function OurStoryPage() {
                     'Agri-Technology',
                     'Critical Minerals',
                     'Sustainable Mining',
-                  ].map((focus, index) => (
-                    <div key={index} className="flex items-center gap-2 text-sm text-steel-blue">
+                  ].map((focus) => (
+                    <div key={listKey(['our-story-focus', focus])} className="flex items-center gap-2 text-sm text-steel-blue">
                       <GoldDot size="sm" />
                       <span>{focus}</span>
                     </div>

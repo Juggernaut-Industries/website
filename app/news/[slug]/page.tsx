@@ -1,18 +1,24 @@
-'use client';
+/** biome-ignore-all lint/security/noDangerouslySetInnerHtml: <explanation> */
+"use client";
 
-import { use } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { PageHeader } from '@/components/ui/page-header';
-import { ScrollReveal } from '@/components/animations/scroll-reveal';
-import { NewsCard } from '@/components/ui/news-card';
-import { Calendar, ArrowLeft, Share2, Tag } from 'lucide-react';
-import { notFound } from 'next/navigation';
-import { newsArticles, formatNewsDate } from '@/config/news';
+import { use } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { PageHeader } from "@/components/ui/page-header";
+import { ScrollReveal } from "@/components/animations/scroll-reveal";
+import { NewsCard } from "@/components/ui/news-card";
+import { Calendar, ArrowLeft, Share2, Tag } from "lucide-react";
+import { notFound } from "next/navigation";
+import { newsArticles, formatNewsDate } from "@/config/news";
+import { listKey } from "@/lib/list-key";
 
-export default function NewsArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+export default function NewsArticlePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = use(params);
-  const article = newsArticles.find(a => a.slug === slug);
+  const article = newsArticles.find((a) => a.slug === slug);
 
   if (!article) {
     notFound();
@@ -20,19 +26,19 @@ export default function NewsArticlePage({ params }: { params: Promise<{ slug: st
 
   // Get related articles (exclude current article)
   const relatedArticles = newsArticles
-    .filter(a => a.slug !== slug && a.category === article.category)
+    .filter((a) => a.slug !== slug && a.category === article.category)
     .slice(0, 2);
 
   return (
     <>
       {/* Page Header */}
       <PageHeader
-        className='h-[70vh] md:h-[60vh] lg:h-[50vh]'
+        className="h-[70vh] md:h-[60vh] lg:h-[50vh]"
         title={article.title}
         subtitle={article.excerpt}
         breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'News', href: '/news' },
+          { label: "Home", href: "/" },
+          { label: "News", href: "/news" },
           { label: article.title, href: `/news/${slug}` },
         ]}
         backgroundImage={article.image}
@@ -87,7 +93,9 @@ export default function NewsArticlePage({ params }: { params: Promise<{ slug: st
                       <span className="font-heading text-xs tracking-[0.1em] uppercase text-steel-blue mb-2 block">
                         Author
                       </span>
-                      <p className="text-sm text-steel-blue">{article.author}</p>
+                      <p className="text-sm text-steel-blue">
+                        {article.author}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -106,7 +114,7 @@ export default function NewsArticlePage({ params }: { params: Promise<{ slug: st
             </ScrollReveal>
 
             {/* Right - Content */}
-            <div className="space-y-8 order-1 lg:order-2">
+            <div className="space-y-5 order-1 lg:order-2">
               <ScrollReveal animation="fadeUp">
                 <article
                   className="prose prose-lg max-w-none text-steel-blue
@@ -131,9 +139,9 @@ export default function NewsArticlePage({ params }: { params: Promise<{ slug: st
                         </span>
                       </div>
                       <div className="flex flex-wrap gap-2">
-                        {article.tags.map((tag, index) => (
+                        {article.tags.map((tag) => (
                           <span
-                            key={index}
+                            key={listKey(["news-tag", slug, tag])}
                             className="px-3 py-1 bg-industrial-gold/10 border border-industrial-gold/30 text-steel-blue font-heading text-xs tracking-[0.05em] rounded-lg hover:bg-industrial-gold/20 transition-colors"
                           >
                             {tag}
@@ -152,7 +160,7 @@ export default function NewsArticlePage({ params }: { params: Promise<{ slug: st
             <div className="mt-20">
               <ScrollReveal animation="fadeUp">
                 <div className="mb-10 text-center">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Field Gallery
                   </span>
@@ -165,7 +173,7 @@ export default function NewsArticlePage({ params }: { params: Promise<{ slug: st
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {article.images.map((image, index) => (
                   <ScrollReveal
-                    key={index}
+                    key={listKey(["news-gallery-img", slug, image], index)}
                     animation="fadeUp"
                     delay={0.1 * (index % 3)}
                   >
@@ -186,7 +194,6 @@ export default function NewsArticlePage({ params }: { params: Promise<{ slug: st
         </div>
       </section>
 
-
       {/* Related Articles */}
       {relatedArticles.length > 0 && (
         <section className="relative py-14 overflow-hidden bg-off-white">
@@ -196,7 +203,7 @@ export default function NewsArticlePage({ params }: { params: Promise<{ slug: st
               className="absolute inset-0"
               style={{
                 backgroundImage: `radial-gradient(circle at 2px 2px, #0D1B2A 1px, transparent 0)`,
-                backgroundSize: '48px 48px',
+                backgroundSize: "48px 48px",
               }}
             />
           </div>
@@ -204,7 +211,7 @@ export default function NewsArticlePage({ params }: { params: Promise<{ slug: st
           <div className="container-jil relative z-10">
             <ScrollReveal animation="fadeUp">
               <div className="mb-8">
-                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                   <span className="w-8 h-px bg-industrial-gold" />
                   Related Articles
                 </span>
@@ -216,7 +223,11 @@ export default function NewsArticlePage({ params }: { params: Promise<{ slug: st
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedArticles.map((related, index) => (
-                <ScrollReveal key={related.slug} animation="fadeUp" delay={0.1 * index}>
+                <ScrollReveal
+                  key={related.slug}
+                  animation="fadeUp"
+                  delay={0.1 * index}
+                >
                   <NewsCard
                     id={related.slug}
                     title={related.title}

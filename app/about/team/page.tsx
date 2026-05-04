@@ -6,6 +6,7 @@ import { PageHeader } from '@/components/ui/page-header';
 import { GoldDot } from '@/components/ui/gold-dot';
 import { ScrollReveal } from '@/components/animations/scroll-reveal';
 import { ArrowRight } from 'lucide-react';
+import { listKey } from '@/lib/list-key';
 
 // Team members data from the website
 const leadership = [
@@ -49,17 +50,17 @@ export default function TeamPage() {
         <div className="container-jil relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             {/* Left - Content */}
-            <div className="space-y-8 order-2 lg:order-1">
+            <div className="space-y-5 order-2 lg:order-1">
               {/* Header */}
               <div>
                 {/* <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Our People
                   </span>
                 </ScrollReveal> */}
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-3">
                      OUR PEOPLE
                   </h2>
                 </ScrollReveal>
@@ -124,13 +125,13 @@ export default function TeamPage() {
         <div className="container-jil mb-12 md:mb-16">
           <div>
             <ScrollReveal animation="fadeUp">
-              <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+              <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                 <span className="w-8 h-px bg-industrial-gold" />
                 Our People
               </span>
             </ScrollReveal>
             <ScrollReveal animation="fadeUp" delay={0.1}>
-              <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-6">
+              <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-3">
                 EXECUTIVE TEAM
               </h2>
             </ScrollReveal>
@@ -141,7 +142,7 @@ export default function TeamPage() {
           {/* Team Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {leadership.map((member, index) => (
-              <ScrollReveal key={index} animation="fadeUp" delay={0.1 * index}>
+              <ScrollReveal key={listKey(['team-executive', member.name])} animation="fadeUp" delay={0.1 * index}>
                 <div className="group h-full bg-white rounded-xl overflow-hidden border border-steel-blue/10 hover:shadow-xl transition-all duration-300">
                   {/* Image */}
                   <div className="relative aspect-[4/5] overflow-hidden">
@@ -181,7 +182,7 @@ export default function TeamPage() {
       {/* <section className="relative py-14 overflow-hidden bg-white">
         <div className="container-jil relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
-            <div className="space-y-8 order-2 lg:order-1">
+            <div className="space-y-5 order-2 lg:order-1">
               <ScrollReveal animation="fadeUp">
                 <div className="space-y-4">
                   <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold">

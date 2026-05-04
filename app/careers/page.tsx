@@ -18,6 +18,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 
 import { toast } from 'sonner';
+import { listKey } from '@/lib/list-key';
 
 export default function CareersPage() {
   const [formData, setFormData] = useState({
@@ -123,18 +124,18 @@ export default function CareersPage() {
         <div className="container-jil relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             {/* Left - Content */}
-            <div className="space-y-8 order-2 lg:order-1">
+            <div className="space-y-5 order-2 lg:order-1">
               {/* Header */}
               <div>
   <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Careers
                   </span>
                 </ScrollReveal>
   
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-3">
                     BE PART OF OUR MISSION
                   </h2>
                 </ScrollReveal>
@@ -158,8 +159,8 @@ export default function CareersPage() {
                     'Professional development opportunities',
                     'Collaborative team environment',
                     'Industry-leading projects',
-                  ].map((point, index) => (
-                    <div key={index} className="flex items-center gap-3 text-sm text-steel-blue">
+                  ].map((point) => (
+                    <div key={listKey(['careers-bullet', point])} className="flex items-center gap-3 text-sm text-steel-blue">
                       <GoldDot size="sm" />
                       <span>{point}</span>
                     </div>
@@ -230,18 +231,18 @@ export default function CareersPage() {
             </ScrollReveal>
 
             {/* Right - Content */}
-            <div className="space-y-8 order-1 lg:order-2">
+            <div className="space-y-5 order-1 lg:order-2">
               {/* Section Header */}
               <div>
   <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                     <span className="w-8 h-px bg-industrial-gold" />
                     Why Join Us
                   </span>
                 </ScrollReveal>
   
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-3">
                     GROW YOUR CAREER WITH US
                   </h2>
                 </ScrollReveal>
@@ -274,8 +275,8 @@ export default function CareersPage() {
                       title: 'Innovation Culture',
                       description: 'Work with cutting-edge technology and contribute to groundbreaking projects.',
                     },
-                  ].map((benefit, index) => (
-                    <div key={index} className="flex items-start gap-4">
+                  ].map((benefit) => (
+                    <div key={listKey(['careers-benefit', benefit.title])} className="flex items-start gap-4">
                       <GoldDot size="lg" className="mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-heading text-sm tracking-[0.1em] uppercase text-deep-navy mb-1">
@@ -316,14 +317,14 @@ export default function CareersPage() {
           <div className="mb-12 md:mb-16">
             <div>
   <ScrollReveal animation="fadeUp">
-                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                   <span className="w-8 h-px bg-industrial-gold" />
                   Application Form
                 </span>
               </ScrollReveal>
   
               <ScrollReveal animation="fadeUp" delay={0.1}>
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-6">
+                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-deep-navy leading-[2.5rem] mb-3">
                   SUBMIT YOUR APPLICATION
                 </h2>
               </ScrollReveal>

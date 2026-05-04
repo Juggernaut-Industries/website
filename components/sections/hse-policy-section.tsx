@@ -2,7 +2,6 @@
 
 import { cn } from '@/lib/utils';
 import { ScrollReveal } from '@/components/animations/scroll-reveal';
-import { ShieldCheck, Leaf } from 'lucide-react';
 
 interface HSEPolicySectionProps {
   className?: string;
@@ -27,26 +26,24 @@ export function HSEPolicySection({ className }: HSEPolicySectionProps) {
         />
       </div>
 
-        <div className="container-jil relative z-10">
-          <div className="flex flex-col justify-center items-center gap-8 lg:gap-8 items-stretch">
-            <div className="space-y-8 ">
-              <div>
-                <ScrollReveal animation="fadeUp">
-                  <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
-                    <span className="w-8 h-px bg-industrial-gold" />
-                    Our Values
-                  </span>
-                </ScrollReveal>
-                <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl  font-light leading-[2.5rem] mb-6">
-                    HEALTH SAFETY & ENVIRONMENT
-                  </h2>
-                </ScrollReveal>
-              </div>
+      <div className="container-jil relative z-10">
+        <div className="flex flex-col gap-4">
+          <div>
+            <ScrollReveal animation="fadeUp">
+              <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
+                <span className="w-8 h-px bg-industrial-gold" />
+                Our Values
+              </span>
+            </ScrollReveal>
+            <ScrollReveal animation="fadeUp" delay={0.1}>
+              <h2 className="font-display text-3xl md:text-4xl font-light leading-[2.5rem] mb-0">
+                HEALTH SAFETY & ENVIRONMENT
+              </h2>
+            </ScrollReveal>
           </div>
 
           <ScrollReveal animation="fadeUp" delay={0.1}>
-            <p className="text-light-gray text-lg leading-relaxed">
+            <p className="text-light-gray text-left text-lg max-w-2xl leading-relaxed">
               Safety is not a policy at Juggernaut it is a
               culture. Our HSE management system is built
               on global best practices, continuous staff
@@ -58,9 +55,10 @@ export function HSEPolicySection({ className }: HSEPolicySectionProps) {
               on. Our people go home safe.
             </p>
           </ScrollReveal>
+        </div>
 
-          {/* Feature points */}
-          {/* <ScrollReveal animation="fadeUp" delay={0.2}>
+        {/* Feature points */}
+        {/* <ScrollReveal animation="fadeUp" delay={0.2}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 text-left max-w-xl mx-auto">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-steel-blue/20 text-industrial-gold">
@@ -82,7 +80,6 @@ export function HSEPolicySection({ className }: HSEPolicySectionProps) {
               </div>
             </div>
           </ScrollReveal> */}
-        </div>
       </div>
     </section>
   );

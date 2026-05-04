@@ -4,6 +4,7 @@ import { motion, useInView, useMotionValue, useTransform, animate } from 'framer
 import { useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { statsContainer, statItem } from '@/lib/animations';
+import { listKey } from '@/lib/list-key';
 
 interface StatItemData {
   value: number;
@@ -99,7 +100,7 @@ export function StatsBar({
   className,
   variant = 'default',
   animate: shouldAnimate = true,
-  showLines = true,
+  showLines: _showLines = true,
 }: StatsBarProps) {
   const content = (
     <div
@@ -111,7 +112,16 @@ export function StatsBar({
     >
       {stats.map((stat, index) => (
         <StatItem
-          key={index}
+          key={listKey(
+            [
+              'stats-bar-row',
+              stat.label,
+              String(stat.value),
+              stat.prefix ?? '',
+              stat.suffix ?? '',
+            ],
+            index
+          )}
           stat={stat}
           animateCounter={shouldAnimate}
         />
@@ -138,7 +148,20 @@ export function StatsBar({
         )}
       >
         {stats.map((stat, index) => (
-          <motion.div key={index} variants={statItem} className="flex-1">
+          <motion.div
+            key={listKey(
+              [
+                'stats-bar-motion',
+                stat.label,
+                String(stat.value),
+                stat.prefix ?? '',
+                stat.suffix ?? '',
+              ],
+              index
+            )}
+            variants={statItem}
+            className="flex-1"
+          >
             <StatItem stat={stat} animateCounter={shouldAnimate} />
           </motion.div>
         ))}

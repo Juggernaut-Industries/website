@@ -99,7 +99,7 @@ export default function VideosPage() {
           <div className="max-w-5xl mx-auto">
             <ScrollReveal animation="fadeUp">
               <div className="mb-8 text-center">
-                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-4">
+                <span className="inline-flex items-center gap-2 font-heading text-xs tracking-[0.2em] uppercase text-industrial-gold mb-2">
                   <span className="w-8 h-px bg-industrial-gold" />
                   Featured Video
                   <span className="w-8 h-px bg-industrial-gold" />
