@@ -18,6 +18,30 @@ export interface NewsArticle {
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 'africa-outlook-magazine-issue-119',
+    slug: 'africa-outlook-magazine-issue-119',
+    title: 'Juggernaut Industries in Africa Outlook Magazine — Issue 119',
+    excerpt:
+      'JIL appears in Issue 119 of Africa Outlook Magazine (pages 122–123), standing alongside influential companies shaping mining, industry, and commerce across the continent — a milestone for our drilling and exploration brand.',
+    category: 'Company News',
+    date: '2026-04-30',
+    author: 'Corporate Communications',
+    image: '/juggernaut-mag.png',
+    images: ['/juggernaut-mag.png'],
+    href: '/news/africa-outlook-magazine-issue-119',
+    content: `
+      <p>Juggernaut Industries Limited is proud to appear in <strong>Africa Outlook Magazine</strong>, part of Outlook Publishing’s global network of B2B titles covering the companies and leaders driving African industry forward — featured in <strong>Issue 119</strong> on <strong>pages 122–123</strong>.</p>
+      <br/>
+      <p>Our presence in this edition reflects growing visibility for JIL within the <strong>mining and industrial services</strong> space — including high-performance drilling, exploration support, and disciplined execution for resource projects across the region.</p>
+      <br/>
+      <p>Readers can explore the issue and the breadth of stories Outlook spotlights at <a href="https://www.africaoutlookmag.com/magazine/issues/issue119" target="_blank" rel="noopener noreferrer">africaoutlookmag.com — Issue 119</a>. Being included in this edition reinforces our commitment to <strong>operational excellence, innovation, and data-informed delivery</strong> for partners who depend on reliable field performance.</p>
+      <br/>
+      <p>At Juggernaut Industries Ltd, we continue to push boundaries — providing dependable, efficient services that help teams make <strong>smarter decisions in exploration and mining</strong>. We thank Africa Outlook for this platform and our clients and colleagues for the trust that makes moments like this possible.</p>
+    `,
+    tags: ['Africa Outlook', 'Media', 'Mining', 'Exploration', 'Company News'],
+    featured: true,
+  },
+  {
     id: 'ksa-mauritania-partnership',
     slug: 'ksa-mauritania-exclusive-partnership',
     title: 'JIL Signs Exclusive Mining Partnership for Saudi Arabia & Mauritania',
