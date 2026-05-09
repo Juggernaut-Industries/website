@@ -58,7 +58,7 @@ export function HeroFlow({ className }: HeroFlowProps) {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-deep-navy/95 via-deep-navy/80 to-deep-navy/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-navy/25 via-deep-navy/10 to-deep-navy/20" />
         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-industrial-gold/5 to-transparent" />
         {/* Subtle radial glow */}
         <div className="absolute top-1/4 -left-1/4 w-[60%] h-[60%] bg-steel-blue/15 rounded-full blur-[120px]" />
@@ -99,7 +99,7 @@ export function HeroFlow({ className }: HeroFlowProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <span className="inline-flex items-center w-full h-full justify-start gap-2 font-heading text-xs tracking-[0.2em] uppercase text-mid-gray">
+                <span className="inline-flex items-center w-full h-full justify-start gap-2 font-heading text-xs tracking-[0.2em] uppercase text-gray-800">
                   <span className="w-8 h-px bg-industrial-gold" />
                   {heroContent.eyebrow}
                 </span>
@@ -130,7 +130,7 @@ export function HeroFlow({ className }: HeroFlowProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
-                className="text-xl md:text-2xl w-full h-full justify-start  text-left text-light-gray max-w-2xl font-light leading-relaxed"
+                className="text-xl md:text-2xl w-full h-full justify-start  text-left text-black max-w-2xl font-medium leading-relaxed"
               >
                 {heroContent.description}
               </motion.p>

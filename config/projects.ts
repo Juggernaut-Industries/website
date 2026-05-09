@@ -53,9 +53,9 @@ export const projects: Project[] = [
   },
   {
     id: "segilola",
-    sector: "SEGILOLA RESOURCES OPERATING LIMITED",
-    title: "Grade Control Operations",
-    client: "Segilola Gold Mine",
+    sector: "Segilola Gold Mine",
+    title: "Grade Control Drilling",
+    client: "Segilola Resources Operating Limited",
     clientLogo: "/segilola.png",
     category: "Mining & Exploration",
     location: "Osun State, Nigeria",
@@ -84,9 +84,9 @@ export const projects: Project[] = [
     location: "South-South Nigeria",
     year: "2021 - 2023",
     description:
-      "Juggernaut has completed the installation of a Barite processing plant in the South-South region of the country.",
+      "Juggernaut has completed the purchase and installation of a Barite processing plant in the South-South region of the country.",
     fullDescription:
-      "Juggernaut Industries successfully completed the installation of a Barite processing plant in the South-South region of Nigeria. This project aligns with the Federal Government vision to rapidly develop and support locally made Nigerian goods, contributing to the nation's industrial growth and self-sufficiency.",
+      "Juggernaut Industries successfully completed the purchase and installation of a Barite processing plant in the South-South region of Nigeria. This project aligns with the Federal Government vision to rapidly develop and support locally made Nigerian goods, contributing to the nation's industrial growth and self-sufficiency.",
     services: [
       "Plant Installation",
       "Equipment Setup",
@@ -99,22 +99,21 @@ export const projects: Project[] = [
   },
   {
     id: "ngsa",
-    sector: "SEGILOLA RESOURCES OPERATING LIMITED",
+    sector: "Segilola Gold Mine",
     title: "Diamond Drilling",
-    client: "Segilola Gold Mine",
+    client: "Segilola Resources Operating Limited",
     clientLogo: "/segilola.png",
     category: "Mining & Exploration",
     location: "Osun State, Nigeria",
     year: "2024",
     description:
-      "Mixture of exploration and indicated drilling at depth exceeding 550 meters.",
+      "Mixture of exploration and resource drilling at depth exceeding 550 meters.",
     fullDescription:
       "Juggernaut Industries provides high quality core samples for accurate geological analysis and resource evaluation. Our diamond drilling services are essential for comprehensive geological assessments and resource evaluations.",
     services: [
       "Diamond Drilling",
       "Exploration Drilling",
       "Mineral Resource Estimate (MRE)",
-      "Quality Assurance",
     ],
     image: "/segilola-2.png",
     href: "/projects/ngsa",

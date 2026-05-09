@@ -64,18 +64,6 @@ export default function GalleryPage() {
       category: 'Mining & Exploration',
     },
     {
-      id: 20,
-      src: '/survey.jpg',
-      title: 'Regional Geological Survey',
-      category: 'Mining & Exploration',
-    },
-    {
-      id: 21,
-      src: '/survey-1.jpg',
-      title: 'Field Exploration Team',
-      category: 'Mining & Exploration',
-    },
-    {
       id: 22,
       src: '/survey-2.jpg',
       title: 'Site Mapping & Analysis',
@@ -124,39 +112,9 @@ export default function GalleryPage() {
       category: 'Mining & Exploration',
     },
     {
-      id: 4,
-      src: '/Agriculture.jpg',
-      title: 'Large Scale Farming',
-      category: 'Agriculture',
-    },
-    {
-      id: 30,
-      src: '/farming-1.jpg',
-      title: 'Mechanized Agricultural Operations',
-      category: 'Agriculture',
-    },
-    {
-      id: 5,
-      src: '/farmers.jpg',
-      title: 'Local Farm Support',
-      category: 'Agriculture',
-    },
-    {
-      id: 6,
-      src: '/oil_palm.jpg',
-      title: 'Oil Palm Processing',
-      category: 'Agriculture',
-    },
-    {
       id: 7,
       src: '/construction.jpg',
       title: 'Infrastructure Development',
-      category: 'Construction',
-    },
-    {
-      id: 8,
-      src: '/drilling.jpg',
-      title: 'Borehole Drilling',
       category: 'Construction',
     },
     {
@@ -196,18 +154,6 @@ export default function GalleryPage() {
       category: 'Events',
     },
     {
-      id: 31,
-      src: '/event-5.jpeg',
-      title: 'Stakeholder Engagement',
-      category: 'Events',
-    },
-    {
-      id: 32,
-      src: '/event-6.jpeg',
-      title: 'Collaborative Workshop',
-      category: 'Events',
-    },
-    {
       id: 33,
       src: '/event-7.jpeg',
       title: 'Strategic Planning Session',
@@ -232,21 +178,9 @@ export default function GalleryPage() {
       category: 'Events',
     },
     {
-      id: 37,
-      src: '/event-11.jpg',
-      title: 'Industrial Outlook Seminar',
-      category: 'Events',
-    },
-    {
       id: 38,
       src: '/event-12.jpg',
       title: 'Operational Strategy Meeting',
-      category: 'Events',
-    },
-    {
-      id: 39,
-      src: '/event-13.jpg',
-      title: 'Milestone Celebration',
       category: 'Events',
     },
     {

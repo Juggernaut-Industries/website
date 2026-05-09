@@ -6,6 +6,7 @@ export interface NewsArticle {
   slug: string;
   excerpt: string;
   category: 'Mining & Exploration' | 'Agriculture' | 'Construction' | 'Renewable Energy' | 'Company News';
+  link?: string;
   date: string;
   author: string;
   image: string;
@@ -24,6 +25,7 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       'JIL appears in Issue 119 of Africa Outlook Magazine (pages 122–123), standing alongside influential companies shaping mining, industry, and commerce across the continent — a milestone for our drilling and exploration brand.',
     category: 'Company News',
+    link: 'https://www.africaoutlookmag.com/magazine/issues/issue119',
     date: '2026-04-30',
     author: 'Corporate Communications',
     image: '/juggernaut-mag.png',
@@ -36,8 +38,10 @@ export const newsArticles: NewsArticle[] = [
       <br/>
       <p>Readers can explore the issue and the breadth of stories Outlook spotlights at <a href="https://www.africaoutlookmag.com/magazine/issues/issue119" target="_blank" rel="noopener noreferrer">africaoutlookmag.com — Issue 119</a>. Being included in this edition reinforces our commitment to <strong>operational excellence, innovation, and data-informed delivery</strong> for partners who depend on reliable field performance.</p>
       <br/>
-      <p>At Juggernaut Industries Ltd, we continue to push boundaries — providing dependable, efficient services that help teams make <strong>smarter decisions in exploration and mining</strong>. We thank Africa Outlook for this platform and our clients and colleagues for the trust that makes moments like this possible.</p>
-    `,
+      <p>At Juggernaut Industries Ltd, we continue to push boundaries — providing dependable, efficient services that help teams make <strong>smarter decisions in exploration and mining</strong>. We thank Africa Outlook for this platform and our clients and colleagues for the trust that makes moments like this possible. </p> 
+      <br/>
+      <a style="color: #d4af37;" href="https://www.africaoutlookmag.com/magazine/issues/issue119"> Click to View Issue</a>
+      `,
     tags: ['Africa Outlook', 'Media', 'Mining', 'Exploration', 'Company News'],
     featured: true,
   },

@@ -97,6 +97,17 @@ export default function NewsArticlePage({
                         {article.author}
                       </p>
                     </div>
+                    {article.link && (
+                      <div className="h-px bg-steel-blue/20" />
+                    )}
+                    <div>
+                      <span className="font-heading text-xs tracking-[0.1em] uppercase text-steel-blue mb-2 block">
+                        Link
+                      </span>
+                      <a href={article.link} target="_blank" rel="noopener noreferrer" className="text-sm text-steel-blue hover:text-industrial-gold transition-colors">
+                        {article.link}
+                      </a>
+                    </div>
                   </div>
                 </div>
 

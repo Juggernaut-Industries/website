@@ -172,7 +172,7 @@ export default function ProjectsPage() {
                         {(
                           [
                             ["Client", project.client],
-                            ["Project", project.sector],
+                            ["Project", project.title],
                             ["Year", project.year],
                             ["Location", project.location],
                           ] as const
@@ -182,19 +182,14 @@ export default function ProjectsPage() {
                             className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3"
                           >
                             <dt className="font-heading text-[10px] tracking-[0.15em] uppercase text-deep-navy font-semibold shrink-0 sm:min-w-[5.5rem]">
-                              {label}
+                              {label} 
                             </dt>
                             <dd className="text-steel-blue font-medium leading-snug sm:flex-1 m-0">
-                              {value}
+                              {value} { label === "Project" &&  `— ${project.sector}`}
                             </dd>
                           </div>
                         ))}
                       </dl>
-
-                      {/* Title */}
-                      <h3 className="font-display text-xl md:text-2xl  text-deep-navy mb-3">
-                        {project.title}
-                      </h3>
 
                       {/* Description */}
                       <p className="text-steel-blue text-sm leading-relaxed mb-6">
