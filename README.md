@@ -152,7 +152,3 @@ Projects data in `/config/projects.ts`
 - Email: info@juggernautind.com
 - Phone: +234 7052 4401 33
 - Website: [juggernautind.com](https://juggernautind.com)
-
----
-
-Built with Next.js
