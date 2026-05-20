@@ -7,25 +7,26 @@ import { GoldDot } from '@/components/ui/gold-dot';
 import { ScrollReveal } from '@/components/animations/scroll-reveal';
 import { ArrowRight } from 'lucide-react';
 import { listKey } from '@/lib/list-key';
+import { contentImages } from '@/assets/content';
 
 // Team members data from the website
 const leadership = [
   {
     name: 'Alhaji Bello Mohammed',
     role: 'Managing Director',
-    image: '/team-1.jpg',
+    image: contentImages.team1,
     bio: 'Leading Juggernaut Industries with over two decades of experience in mining, construction, and industrial services across Nigeria.',
   },
   {
     name: 'Usman Mohammed',
     role: 'Executive Director',
-    image: '/team-2.jpg',
+    image: contentImages.team2,
     bio: 'Overseeing strategic operations and business development, driving growth across all company divisions.',
   },
   {
     name: 'Thompson Waheed',
     role: 'General Manager',
-    image: '/team-3.jpg',
+    image: contentImages.team3,
     bio: 'Managing day-to-day operations with expertise in project management and client relations.',
   },
 ];
@@ -42,7 +43,7 @@ export default function TeamPage() {
           { label: "About", href: "/about" },
           { label: "Team", href: "/about/team" },
         ]}
-        backgroundImage="/team-group.jpg"
+        backgroundImage={contentImages.teamGroup}
       />
 
       {/* Team Intro Section - Content Left, Image Right */}
@@ -96,7 +97,7 @@ export default function TeamPage() {
               <div className="sticky top-24">
                 <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/team-group.jpg"
+                    src={contentImages.teamGroup}
                     alt="Team collaboration at Juggernaut Industries"
                     fill
                     className="object-cover"
@@ -267,7 +268,7 @@ export default function TeamPage() {
               <div className="sticky top-24">
                 <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/story.jpg"
+                    src={contentImages.story}
                     alt="Team meeting at Juggernaut Industries"
                     fill
                     className="object-cover"

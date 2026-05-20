@@ -7,27 +7,27 @@
 /* ===== JIL BRAND COLOR PALETTE ===== */
 :root {
   /* Primary Palette */
-  --deep-navy: #0D1B2A;
-  --steel-blue: #1B3A5C;
-  --industrial-gold: #E8A317;
+  --deep-navy: #0d1b2a;
+  --steel-blue: #1b3a5c;
+  --industrial-gold: #e8a317;
 
   /* Secondary Palette (Sector Colors) */
-  --mining-green: #2E7D32;
-  --energy-teal: #00796B;
-  --rust: #BF360C;
+  --mining-green: #2e7d32;
+  --energy-teal: #00796b;
+  --rust: #bf360c;
 
   /* Neutrals */
   --near-black: #111827;
   --dark-gray: #374151;
-  --mid-gray: #6B7280;
-  --light-gray: #D1D5DB;
-  --off-white: #F3F4F6;
-  --pure-white: #FFFFFF;
+  --mid-gray: #6b7280;
+  --light-gray: #d1d5db;
+  --off-white: #f3f4f6;
+  --pure-white: #ffffff;
 
   /* Typography */
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-heading: 'Montserrat', system-ui, sans-serif;
-  --font-body: 'Nunito Sans', system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-heading: "Montserrat", system-ui, sans-serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
 
   /* Spacing & Sizing */
   --section-padding: clamp(4rem, 10vh, 8rem);
@@ -150,7 +150,7 @@
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
   --font-sans: var(--font-body);
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-mono: "JetBrains Mono", monospace;
 
   /* Border Radius */
   --radius-sm: calc(var(--radius) - 4px);
@@ -351,14 +351,14 @@
   }
 
   .bracket-text::before {
-    content: '[';
+    content: "[";
     color: var(--mid-gray);
     font-weight: 300;
     opacity: 0.6;
   }
 
   .bracket-text::after {
-    content: ']';
+    content: "]";
     color: var(--mid-gray);
     font-weight: 300;
     opacity: 0.6;
@@ -481,7 +481,7 @@
   }
 
   .btn-animated::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -100%;
     left: 0;

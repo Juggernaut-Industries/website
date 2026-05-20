@@ -10,6 +10,7 @@ import { Pickaxe, Leaf, Building2, Sun, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { listKey } from '@/lib/list-key';
+import { contentImages } from '@/assets/content';
 
 interface ServicesAsymmetricProps {
   className?: string;
@@ -120,13 +121,13 @@ export function ServicesAsymmetric({ className }: ServicesAsymmetricProps) {
               <div className="sticky top-24">
                 <div className="grid grid-cols-2 gap-1 aspect-square w-full">
                   {[
-                    { src: '/mining-2.jpeg', label: 'Mining & Exploration' },
-                    { src: '/shea.jpg', label: 'Agriculture' },
+                    { src: contentImages.mining2, label: 'Mining & Exploration' },
+                    { src: contentImages.shea, label: 'Agriculture' },
                     { src: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop', label: 'Construction' },
-                    { src: '/solar_installation.jpg', label: 'Renewable Energy' },
+                    { src: contentImages.solarInstallation, label: 'Renewable Energy' },
                   ].map((item, i) => (
                     <div
-                      key={listKey(['services-collage', item.src, item.label])}
+                      key={listKey(['services-collage', item.label])}
                       className={`relative overflow-hidden ${i === 0 ? 'rounded-tl-xl' : i === 1 ? 'rounded-tr-xl' : i === 2 ? 'rounded-bl-xl' : 'rounded-br-xl'}`}
                     >
                       <Image

@@ -9,6 +9,7 @@ import { siteConfig, stats } from "@/config/site";
 import { services } from "@/config/services";
 import { listKey } from "@/lib/list-key";
 import { ArrowRight } from "lucide-react";
+import { contentImages } from "@/assets/content";
 
 // Core values
 const coreValues = [
@@ -51,7 +52,7 @@ export default function AboutPage() {
         //   { label: 'Home', href: '/' },
         //   { label: 'About', href: '/about' },
         // ]}
-        backgroundImage="/construction.jpg"
+        backgroundImage={contentImages.construction}
       />
 
       {/* Who We Are Section - Content Left, Image Right */}
@@ -174,27 +175,14 @@ export default function AboutPage() {
             </ScrollReveal> */}
             <ScrollReveal animation="fadeUp" className="order-2">
               <div className="sticky top-24">
-                <div className="grid grid-cols-2 gap-1 aspect-square w-full">
-                  {[
-                    { src: "/mining-2.jpeg" },
-                    { src: "/construction.jpg" },
-                    {
-                      src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop",
-                    },
-                    { src: "/solar_installation.jpg" },
-                  ].map((item, i) => (
-                    <div
-                      key={listKey(["about-photo-grid", item.src])}
-                      className={`relative overflow-hidden ${i === 0 ? "rounded-tl-xl" : i === 1 ? "rounded-tr-xl" : i === 2 ? "rounded-bl-xl" : "rounded-br-xl"}`}
-                    >
-                      <Image
-                        src={item.src}
-                        alt={item.src}
-                        fill
-                        className="object-cover hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                  ))}
+                <div className="relative aspect-square w-full overflow-hidden rounded-xl shadow-2xl">
+                  <Image
+                    src={contentImages.aboutOperationsTeam}
+                    alt="Juggernaut Industries drilling operations team on site"
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </ScrollReveal>

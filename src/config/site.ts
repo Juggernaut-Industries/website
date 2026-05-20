@@ -1,4 +1,5 @@
 // Site-wide configuration for Juggernaut Industries Limited
+import { contentImages } from '@/assets/content';
 
 export const siteConfig = {
   name: 'Juggernaut Industries Limited',
@@ -115,7 +116,7 @@ export const heroContent = {
 export const heroSlides = [
   {
     id: 'mining',
-    image: '/drilling.jpg',
+    image: contentImages.drilling,
     title: 'Mining & Exploration',
     subtitle: 'Core Service',
     description: 'Expert mineral exploration with our own drill rigs, geophysics equipment and in-house laboratory.',
@@ -170,18 +171,18 @@ export const heroThumbnails = [
 export const galleryThumbnails = [
   {
     id: 1,
-    src: '/mining-1.jpeg',
+    src: contentImages.mining1,
   },
   {
     id: 2,
-    src: '/mining-2.jpeg',
+    src: contentImages.mining2,
   },
   {
     id: 3,
-    src: '/mining-3.jpeg',
+    src: contentImages.mining3,
   },
   {
     id: 4,
-    src: '/Agriculture.jpg',
+    src: contentImages.agriculture,
   },
 ];

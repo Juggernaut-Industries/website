@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { listKey } from "@/lib/list-key";
+import { contentImages, hsePolicyPdf } from "@/assets/content";
 
 const hseHighlights = [
   {
@@ -51,7 +52,7 @@ export default function HSEPolicyPage() {
           { label: "Home", href: "/" },
           { label: "HSE Policy", href: "/hse-policy" },
         ]}
-        backgroundImage="/team-group.jpg"
+        backgroundImage={contentImages.teamGroup}
       />
 
       {/* Overview Section */}
@@ -139,7 +140,7 @@ export default function HSEPolicyPage() {
                     document for Juggernaut Industries Limited.
                   </p>
                   <a
-                    href="/hse-policy.pdf"
+                    href={hsePolicyPdf}
                     download
                     className="inline-flex items-center gap-3 px-6 py-4 bg-industrial-gold text-near-black font-heading text-sm tracking-[0.1em] uppercase rounded-xl btn-animated relative z-1 overflow-hidden after:bg-steel-blue hover:text-off-white transition-colors w-full justify-center"
                   >
@@ -161,7 +162,7 @@ export default function HSEPolicyPage() {
                       Document Preview
                     </p>
                     <a
-                      href="/hse-policy.pdf"
+                      href={hsePolicyPdf}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-industrial-gold border-b border-industrial-gold/30 hover:border-industrial-gold flex items-center gap-2 transition-all mt-2"
@@ -172,7 +173,7 @@ export default function HSEPolicyPage() {
 
                   {/* PDF Object (Hidden on mobile if not supported, but CSS will handle display) */}
                   <object
-                    data="/hse-policy.pdf"
+                    data={hsePolicyPdf}
                     type="application/pdf"
                     className="relative z-10 w-full h-full rounded-2xl hidden lg:block"
                   >
@@ -181,7 +182,7 @@ export default function HSEPolicyPage() {
                         PDF viewer is not supported by your browser.
                       </p>
                       <a
-                        href="/hse-policy.pdf"
+                        href={hsePolicyPdf}
                         className="text-industrial-gold underline"
                       >
                         Click here to download the PDF

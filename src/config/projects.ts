@@ -1,19 +1,21 @@
 // Projects configuration for Juggernaut Industries Limited
+import type { StaticImageData } from "next/image";
+import { contentImages } from "@/assets/content";
 
 export interface Project {
   id: string;
   sector: string;
   title: string;
   client: string;
-  clientLogo: string;
+  clientLogo: string | StaticImageData;
   category: string;
   location: string;
   year: string;
   description: string;
   fullDescription: string;
   services: string[];
-  image: string;
-  images?: string[];
+  image: string | StaticImageData;
+  images?: (string | StaticImageData)[];
   href: string;
   completed: boolean;
 }
@@ -24,7 +26,7 @@ export const projects: Project[] = [
     sector: "NIMEP",
     title: "Lead, Zinc & Silver Exploration",
     client: "Ministry of Mines and Steel Development",
-    clientLogo: "/nimep-new.png",
+    clientLogo: contentImages.nimepNew,
     category: "Mining & Exploration",
     location: "Benue Trough, Nigeria",
     year: "2018 - 2021",
@@ -41,12 +43,12 @@ export const projects: Project[] = [
       "RC Drilling",
       "JORC & N143-101 Reporting",
     ],
-    image: "/survey-4.jpg",
+    image: contentImages.survey4,
     images: [
-      "/survey-4.jpg",
-      "/survey-5.jpg",
-      "/survey-6.jpg",
-      "/survey-7.jpg",
+      contentImages.survey4,
+      contentImages.survey5,
+      contentImages.survey6,
+      contentImages.survey7,
     ],
     href: "/projects/lead-zinc-silver",
     completed: true,
@@ -56,7 +58,7 @@ export const projects: Project[] = [
     sector: "Segilola Gold Mine",
     title: "Grade Control Drilling",
     client: "Segilola Resources Operating Limited",
-    clientLogo: "/segilola.png",
+    clientLogo: contentImages.segilola,
     category: "Mining & Exploration",
     location: "Osun State, Nigeria",
     year: "2021",
@@ -70,7 +72,7 @@ export const projects: Project[] = [
       "Sample Analysis",
       "Quality Assurance",
     ],
-    image: "/mining-1.jpeg",
+    image: contentImages.mining1,
     href: "/projects/segilola",
     completed: false,
   },
@@ -79,7 +81,7 @@ export const projects: Project[] = [
     sector: "MSMD",
     title: "Barite Processing Plant Installation",
     client: "Ministry of Solid Minerals",
-    clientLogo: "/nimep-new.png",
+    clientLogo: contentImages.nimepNew,
     category: "Construction",
     location: "South-South Nigeria",
     year: "2021 - 2023",
@@ -93,7 +95,7 @@ export const projects: Project[] = [
       "Process Engineering",
       "Commissioning",
     ],
-    image: "/barite.jpeg",
+    image: contentImages.barite,
     href: "/projects/ministry-solid-minerals",
     completed: true,
   },
@@ -102,7 +104,7 @@ export const projects: Project[] = [
     sector: "Segilola Gold Mine",
     title: "Diamond Drilling",
     client: "Segilola Resources Operating Limited",
-    clientLogo: "/segilola.png",
+    clientLogo: contentImages.segilola,
     category: "Mining & Exploration",
     location: "Osun State, Nigeria",
     year: "2024",
@@ -115,7 +117,7 @@ export const projects: Project[] = [
       "Exploration Drilling",
       "Mineral Resource Estimate (MRE)",
     ],
-    image: "/segilola-2.png",
+    image: contentImages.segilola2,
     href: "/projects/ngsa",
     completed: false,
   },
@@ -124,7 +126,7 @@ export const projects: Project[] = [
     sector: "NEWSTAR MINERALS LTD",
     title: "Lithium Exploration Drilling",
     client: "Newstar Minerals Ltd (Thor Explorations)",
-    clientLogo: "/newstar.png",
+    clientLogo: contentImages.newstar,
     category: "Mining & Exploration",
     location: "West Oyo, Nigeria",
     year: "2023 - 2024",
@@ -132,7 +134,7 @@ export const projects: Project[] = [
     fullDescription:
       "Juggernaut Industries is currently carrying out drilling services for lithium exploration in partnership with Newstar Minerals Ltd (Thor Explorations) in their West Oyo Project Area. This project positions JIL at the forefront of Nigeria's emerging battery minerals sector.",
     services: ["Exploration Drilling", "Resource Assessment"],
-    image: "/mining-2.jpeg",
+    image: contentImages.mining2,
     href: "/projects/newstar-thor",
     completed: true,
   },

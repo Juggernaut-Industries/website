@@ -1,10 +1,5 @@
-import { HeroFlow } from '@/components/sections/hero-flow';
+import { HeroFlow, HeroIntroPanel } from '@/components/sections/hero-flow';
 import { IntroBlend } from '@/components/sections/intro-blend';
-import { ServicesAsymmetric } from '@/components/sections/services-asymmetric';
-import { ProjectsCarousel } from '@/components/sections/projects-carousel';
-import { NewsSection } from '@/components/sections/news-section';
-import { HSEPolicySection } from '@/components/sections/hse-policy-section';
-import { CTASection } from '@/components/sections/cta-section';
 
 export default function HomePage() {
   return (
@@ -12,7 +7,10 @@ export default function HomePage() {
       {/* Hero Section - Full viewport, stacked heading, floating card, stats */}
       <HeroFlow />
 
-      {/* Intro Section - Bracket text, thumbnails, brand divider */}
+      {/* Hero Intro - Welcome copy and stats */}
+      <HeroIntroPanel />
+
+      {/* In tro Section - Bracket text, thumbnails, brand divider */}
       <IntroBlend />
 
       {/* Services Section - Asymmetric layout with accordion */}

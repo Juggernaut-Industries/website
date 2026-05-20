@@ -2,6 +2,7 @@ import { PageHeader } from '@/components/ui/page-header';
 import { NewsCard } from '@/components/ui/news-card';
 import { newsArticles } from '@/config/news';
 import { ScrollReveal } from '@/components/animations/scroll-reveal';
+import { contentImages } from '@/assets/content';
 
 export default function NewsPage() {
   // Sort news articles by date (newest first)
@@ -19,7 +20,7 @@ export default function NewsPage() {
           { label: 'Home', href: '/' },
           { label: 'News', href: '/news' },
         ]}
-        backgroundImage="/conference.jpg"
+        backgroundImage={contentImages.conference}
       />
 
       {/* News Grid */}

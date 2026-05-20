@@ -8,6 +8,7 @@ import { siteConfig } from '@/config/site';
 import { ArrowRight, Mail, Phone, Loader2, CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { contentImages } from '@/assets/content';
 
 interface CTASectionProps {
   className?: string;
@@ -62,7 +63,7 @@ export function CTASection({ className }: CTASectionProps) {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/conference.jpg"
+          src={contentImages.conference}
           alt="JIL Conference"
           fill
           className="absolute inset-0 w-full h-full object-cover"
@@ -190,4 +191,3 @@ export function CTASection({ className }: CTASectionProps) {
     </section>
   );
 }
-

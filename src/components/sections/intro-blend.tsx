@@ -31,7 +31,7 @@ export function IntroBlend({ className }: IntroBlendProps) {
     <section
       id="intro"
       className={cn(
-        'relative pt-20 md:pt-32 pb-32 md:pb-48 overflow-hidden',
+        'relative pt-20 pb-32 md:pb-48 overflow-hidden',
         'bg-gradient-to-b from-deep-navy via-steel-blue/20 to-deep-navy',
         className
       )}

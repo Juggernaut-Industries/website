@@ -221,7 +221,7 @@ export default function ProjectDetailPage() {
             <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
               {project.images.map((image, index) => (
                 <ScrollReveal
-                  key={listKey(['project-gallery-img', project.id, image], index)}
+                  key={listKey(['project-gallery-img', project.id], index)}
                   animation="fadeUp"
                   delay={0.05 * index}
                 >

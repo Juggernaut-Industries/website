@@ -9,6 +9,7 @@ import { services, explorationServices } from "@/config/services";
 import { ArrowRight } from "lucide-react";
 import { HSEPolicySection } from "@/components/sections";
 import { listKey } from "@/lib/list-key";
+import { contentImages } from "@/assets/content";
 
 const SERVICE_HEADLINES: Record<string, { headline: string }> = {
   mining: { headline: "MINING & EXPLORATION SERVICES" },
@@ -29,7 +30,7 @@ export default function ServicesPage() {
         //   { label: 'Home', href: '/' },
         //   { label: 'Services', href: '/services' },
         // ]}
-        backgroundImage="/construction.jpg"
+        backgroundImage={contentImages.construction}
       />
 
       {/* Intro Section */}
@@ -349,7 +350,7 @@ export default function ServicesPage() {
               <div className="sticky top-24">
                 <div className="relative aspect-square w-full lg:h-96 rounded-xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/rc.jpg"
+                    src={contentImages.rc}
                     alt="RC Drilling"
                     fill
                     className="object-cover"
@@ -398,7 +399,7 @@ export default function ServicesPage() {
               <div className="sticky top-24">
                 <div className="relative aspect-square w-full lg:h-96 rounded-xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/mining-2.jpeg"
+                    src={contentImages.mining2}
                     alt="Diamond Drilling"
                     fill
                     className="object-cover"

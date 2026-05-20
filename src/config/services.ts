@@ -1,4 +1,6 @@
 // Services configuration for Juggernaut Industries Limited
+import type { StaticImageData } from 'next/image';
+import { contentImages } from '@/assets/content';
 
 export type ServiceSector =
   | 'mining'
@@ -21,8 +23,8 @@ export interface Service {
   href: string;
   features: string[];
   highlights?: ServiceHighlight[];
-  image: string;
-  images?: string[];
+  image: string | StaticImageData;
+  images?: (string | StaticImageData)[];
 }
 
 // Mining exploration services from PDF
@@ -197,8 +199,14 @@ export const services: Service[] = [
         description: 'Modern RC and Diamond rigs, built for accuracy and reliability.',
       }
     ],
-    image: '/mining-1.jpeg',
-    images: ['/mining-1.jpeg', '/mining-2.jpeg', '/mining-3.jpeg', '/mineral.jpg', '/mineral-2.jpg'],
+    image: contentImages.mining1,
+    images: [
+      contentImages.mining1,
+      contentImages.mining2,
+      contentImages.mining3,
+      contentImages.mineral,
+      contentImages.mineral2,
+    ],
   },
   // {
   //   id: 'agriculture',
@@ -328,8 +336,8 @@ export const services: Service[] = [
         description: 'Install different capacity transformers based on project requirements.',
       },
     ],
-    image: '/solar_installation.jpg',
-    images: ['/solar_installation.jpg', 'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop'],
+    image: contentImages.solarInstallation,
+    images: [contentImages.solarInstallation, 'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop'],
   },
 ];
 

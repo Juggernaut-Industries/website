@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import type { StaticImageData } from 'next/image';
 
 interface Breadcrumb {
   label: string;
@@ -14,7 +15,7 @@ interface PageHeaderProps {
   title?: string;
   subtitle?: string;
   breadcrumbs?: Breadcrumb[];
-  backgroundImage: string;
+  backgroundImage: string | StaticImageData;
   className?: string;
 }
 

@@ -2,12 +2,13 @@
 
 import { PageHeader } from "@/components/ui/page-header";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
+import { contentImages, miningVideo2 } from "@/assets/content";
 
 export default function VideosPage() {
   const videos = [
     {
       id: 1,
-      src: "/mining-video-2.mp4",
+      src: miningVideo2,
       title: "Site Operations",
       category: "Mining & Exploration",
       description:
@@ -26,7 +27,7 @@ export default function VideosPage() {
           { label: "Home", href: "/" },
           { label: "Videos", href: "/media/videos" },
         ]}
-        backgroundImage="/conference.jpg"
+        backgroundImage={contentImages.conference}
       />
 
       {/* Videos Section */}
@@ -59,7 +60,7 @@ export default function VideosPage() {
                       src={video.src}
                       className="w-full h-full"
                       controls
-                      poster="/mining-1.jpeg" // Valid local fallback
+                      poster={contentImages.mining1.src}
                     />
                   </div>
 

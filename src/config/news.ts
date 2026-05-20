@@ -1,4 +1,6 @@
 // News configuration for Juggernaut Industries Limited
+import type { StaticImageData } from "next/image";
+import { contentImages } from "@/assets/content";
 
 export interface NewsArticle {
   id: string;
@@ -9,8 +11,8 @@ export interface NewsArticle {
   link?: string;
   date: string;
   author: string;
-  image: string;
-  images?: string[]; // Multiple images support
+  image: string | StaticImageData;
+  images?: (string | StaticImageData)[]; // Multiple images support
   href: string;
   content: string;
   tags: string[];
@@ -19,18 +21,18 @@ export interface NewsArticle {
 
 export const newsArticles: NewsArticle[] = [
   {
-    id: 'africa-outlook-magazine-issue-119',
-    slug: 'africa-outlook-magazine-issue-119',
-    title: 'Juggernaut Industries in Africa Outlook Magazine — Issue 119',
+    id: "africa-outlook-magazine-issue-119",
+    slug: "africa-outlook-magazine-issue-119",
+    title: "Juggernaut Industries in Africa Outlook Magazine — Issue 119",
     excerpt:
-      'JIL appears in Issue 119 of Africa Outlook Magazine (pages 122–123), standing alongside influential companies shaping mining, industry, and commerce across the continent — a milestone for our drilling and exploration brand.',
-    category: 'Company News',
-    link: 'https://www.africaoutlookmag.com/magazine/issues/issue119',
-    date: '2026-04-30',
-    author: 'Corporate Communications',
-    image: '/juggernaut-mag.png',
-    images: ['/juggernaut-mag.png'],
-    href: '/news/africa-outlook-magazine-issue-119',
+      "JIL appears in Issue 119 of Africa Outlook Magazine (pages 122–123), standing alongside influential companies shaping mining, industry, and commerce across the continent — a milestone for our drilling and exploration brand.",
+    category: "Company News",
+    link: "https://www.africaoutlookmag.com/magazine/issues/issue119",
+    date: "2026-04-30",
+    author: "Corporate Communications",
+    image: contentImages.magazine,
+    images: [contentImages.magazine, contentImages.juggernautMag],
+    href: "/news/africa-outlook-magazine-issue-119",
     content: `
       <p>Juggernaut Industries Limited is proud to appear in <strong>Africa Outlook Magazine</strong>, part of Outlook Publishing’s global network of B2B titles covering the companies and leaders driving African industry forward — featured in <strong>Issue 119</strong> on <strong>pages 122–123</strong>.</p>
       <br/>
@@ -42,21 +44,22 @@ export const newsArticles: NewsArticle[] = [
       <br/>
       <a style="color: #d4af37;" href="https://www.africaoutlookmag.com/magazine/issues/issue119"> Click to View Issue</a>
       `,
-    tags: ['Africa Outlook', 'Media', 'Mining', 'Exploration', 'Company News'],
+    tags: ["Africa Outlook", "Media", "Mining", "Exploration", "Company News"],
     featured: true,
   },
   {
-    id: 'ksa-mauritania-partnership',
-    slug: 'ksa-mauritania-exclusive-partnership',
-    title: 'JIL Signs Exclusive Mining Partnership for Saudi Arabia & Mauritania',
+    id: "ksa-mauritania-partnership",
+    slug: "ksa-mauritania-exclusive-partnership",
+    title:
+      "JIL Signs Exclusive Mining Partnership for Saudi Arabia & Mauritania",
     excerpt:
-      'At the Future Minerals Forum in Riyadh, Juggernaut Industries MD Bello Mohammed signed an exclusive agreement with Nebras Business Holdings, securing our presence in the Kingdom of Saudi Arabia and Mauritania.',
-    category: 'Mining & Exploration',
-    date: '2026-02-10',
-    author: 'Corporate Communications',
-    image: '/event-3.jpeg',
-    images: ['/event-3.jpeg'],
-    href: '/news/ksa-mauritania-exclusive-partnership',
+      "At the Future Minerals Forum in Riyadh, Juggernaut Industries MD Bello Mohammed signed an exclusive agreement with Nebras Business Holdings, securing our presence in the Kingdom of Saudi Arabia and Mauritania.",
+    category: "Mining & Exploration",
+    date: "2026-02-10",
+    author: "Corporate Communications",
+    image: contentImages.event3,
+    images: [contentImages.event3],
+    href: "/news/ksa-mauritania-exclusive-partnership",
     content: `
       <p>Juggernaut Industries Limited is proud to announce a landmark milestone in our international growth strategy. At the prestigious <strong>Future Minerals Forum in Riyadh</strong>, our Managing Director, Alh. Bello Mohammed, FNSEG, attended a signing ceremony for an exclusive agreement with <strong>Nebras Business Holdings</strong>, a reputable Saudi company.</p>
       <br/>
@@ -66,21 +69,27 @@ export const newsArticles: NewsArticle[] = [
       <br/>
       <p>We look forward to the significant opportunities this collaboration will unlock — and to further strengthening our position as Nigeria's leading multidisciplinary services company on the global stage.</p>
     `,
-    tags: ['Partnership', 'Saudi Arabia', 'Mauritania', 'Future Minerals Forum', 'International'],
+    tags: [
+      "Partnership",
+      "Saudi Arabia",
+      "Mauritania",
+      "Future Minerals Forum",
+      "International",
+    ],
     featured: true,
   },
   {
-    id: 'md-nseg-honorary-fellow',
-    slug: 'md-bello-mohammed-nseg-honorary-fellow',
-    title: 'MD Alh. Bello Mohammed Conferred as Honorary Fellow of NSEG',
+    id: "md-nseg-honorary-fellow",
+    slug: "md-bello-mohammed-nseg-honorary-fellow",
+    title: "MD Alh. Bello Mohammed Conferred as Honorary Fellow of NSEG",
     excerpt:
-      'Juggernaut Industries congratulates our Managing Director, Alh. Bello Mohammed, FNSEG, on his conferment as Honorary Fellow of the Nigerian Society of Economic Geologists — a prestigious recognition of his exceptional leadership in Nigeria\'s mining industry.',
-    category: 'Company News',
-    date: '2025-10-29',
-    author: 'Corporate Communications',
-    image: '/event-7.jpeg',
-    images: ['/event-7.jpeg', '/event-8.jpg', '/event-5.jpg', '/event-6.jpg'],
-    href: '/news/md-bello-mohammed-nseg-honorary-fellow',
+      "Juggernaut Industries congratulates our Managing Director, Alh. Bello Mohammed, FNSEG, on his conferment as Honorary Fellow of the Nigerian Society of Economic Geologists — a prestigious recognition of his exceptional leadership in Nigeria's mining industry.",
+    category: "Company News",
+    date: "2025-10-29",
+    author: "Corporate Communications",
+    image: contentImages.event7,
+    images: [contentImages.event7, contentImages.event8, contentImages.event5, contentImages.event6],
+    href: "/news/md-bello-mohammed-nseg-honorary-fellow",
     content: `
       <p>Juggernaut Industries Limited is proud to congratulate our Managing Director, <strong>Alh. Bello Mohammed, FNSEG</strong>, on his conferment as an <strong>Honorary Fellow of the Nigerian Society of Economic Geologists (NSEG)</strong> — a prestigious recognition of his exceptional leadership, commitment, and contributions to the growth of Nigeria's mining and exploration industry.</p>
       <br/>
@@ -92,21 +101,33 @@ export const newsArticles: NewsArticle[] = [
       <br/>
       <p>Congratulations once again to Alh. Bello Mohammed, FNSEG, and the entire Juggernaut team on this outstanding recognition. #NSEG #NigeriaMining #EconomicGeology</p>
     `,
-    tags: ['Award', 'NSEG',  'Recognition', 'Company News'],
+    tags: ["Award", "NSEG", "Recognition", "Company News"],
     featured: true,
   },
   {
-    id: 'nigeria-mining-week-2025',
-    slug: 'nigeria-mining-week-2025',
-    title: 'JIL at the 10th Nigeria Mining Week — Inspiring a Mining-Led Future',
+    id: "nigeria-mining-week-2025",
+    slug: "nigeria-mining-week-2025",
+    title:
+      "JIL at the 10th Nigeria Mining Week — Inspiring a Mining-Led Future",
     excerpt:
-      'The Juggernaut team attended the 10th Nigeria Mining Week in Abuja, connecting with over 1,200 industry leaders and contributing to discussions on innovation, partnerships, and mining-led economic transformation.',
-    category: 'Mining & Exploration',
-    date: '2025-10-15',
-    author: 'Corporate Communications',
-    image: '/event-15.jpg',
-    images: ['/event-15.jpg', '/event-16.jpg', '/event-17.jpg', '/event-8.jpg', '/event-9.jpg', '/event-10.jpg', '/event-11.jpg', '/event-12.jpg', '/event-13.jpg', '/event-14.jpg'],
-    href: '/news/nigeria-mining-week-2025',
+      "The Juggernaut team attended the 10th Nigeria Mining Week in Abuja, connecting with over 1,200 industry leaders and contributing to discussions on innovation, partnerships, and mining-led economic transformation.",
+    category: "Mining & Exploration",
+    date: "2025-10-15",
+    author: "Corporate Communications",
+    image: contentImages.event15,
+    images: [
+      contentImages.event15,
+      contentImages.event16,
+      contentImages.event17,
+      contentImages.event8,
+      contentImages.event9,
+      contentImages.event10,
+      contentImages.event11,
+      contentImages.event12,
+      contentImages.event13,
+      contentImages.event14,
+    ],
+    href: "/news/nigeria-mining-week-2025",
     content: `
       <p>What an incredible <strong>10th edition of Nigeria Mining Week</strong>, held right here in Abuja!</p>
       <br/>
@@ -118,10 +139,15 @@ export const newsArticles: NewsArticle[] = [
       <br/>
       <p>Here's to turning these conversations into action for a greener, more competitive future. #NigeriaMiningWeek #MiningTransformation #SustainableMining</p>
     `,
-    tags: ['Nigeria Mining Week', 'Industry Event', 'Mining', 'Abuja', 'Networking'],
+    tags: [
+      "Nigeria Mining Week",
+      "Industry Event",
+      "Mining",
+      "Abuja",
+      "Networking",
+    ],
     featured: true,
   },
-  
 ];
 
 

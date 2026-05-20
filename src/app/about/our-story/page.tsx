@@ -7,6 +7,7 @@ import { GoldDot } from '@/components/ui/gold-dot';
 import { ScrollReveal } from '@/components/animations/scroll-reveal';
 import { ArrowRight } from 'lucide-react';
 import { listKey } from '@/lib/list-key';
+import { contentImages } from '@/assets/content';
 
 // Timeline milestones
 const milestones = [
@@ -60,7 +61,7 @@ export default function OurStoryPage() {
           { label: 'About', href: '/about' },
           { label: 'Our Story', href: '/about/our-story' },
         ]}
-        backgroundImage="/solarfarm.jpg"
+        backgroundImage={contentImages.solarfarm}
       />
 
       {/* Story Intro Section - Content Left, Image Right */}
@@ -138,7 +139,7 @@ export default function OurStoryPage() {
               <div className="sticky top-24">
                 <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/mining-1.jpeg"
+                    src={contentImages.mining1}
                     alt="Juggernaut Industries mining site"
                     fill
                     className="object-cover"

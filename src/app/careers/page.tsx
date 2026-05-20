@@ -19,6 +19,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 import { toast } from 'sonner';
 import { listKey } from '@/lib/list-key';
+import { contentImages } from '@/assets/content';
 
 export default function CareersPage() {
   const [formData, setFormData] = useState({
@@ -185,7 +186,7 @@ export default function CareersPage() {
               <div className="sticky top-24">
                 <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/team-group.jpg"
+                    src={contentImages.teamGroup}
                     alt="Team collaboration at Juggernaut Industries"
                     fill
                     className="object-cover"
@@ -219,7 +220,7 @@ export default function CareersPage() {
               <div className="sticky top-24">
                 <div className="relative aspect-square w-full rounded-xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/story.jpg"
+                    src={contentImages.story}
                     alt="Team working together at Juggernaut Industries"
                     fill
                     className="object-cover"

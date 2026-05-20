@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import type { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { ArrowRight, Calendar } from 'lucide-react';
@@ -13,7 +14,7 @@ export interface NewsCardProps {
   excerpt: string;
   category: string;
   date: string;
-  image: string;
+  image: string | StaticImageData;
   href: string;
   featured?: boolean;
   className?: string;

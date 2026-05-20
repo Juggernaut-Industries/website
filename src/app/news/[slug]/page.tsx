@@ -184,7 +184,7 @@ export default function NewsArticlePage({
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {article.images.map((image, index) => (
                   <ScrollReveal
-                    key={listKey(["news-gallery-img", slug, image], index)}
+                    key={listKey(["news-gallery-img", slug], index)}
                     animation="fadeUp"
                     delay={0.1 * (index % 3)}
                   >
