@@ -127,18 +127,6 @@ export default function GalleryPage() {
       category: 'Construction',
     },
     {
-      id: 9,
-      src: contentImages.solarInstallation,
-      title: 'Industrial Solar Array',
-      category: 'Solar & Renewable Energy',
-    },
-    {
-      id: 10,
-      src: contentImages.solarfarm,
-      title: 'Renewable Power Plant',
-      category: 'Solar & Renewable Energy',
-    },
-    {
       id: 11,
       src: contentImages.event1,
       title: 'Executive Summit',
@@ -287,27 +275,15 @@ export default function GalleryPage() {
             {filteredImages.map((image, index) => (
               <ScrollReveal key={image.id} animation="fadeUp" delay={0.1 * (index % 3)}>
                 <div
-                  className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300"
+                  className="relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer shadow-lg"
                   onClick={() => setSelectedImage(index)}
                 >
                   <Image
                     src={image.src}
                     alt={image.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover"
                   />
-
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/80 via-deep-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <p className="font-heading text-xs tracking-[0.15em] uppercase text-industrial-gold mb-1">
-                        {image.category}
-                      </p>
-                      <h3 className="font-display text-xl text-off-white">
-                        {image.title}
-                      </h3>
-                    </div>
-                  </div>
                 </div>
               </ScrollReveal>
             ))}
@@ -337,14 +313,6 @@ export default function GalleryPage() {
               onClick={(e) => e.stopPropagation()}
             />
 
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-deep-navy/90 to-transparent p-6">
-              <p className="font-heading text-xs tracking-[0.15em] uppercase text-industrial-gold mb-1">
-                {filteredImages[selectedImage].category}
-              </p>
-              <h3 className="font-display text-2xl text-off-white">
-                {filteredImages[selectedImage].title}
-              </h3>
-            </div>
           </div>
         </div>
       )}

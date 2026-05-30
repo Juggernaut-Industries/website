@@ -80,6 +80,8 @@ import team3 from "./images/team-3.jpg";
 import teamGroup from "./images/team-group.jpg";
 import excavatorSite from "@/assets/media/gallery/excavator-site.jpg";
 import fieldOperationsTeam from "@/assets/media/gallery/field-operations-team.jpg";
+import tenthEditionConference from "@/assets/content/images/event-18.jpeg"
+import rcDrilling from "@/assets/content/images/rc-drilling.jpeg"
 
 export type ContentImage = StaticImageData;
 
@@ -164,6 +166,8 @@ export const contentImages = {
   team2,
   team3,
   teamGroup,
+  tenthEditionConference,
+  rcDrilling
 } satisfies Record<string, StaticImageData>;
 
 export const hsePolicyPdf = '/assets/content/documents/hse-policy.pdf';

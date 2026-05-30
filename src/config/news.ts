@@ -114,7 +114,7 @@ export const newsArticles: NewsArticle[] = [
     category: "Mining & Exploration",
     date: "2025-10-15",
     author: "Corporate Communications",
-    image: contentImages.event15,
+    image: contentImages.tenthEditionConference,
     images: [
       contentImages.event15,
       contentImages.event16,
