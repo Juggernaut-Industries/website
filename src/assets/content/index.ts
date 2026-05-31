@@ -5,10 +5,12 @@ import aboutOperationsTeam from "./images/about-operations-team.jpg";
 import barite from "./images/barite.jpeg";
 import conference from "./images/conference.jpg";
 import construction from "./images/construction.jpg";
+import coreSampleHandling from "./images/core-sample-handling.jpeg";
 import data from "./images/data.png";
 import diamondMining from "./images/diamond-mining.jpg";
 import drilling from "./images/drilling.jpg";
 import drilling2 from "./images/drilling-2.jpg";
+import drillingOperationsActive from "./images/drilling-operations-active.jpeg";
 import event1 from "./images/event-1.jpeg";
 import event2 from "./images/event-2.jpeg";
 import event3 from "./images/event-3.jpeg";
@@ -55,6 +57,8 @@ import riceFarm from "./images/rice-farm.jpg";
 import segilola from "./images/segilola.png";
 import segilola2 from "./images/segilola-2.png";
 import shea from "./images/shea.jpg";
+import siteSurveyMarking from "./images/site-survey-marking.jpeg";
+import siteTeamBriefing from "./images/site-team-briefing.jpeg";
 import siteOperationsNov21 from "./images/site-operations-nov-21.jpg";
 import siteOperationsOct21 from "./images/site-operations-oct-21.jpg";
 import siteOperationsOct28A from "./images/site-operations-oct-28-a.jpg";
@@ -80,8 +84,8 @@ import team3 from "./images/team-3.jpg";
 import teamGroup from "./images/team-group.jpg";
 import excavatorSite from "@/assets/media/gallery/excavator-site.jpg";
 import fieldOperationsTeam from "@/assets/media/gallery/field-operations-team.jpg";
-import tenthEditionConference from "@/assets/content/images/event-18.jpeg"
-import rcDrilling from "@/assets/content/images/rc-drilling.jpeg"
+import tenthEditionConference from "@/assets/content/images/event-18.jpeg";
+import rcDrilling from "@/assets/content/images/rc-drilling.jpeg";
 
 export type ContentImage = StaticImageData;
 
@@ -91,10 +95,12 @@ export const contentImages = {
   barite,
   conference,
   construction,
+  coreSampleHandling,
   data,
   diamondMining,
   drilling,
   drilling2,
+  drillingOperationsActive,
   event1,
   event2,
   event3,
@@ -143,6 +149,8 @@ export const contentImages = {
   segilola,
   segilola2,
   shea,
+  siteSurveyMarking,
+  siteTeamBriefing,
   siteOperationsNov21,
   siteOperationsOct21,
   siteOperationsOct28A,
@@ -167,7 +175,7 @@ export const contentImages = {
   team3,
   teamGroup,
   tenthEditionConference,
-  rcDrilling
+  rcDrilling,
 } satisfies Record<string, StaticImageData>;
 
 export const hsePolicyPdf = '/assets/content/documents/hse-policy.pdf';

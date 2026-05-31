@@ -121,6 +121,24 @@ export default function GalleryPage() {
       category: 'Mining & Exploration',
     },
     {
+      id: 45,
+      src: contentImages.drillingOperationsActive,
+      title: 'Active Drilling Operations',
+      category: 'Mining & Exploration',
+    },
+    {
+      id: 46,
+      src: contentImages.coreSampleHandling,
+      title: 'Core Sample Handling',
+      category: 'Mining & Exploration',
+    },
+    {
+      id: 47,
+      src: contentImages.siteSurveyMarking,
+      title: 'Site Survey Marking',
+      category: 'Mining & Exploration',
+    },
+    {
       id: 7,
       src: contentImages.construction,
       title: 'Infrastructure Development',
@@ -214,6 +232,12 @@ export default function GalleryPage() {
       id: 15,
       src: contentImages.fieldOperationsTeam,
       title: 'Field Operations Team',
+      category: 'Company Culture',
+    },
+    {
+      id: 48,
+      src: contentImages.siteTeamBriefing,
+      title: 'Field Team Briefing',
       category: 'Company Culture',
     },
   ];
