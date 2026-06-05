@@ -1,5 +1,5 @@
 // Site-wide configuration for Juggernaut Industries Limited
-import { contentImages } from '@/assets/content';
+import { contentImages } from '@/assets';
 
 export const siteConfig = {
   name: 'Juggernaut Industries Limited',

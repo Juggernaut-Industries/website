@@ -29,7 +29,6 @@ export async function GET(_request: Request, context: RouteContext) {
     process.cwd(),
     'src',
     'assets',
-    'content',
     kind,
     file
   );

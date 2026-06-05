@@ -8,7 +8,7 @@ import { siteConfig, stats } from "@/config/site";
 import { services } from "@/config/services";
 import { listKey } from "@/lib/list-key";
 import { ArrowRight } from "lucide-react";
-import { contentImages } from "@/assets/content";
+import { contentImages } from "@/assets";
 
 // Core values
 const coreValues = [

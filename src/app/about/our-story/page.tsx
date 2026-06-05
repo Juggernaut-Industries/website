@@ -7,7 +7,7 @@ import { GoldDot } from '@/components/ui/gold-dot';
 import { ScrollReveal } from '@/components/animations/scroll-reveal';
 import { ArrowRight } from 'lucide-react';
 import { listKey } from '@/lib/list-key';
-import { contentImages } from '@/assets/content';
+import { contentImages } from '@/assets';
 
 // Timeline milestones
 const milestones = [

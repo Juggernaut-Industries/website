@@ -2,7 +2,7 @@ import { PageHeader } from '@/components/ui/page-header';
 import { NewsCard } from '@/components/ui/news-card';
 import { newsArticles } from '@/config/news';
 import { ScrollReveal } from '@/components/animations/scroll-reveal';
-import { contentImages } from '@/assets/content';
+import { contentImages } from '@/assets';
 
 export default function NewsPage() {
   // Sort news articles by date (newest first)

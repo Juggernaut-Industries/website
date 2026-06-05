@@ -19,7 +19,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 import { toast } from 'sonner';
 import { listKey } from '@/lib/list-key';
-import { contentImages } from '@/assets/content';
+import { contentImages } from '@/assets';
 
 export default function CareersPage() {
   const [formData, setFormData] = useState({

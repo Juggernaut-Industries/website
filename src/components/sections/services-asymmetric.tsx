@@ -10,7 +10,7 @@ import { Pickaxe, Leaf, Building2, Sun, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { listKey } from '@/lib/list-key';
-import { contentImages } from '@/assets/content';
+import { contentImages } from '@/assets';
 
 interface ServicesAsymmetricProps {
   className?: string;

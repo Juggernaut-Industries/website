@@ -8,7 +8,7 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { projects, successFactors } from "@/config/projects";
 import { listKey } from "@/lib/list-key";
 import { ArrowRight } from "lucide-react";
-import { contentImages } from "@/assets/content";
+import { contentImages } from "@/assets";
 
 export default function ProjectsPage() {
   return (

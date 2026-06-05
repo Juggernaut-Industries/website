@@ -123,7 +123,7 @@ import team1 from "./images/team-1.jpg";
 import team2 from "./images/team-2.jpg";
 import team3 from "./images/team-3.jpg";
 import teamGroup from "./images/team-group.jpg";
-import tenthEditionConference from "@/assets/content/images/event-18.jpeg";
+import tenthEditionConference from "@/assets/images/event-18.jpeg";
 
 export type ContentImage = StaticImageData;
 
@@ -254,7 +254,7 @@ export const contentImages = {
   tenthEditionConference,
 } satisfies Record<string, StaticImageData>;
 
-export const hsePolicyPdf = '/assets/content/documents/hse-policy.pdf';
-export const miningVideo = '/assets/content/videos/mining-video.mp4';
-export const miningVideo1 = '/assets/content/videos/mining-video-1.mp4';
-export const miningVideo2 = '/assets/content/videos/mining-video-2.mp4';
+export const hsePolicyPdf = '/assets/documents/hse-policy.pdf';
+export const miningVideo = '/assets/videos/mining-video.mp4';
+export const miningVideo1 = '/assets/videos/mining-video-1.mp4';
+export const miningVideo2 = '/assets/videos/mining-video-2.mp4';

@@ -9,7 +9,7 @@ import { services, explorationServices } from "@/config/services";
 import { ArrowRight } from "lucide-react";
 import { HSEPolicySection } from "@/components/sections";
 import { listKey } from "@/lib/list-key";
-import { contentImages } from "@/assets/content";
+import { contentImages } from "@/assets";
 
 const SERVICE_HEADLINES: Record<string, { headline: string }> = {
   mining: { headline: "MINING & EXPLORATION SERVICES" },

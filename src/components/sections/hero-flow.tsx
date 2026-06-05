@@ -7,7 +7,7 @@ import { heroContent, stats } from '@/config/site';
 import { listKey } from '@/lib/list-key';
 import { ChevronDown, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import { contentImages } from '@/assets/content';
+import { contentImages } from '@/assets';
 
 interface HeroFlowProps {
   className?: string;

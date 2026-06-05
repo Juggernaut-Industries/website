@@ -6,7 +6,7 @@ import { PageHeader } from '@/components/ui/page-header';
 import { ScrollReveal } from '@/components/animations/scroll-reveal';
 import { useState } from 'react';
 import { X } from 'lucide-react';
-import { contentImages } from '@/assets/content';
+import { contentImages } from '@/assets';
 
 type GalleryImage = {
   id: number;

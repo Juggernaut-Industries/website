@@ -2,7 +2,7 @@
 
 import { PageHeader } from "@/components/ui/page-header";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
-import { contentImages, miningVideo2 } from "@/assets/content";
+import { contentImages, miningVideo2 } from "@/assets";
 
 export default function VideosPage() {
   const videos = [

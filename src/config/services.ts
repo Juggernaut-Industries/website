@@ -1,6 +1,6 @@
 // Services configuration for Juggernaut Industries Limited
 import type { StaticImageData } from 'next/image';
-import { contentImages } from '@/assets/content';
+import { contentImages } from '@/assets';
 
 export type ServiceSector =
   | 'mining'

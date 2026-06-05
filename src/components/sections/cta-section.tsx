@@ -8,7 +8,7 @@ import { siteConfig } from '@/config/site';
 import { ArrowRight, Mail, Phone, Loader2, CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { contentImages } from '@/assets/content';
+import { contentImages } from '@/assets';
 
 interface CTASectionProps {
   className?: string;

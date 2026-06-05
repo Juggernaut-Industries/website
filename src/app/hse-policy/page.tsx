@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { listKey } from "@/lib/list-key";
-import { contentImages, hsePolicyPdf } from "@/assets/content";
+import { contentImages, hsePolicyPdf } from "@/assets";
 
 const hseHighlights = [
   {
