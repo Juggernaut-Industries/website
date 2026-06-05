@@ -349,7 +349,7 @@ export default function ServicesPage() {
               <div className="sticky top-24">
                 <div className="relative aspect-square w-full lg:h-96 rounded-xl overflow-hidden shadow-2xl">
                   <Image
-                    src={contentImages.rcDrilling}
+                    src={contentImages.survey5}
                     alt="RC Drilling"
                     fill
                     className="object-cover"

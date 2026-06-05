@@ -134,7 +134,7 @@ export const projects: Project[] = [
     fullDescription:
       "Juggernaut Industries is currently carrying out drilling services for lithium exploration in partnership with Newstar Minerals Ltd (Thor Explorations) in their West Oyo Project Area. This project positions JIL at the forefront of Nigeria's emerging battery minerals sector.",
     services: ["Exploration Drilling", "Resource Assessment"],
-    image: contentImages.mining2,
+    image: contentImages.drilling2,
     href: "/projects/newstar-thor",
     completed: true,
   },

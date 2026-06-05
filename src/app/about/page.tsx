@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PageHeader } from "@/components/ui/page-header";
-import { GoldDot } from "@/components/ui/gold-dot";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { siteConfig, stats } from "@/config/site";
 import { services } from "@/config/services";
@@ -115,37 +114,6 @@ export default function AboutPage() {
                   clients, while adhering to the highest international standards.
                 </p>
               </ScrollReveal> */}
-
-              {/* Divider */}
-              <div className="h-px bg-steel-blue/20" />
-
-              {/* Key Highlights */}
-              <ScrollReveal animation="fadeUp" delay={0.2}>
-                <div className="grid grid-cols-2 gap-3">
-                  {[
-                    "In-House Laboratory",
-                    "World Class Team",
-                    "JORC & N143-101 Reporting",
-                    "COREN-Registered Engineers",
-                    "Competent mining technicians (Local and International)",
-                    "Government & Private Clients",
-                    "Geochemistry Analysis",
-                    "Nigerian Electricity Management services Agency (NEMSA)",
-                  ].map((highlight) => (
-                    <div
-                      key={listKey(["about-highlight", highlight])}
-                      className="flex items-center gap-2 text-sm text-steel-blue"
-                    >
-                      <GoldDot size="sm" />
-                      <span>{highlight}</span>
-                    </div>
-                  ))}
-                </div>
-                {/* <div className="flex pt-3 items-center gap-2 text-sm text-steel-blue">
-                  <GoldDot size="sm" />
-                  <span>Qualified mining/ Technician and Engineer - local and international</span>
-                </div> */}
-              </ScrollReveal>
 
               {/* CTA */}
               {/* <ScrollReveal animation="fadeUp" delay={0.25}>
