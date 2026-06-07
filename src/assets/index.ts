@@ -30,6 +30,8 @@ import galleryDrillingSiteOct28 from "./images/gallery-drilling-site-oct-28.jpg"
 import geophysics from "./images/geophysics.jpg";
 import hero from "./images/hero.jpeg";
 import hero2 from "./images/hero-2.jpeg";
+import hero3 from "./images/hero-3.jpeg";
+import hero4 from "./images/hero-4.jpeg";
 import juggernautMag from "./images/juggernaut-mag.png";
 import magazine from "./images/magazine.jpeg";
 import mediaGallery1 from "./gallery/media-gallery-01.jpeg";
@@ -158,6 +160,8 @@ export const contentImages = {
   geophysics,
   hero,
   hero2,
+  hero3,
+  hero4,
   juggernautMag,
   magazine,
   mediaGallery1,

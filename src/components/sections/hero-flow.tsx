@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { heroContent, stats } from '@/config/site';
 import { listKey } from '@/lib/list-key';
@@ -13,7 +14,23 @@ interface HeroFlowProps {
   className?: string;
 }
 
+const heroImages = [
+  contentImages.hero2,
+  contentImages.hero3,
+  contentImages.hero4,
+];
+
 export function HeroFlow({ className }: HeroFlowProps) {
+  const [activeImage, setActiveImage] = useState(0);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveImage((current) => (current + 1) % heroImages.length);
+    }, 5500);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
   return (
     <section
       className={cn(
@@ -23,14 +40,22 @@ export function HeroFlow({ className }: HeroFlowProps) {
     >
       {/* Background Image & Overlay */}
       <div className="absolute inset-0">
-        <Image
-          src={contentImages.hero2}
-          alt="Juggernaut Industries Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-deep-navy/25 via-deep-navy/10 to-deep-navy/20" />
+        {heroImages.map((image, index) => (
+          <Image
+            key={image.src}
+            src={image}
+            alt="Juggernaut Industries Background"
+            fill
+            sizes="100vw"
+            className={cn(
+              'object-cover transition-opacity duration-1000 ease-in-out',
+              activeImage === index ? 'opacity-100' : 'opacity-0'
+            )}
+            priority={index === 0}
+          />
+        ))}
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-navy/45 via-deep-navy/20 to-deep-navy/35" />
         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-industrial-gold/5 to-transparent" />
         {/* Subtle radial glow */}
         <div className="absolute top-1/4 -left-1/4 w-[60%] h-[60%] bg-steel-blue/15 rounded-full blur-[120px]" />
