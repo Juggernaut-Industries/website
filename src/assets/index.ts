@@ -33,6 +33,8 @@ import hero from "./images/hero.jpeg";
 import hero2 from "./images/hero-2.jpeg";
 import hero3 from "./images/hero-3.jpeg";
 import hero4 from "./images/hero-4.jpeg";
+import hero5 from "./images/hero-5.jpeg";
+import hero6 from "./images/hero-6.jpeg";
 import juggernautMag from "./images/juggernaut-mag.png";
 import magazine from "./images/magazine.jpeg";
 import mediaGallery1 from "./gallery/media-gallery-01.jpeg";
@@ -87,6 +89,8 @@ import mediaGallery49 from "./gallery/media-gallery-49.jpg";
 import mediaGallery50 from "./gallery/media-gallery-50.jpg";
 import mediaGallery51 from "./gallery/media-gallery-51.jpg";
 import mediaGallery52 from "./gallery/media-gallery-52.jpg";
+import mediaGallery53 from "./gallery/media-gallery-53.jpg";
+import mediaGallery54 from "./gallery/media-gallery-54.jpg";
 import mineral from "./images/mineral.jpg";
 import mineral2 from "./images/mineral-2.jpg";
 import mining from "./images/mining.jpg";
@@ -165,6 +169,8 @@ export const contentImages = {
   hero2,
   hero3,
   hero4,
+  hero5,
+  hero6,
   juggernautMag,
   magazine,
   mediaGallery1,
@@ -219,6 +225,8 @@ export const contentImages = {
   mediaGallery50,
   mediaGallery51,
   mediaGallery52,
+  mediaGallery53,
+  mediaGallery54,
   mineral,
   mineral2,
   mining,

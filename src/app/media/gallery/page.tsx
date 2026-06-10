@@ -324,6 +324,18 @@ export default function GalleryPage() {
       title: 'Exploration Site Activity',
       category: 'Mining & Exploration',
     },
+    {
+      id: 69,
+      src: contentImages.mediaGallery53,
+      title: 'Media Gallery 53',
+      category: 'Mining & Exploration',
+    },
+    {
+      id: 70,
+      src: contentImages.mediaGallery54,
+      title: 'Media Gallery 54',
+      category: 'Mining & Exploration',
+    },
   ];
 
   const filteredImages = selectedCategory === 'All'

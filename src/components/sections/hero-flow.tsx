@@ -18,6 +18,8 @@ const heroImages = [
   contentImages.hero2,
   contentImages.hero3,
   contentImages.hero4,
+  contentImages.hero5,
+  contentImages.hero6,
 ];
 
 export function HeroFlow({ className }: HeroFlowProps) {
