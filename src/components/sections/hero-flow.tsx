@@ -56,8 +56,8 @@ export function HeroFlow({ className }: HeroFlowProps) {
             priority={index === 0}
           />
         ))}
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-br from-deep-navy/45 via-deep-navy/20 to-deep-navy/35" />
+        <div className="absolute inset-0 bg-black/15" />
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-navy/25 via-deep-navy/10 to-deep-navy/20" />
         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-industrial-gold/5 to-transparent" />
         {/* Subtle radial glow */}
         <div className="absolute top-1/4 -left-1/4 w-[60%] h-[60%] bg-steel-blue/15 rounded-full blur-[120px]" />
