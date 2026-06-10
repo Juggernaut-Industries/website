@@ -117,7 +117,7 @@ export const projects: Project[] = [
       "Exploration Drilling",
       "Mineral Resource Estimate (MRE)",
     ],
-    image: contentImages.segilola2,
+    image: contentImages.segilola3,
     href: "/projects/ngsa",
     completed: false,
   },

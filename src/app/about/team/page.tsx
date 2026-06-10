@@ -61,7 +61,7 @@ export default function TeamPage() {
                   </span>
                 </ScrollReveal> */}
                 <ScrollReveal animation="fadeUp" delay={0.1}>
-                  <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-3">
+                  <h2 className="font-display text-2xl md:text-3xl font-light text-deep-navy leading-[2.5rem] mb-3">
                      OUR PEOPLE
                   </h2>
                 </ScrollReveal>
@@ -132,7 +132,7 @@ export default function TeamPage() {
               </span>
             </ScrollReveal>
             <ScrollReveal animation="fadeUp" delay={0.1}>
-              <h2 className="font-display text-3xl md:text-4xl  font-light text-deep-navy leading-[2.5rem] mb-3">
+              <h2 className="font-display text-2xl md:text-3xl font-light text-deep-navy leading-[2.5rem] mb-3">
                 EXECUTIVE TEAM
               </h2>
             </ScrollReveal>

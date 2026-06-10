@@ -183,7 +183,7 @@ export function Header() {
                   href="/contact"
                   className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 border border-industrial-gold/50 text-industrial-gold font-heading text-xs tracking-[0.1em] uppercase rounded-xl btn-animated relative overflow-hidden after:bg-industrial-gold hover:text-near-black"
                 >
-                  Get Quote
+                  Contact Us
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </motion.div>

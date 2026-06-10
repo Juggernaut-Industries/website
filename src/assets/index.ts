@@ -6,6 +6,7 @@ import barite from "./images/barite.jpeg";
 import conference from "./images/conference.jpg";
 import construction from "./images/construction.jpg";
 import data from "./images/data.png";
+import diamondDrilling from "./images/diamond-drilling.jpeg";
 import diamondMining from "./images/diamond-mining.jpg";
 import drilling from "./images/drilling.jpg";
 import drilling2 from "./images/drilling-2.jpg";
@@ -104,6 +105,7 @@ import rc from "./images/rc.jpg";
 import riceFarm from "./images/rice-farm.jpg";
 import segilola from "./images/segilola.png";
 import segilola2 from "./images/segilola-2.png";
+import segilola3 from "./images/segilola-3.jpeg";
 import shea from "./images/shea.jpg";
 import siteOperationsNov21 from "./images/site-operations-nov-21.jpg";
 import siteOperationsOct21 from "./images/site-operations-oct-21.jpg";
@@ -136,6 +138,7 @@ export const contentImages = {
   conference,
   construction,
   data,
+  diamondDrilling,
   diamondMining,
   drilling,
   drilling2,
@@ -234,6 +237,7 @@ export const contentImages = {
   riceFarm,
   segilola,
   segilola2,
+  segilola3,
   shea,
   siteOperationsNov21,
   siteOperationsOct21,

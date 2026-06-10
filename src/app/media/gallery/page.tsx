@@ -115,12 +115,6 @@ export default function GalleryPage() {
       category: 'Events',
     },
     {
-      id: 53,
-      src: contentImages.mediaGallery5,
-      title: 'Media Gallery 5',
-      category: 'Mining & Exploration',
-    },
-    {
       id: 16,
       src: contentImages.mediaGallery25,
       title: 'Advanced Drilling Operations',
@@ -139,12 +133,6 @@ export default function GalleryPage() {
       category: 'Events',
     },
     {
-      id: 54,
-      src: contentImages.mediaGallery6,
-      title: 'Media Gallery 6',
-      category: 'Mining & Exploration',
-    },
-    {
       id: 27,
       src: contentImages.mediaGallery33,
       title: 'Field Data Collection',
@@ -155,12 +143,6 @@ export default function GalleryPage() {
       src: contentImages.mediaGallery52,
       title: 'Industry Conference',
       category: 'Events',
-    },
-    {
-      id: 55,
-      src: contentImages.mediaGallery7,
-      title: 'Media Gallery 7',
-      category: 'Mining & Exploration',
     },
     {
       id: 46,
