@@ -176,7 +176,7 @@ export default function NewsArticlePage({
                     Field Gallery
                   </span>
                   <h2 className="font-display text-3xl md:text-4xl font-light text-deep-navy">
-                    Operational Showcase
+                    Photos from Events
                   </h2>
                 </div>
               </ScrollReveal>

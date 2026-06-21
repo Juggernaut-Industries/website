@@ -91,6 +91,8 @@ import mediaGallery51 from "./gallery/media-gallery-51.jpg";
 import mediaGallery52 from "./gallery/media-gallery-52.jpg";
 import mediaGallery53 from "./gallery/media-gallery-53.jpg";
 import mediaGallery54 from "./gallery/media-gallery-54.jpg";
+import mediaGallery55 from "./gallery/media-gallery-55.jpeg";
+import mediaGallery56 from "./gallery/media-gallery-56.jpeg";
 import mineral from "./images/mineral.jpg";
 import mineral2 from "./images/mineral-2.jpg";
 import mining from "./images/mining.jpg";
@@ -227,6 +229,8 @@ export const contentImages = {
   mediaGallery52,
   mediaGallery53,
   mediaGallery54,
+  mediaGallery55,
+  mediaGallery56,
   mineral,
   mineral2,
   mining,

@@ -85,9 +85,9 @@ export default function GalleryPage() {
       category: 'Mining & Exploration',
     },
     {
-      id: 58,
-      src: contentImages.mediaGallery10,
-      title: 'Media Gallery 10',
+      id: 69,
+      src: contentImages.mediaGallery55,
+      title: 'Media Gallery 55',
       category: 'Mining & Exploration',
     },
     {
@@ -121,9 +121,9 @@ export default function GalleryPage() {
       category: 'Mining & Exploration',
     },
     {
-      id: 59,
-      src: contentImages.mediaGallery11,
-      title: 'Media Gallery 11',
+      id: 70,
+      src: contentImages.mediaGallery56,
+      title: 'Media Gallery 56',
       category: 'Mining & Exploration',
     },
     {
